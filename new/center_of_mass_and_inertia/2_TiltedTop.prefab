@@ -1,0 +1,37 @@
+node{
+name:t="TiltedTop"
+uid:i=909619914
+prefab:i64=-2077275875976240909
+pos:p3=0, 0.5, 0
+}
+res{
+guid:t="019ce367-db7f-7e8d-8ac4-e1fa7612ea80"
+type:i=12
+refId:i64=-2077275875976240909
+}
+instance{
+root:i=909619914
+node{
+uid:i=909619914
+Collider{
+shapes{
+shape{
+shapeType:i=3
+translation:p3=0.25, 0, 0
+rotation:p4=0, 0, -0.5, 0.866025
+params:p3=1, 0.25, 1
+__mesh:i64=0
+}
+}
+}
+Inertia{
+value:p3=0, 0, 0
+rotateOnly:b=yes
+}
+}
+node{
+pos:p3=0.25, 0, 0
+rot:p4=0, 0, -0.5, 0.866025
+uid:i=1956862086
+}
+}

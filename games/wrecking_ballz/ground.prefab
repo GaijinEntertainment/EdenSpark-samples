@@ -1,0 +1,42 @@
+node{
+name:t="ground"
+uid:i=1247853840
+}
+node{
+name:t="ground"
+uid:i=271718514
+parent:i=1247853840
+pos:p3=0, -300, 0
+scl:p3=300, 600, 1
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=3567965779723893661
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=0.5
+restitution:r=0.5
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+res{
+guid:t="0193c182-6cd3-77c2-b166-39e1825250fa"
+type:i=1
+refId:i64=-5041345716884882344
+}
+res{
+guid:t="01918bbd-56f2-70b3-8181-59fb28c2c32a"
+type:i=3
+refId:i64=3567965779723893661
+}

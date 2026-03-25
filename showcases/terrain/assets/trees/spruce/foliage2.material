@@ -1,0 +1,57 @@
+shader:t="standard_diffuse_shader"
+textures{
+it{
+guid:t="01937470-3fc0-7862-8273-29367bc1c4f3"
+type:i=2
+}
+it{
+guid:t="0193737a-04b9-7be1-801d-81db4ea6eaea"
+type:i=2
+}
+it{}
+it{}
+it{}
+it{}
+}
+properties{
+faceCullMode{
+__variant_index:i=2
+i:i=0
+}
+specularColor{
+__variant_index:i=1
+f4:p4=0.0392157, 0.0392157, 0.0392157, 1
+}
+transparencyMode{
+__variant_index:i=2
+i:i=0
+}
+emission{
+__variant_index:i=1
+f4:p4=0, 0, 0, 1
+}
+atest{
+__variant_index:i=0
+f:r=0.3
+}
+receiveShadows{
+__variant_index:i=2
+i:i=1
+}
+renderOrder{
+__variant_index:i=2
+i:i=0
+}
+glossiness{
+__variant_index:i=0
+f:r=0.83
+}
+color{
+__variant_index:i=1
+f4:p4=1, 0.87451, 1, 1
+}
+uvRect{
+__variant_index:i=1
+f4:p4=0, 0, 1, 1
+}
+}

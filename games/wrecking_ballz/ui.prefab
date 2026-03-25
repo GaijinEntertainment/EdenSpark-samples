@@ -1,0 +1,52 @@
+node{
+name:t="canvas"
+uid:i=-1939704348
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1600, 900
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="hint"
+uid:i=1605868683
+parent:i=-1939704348
+pos:p3=-780, -430, 0
+UIFrame{
+localPosition2D:p2=20, 880
+size:p2=0, 0
+pivot:p2=0, 1
+}
+UIText{
+text:t="""
+Drag red sphere to shoot
+Press R to restart
+"""
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=2
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=0, 1
+left:r=20
+top:r=-20
+right:r=0
+bottom:r=0
+}
+}

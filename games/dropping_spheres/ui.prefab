@@ -1,0 +1,90 @@
+node{
+name:t="ui"
+uid:i=-1956186171
+scl:p3=1.32083, 1.32083, 1
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1920, 1163.66
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="score"
+uid:i=580825830
+parent:i=-1956186171
+pos:p3=-930, 551.83, 0
+UIFrame{
+localPosition2D:p2=30, 30
+size:p2=1920, 40
+pivot:p2=0, 0
+}
+UIText{
+text:t="Score: 0"
+color:p4=0.34902, 0.368627, 0.439216, 1
+fontSize:r=29.9844
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=0, 0.0015625, 0, 1
+effectOffset:p2=5, 7
+effectThickness:r=0
+fontAutoSize:p2=1, 100
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=0
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=0, 0
+left:r=30
+top:r=30
+right:r=-1950
+bottom:r=-30
+}
+ScoreText{}
+}
+node{
+name:t="inputhelp"
+uid:i=-831717416
+parent:i=-1956186171
+pos:p3=-930, -551.83, 0
+UIFrame{
+localPosition2D:p2=30, 1133.66
+size:p2=1920, 80
+pivot:p2=0, 1
+}
+UIText{
+text:t="""
+Press Left/Right arrows to move spawner.
+Press Down/Space to spawn.
+"""
+color:p4=0.34902, 0.368627, 0.439216, 1
+fontSize:r=29.9844
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=0, 0.0015625, 0, 1
+effectOffset:p2=5, 7
+effectThickness:r=0
+fontAutoSize:p2=1, 100
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=2
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=0, 1
+left:r=30
+top:r=-30
+right:r=-1950
+bottom:r=-1110
+}
+}

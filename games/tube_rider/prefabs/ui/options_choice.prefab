@@ -1,0 +1,83 @@
+node{
+name:t="options_choice"
+uid:i=-2131242254
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=800, 48
+pivot:p2=0.5, 0.5
+}
+}
+node{
+name:t="option_text"
+uid:i=-923454721
+parent:i=-2131242254
+pos:p3=-400, 0, 0
+UIFrame{
+localPosition2D:p2=0, 24
+size:p2=0, 48
+pivot:p2=0, 0.5
+}
+UIText{
+text:t="<option>"
+color:p4=1, 1, 1, 1
+fontSize:r=48
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=0, 0.5
+left:r=0
+top:r=0
+right:r=-380
+bottom:r=-60
+}
+}
+node{
+name:t="button"
+uid:i=-1592314532
+prefab:i64=1382267385076481718
+parent:i=-2131242254
+pos:p3=400, 0, 0
+}
+res{
+guid:t="01953270-a75f-7303-a740-072bd473243f"
+type:i=12
+refId:i64=1382267385076481718
+}
+instance{
+root:i=-1592314532
+node{
+uid:i=998342432
+UIFrame{
+localPosition2D:p2=800, 24
+size:p2=280, 48
+pivot:p2=1, 0.5
+}
+UIText{text:t="<val>";}
+newComps{
+UIAnchor{
+anchorMin:p2=1, 0.5
+anchorMax:p2=1, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=-30
+}
+}
+}
+node{
+pos:p3=-280, 24, 0
+uid:i=-1783325023
+}
+}

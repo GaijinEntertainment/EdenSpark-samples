@@ -1,0 +1,184 @@
+node{
+name:t="main_scene"
+uid:i=-971030457
+}
+node{
+name:t="EmissiveStrengthTest"
+uid:i=553390634
+prefab:i64=5780434107258857055
+parent:i=-971030457
+}
+res{
+guid:t="019b3281-d1f7-7803-969b-3b8a1898f886"
+type:i=12
+refId:i64=5780434107258857055
+}
+node{
+name:t="camera"
+uid:i=-596530812
+parent:i=-971030457
+pos:p3=5.8, 7.27735, 23.2451
+rot:p4=-0.0166469, 0.981434, -0.162475, -0.100556
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=0.872665
+fovAxis:i=0
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+}
+node{
+name:t="directional_light"
+uid:i=-535687171
+parent:i=-971030457
+pos:p3=0, 4.3171, 0
+rot:p4=-0.0174524, 0, 0, 0.999848
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="render_setting"
+uid:i=1959326483
+isRenderSettingsNode:b=yes
+parent:i=-971030457
+AmbientSettings{
+ambientColor:p3=0.4, 0.4, 0.4
+ambientStrength:r=1
+ambientSource:i=0
+}
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+AntiAliasing{
+active:b=yes
+mode:i=2
+msaa_quality:i=1
+fxaa_quality:i=1
+}
+Sky{
+active:b=yes
+isHdr:b=yes
+__materialId:i64=5990970791006779606
+}
+Tonemap{
+active:b=no
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+RenderPipeline{
+hdrMode:i=1
+transparencySortMode:i=1
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+}
+node{
+name:t="canvas"
+uid:i=1045116143
+parent:i=-971030457
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1542, 850
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="legal_attribution"
+uid:i=166617797
+parent:i=1045116143
+pos:p3=-521, 395, 0
+UIFrame{
+localPosition2D:p2=250, 30
+size:p2=500, 60
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="""
+Model by Ed Mackey
+Licensed under CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+"""
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=25, -25, 0, 0
+horAlignment:i=0
+vertAlignment:i=0
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=0, 0
+left:r=250
+top:r=30
+right:r=-380
+bottom:r=-90
+}
+}
+res{
+guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
+type:i=3
+refId:i64=5990970791006779606
+}

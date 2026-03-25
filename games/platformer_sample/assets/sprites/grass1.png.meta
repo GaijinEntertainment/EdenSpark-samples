@@ -1,0 +1,10 @@
+guid:t="03efc039-77ad-4ce5-b0e6-920609c5aa50"
+assetType:i=0
+textureType:t="TextureRequest"
+path:t=""
+filter:t="Point"
+addressing:t="Wrap"
+anisotropicLevel:i=4
+sRGB:b=yes
+generateMipLevels:b=no
+format:t="A8R8G8B8"

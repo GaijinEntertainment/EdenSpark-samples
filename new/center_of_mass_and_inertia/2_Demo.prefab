@@ -1,0 +1,259 @@
+node{
+name:t="2_Inertia_Demo"
+uid:i=1283042483
+}
+node{
+name:t="hint"
+uid:i=-1627831925
+parent:i=1283042483
+pos:p3=0, 2.5, 0
+Text3D{
+useDepthScale:b=yes
+text:t="""
+All tops are rotated with same impulse after instantiation
+Gravity is disabled
+"""
+pivot:p2=0.5, 0.5
+size:p2=0, 0
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="floor"
+uid:i=-949102879
+parent:i=1283042483
+pos:p3=0, -0.05, 0
+scl:p3=4, 0.1, 4
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="Top1"
+uid:i=1755614422
+prefab:i64=-2077275875976240909
+parent:i=1283042483
+pos:p3=-1, 0.466, 1.125
+}
+res{
+guid:t="019ce367-db7f-7e8d-8ac4-e1fa7612ea80"
+type:i=12
+refId:i64=-2077275875976240909
+}
+node{
+name:t="Top2"
+uid:i=1501981581
+prefab:i64=-2077275875976240909
+parent:i=1283042483
+pos:p3=1, 0.466, 1.125
+}
+node{
+name:t="TiltedTop1"
+uid:i=461435713
+prefab:i64=9222046116178218532
+parent:i=1283042483
+pos:p3=-1, 0.5, -1.5
+}
+res{
+guid:t="019cf6f4-d6bc-75ee-b1b6-5c14cec07be8"
+type:i=12
+refId:i64=9222046116178218532
+}
+node{
+name:t="TiltedTop2"
+uid:i=-1124843543
+prefab:i64=9222046116178218532
+parent:i=1283042483
+pos:p3=1, 0.5, -1.5
+}
+node{
+name:t="camera"
+uid:i=630942501
+parent:i=1283042483
+pos:p3=0, 2.5777, -4.5
+rot:p4=0.173648, 0, 0, 0.984808
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=1.0472
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+}
+node{
+name:t="sun"
+uid:i=-356700973
+parent:i=1283042483
+pos:p3=0, 10, 0
+rot:p4=0.353553, 0.353553, -0.146447, 0.853554
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="render_setting"
+uid:i=-43832494
+isRenderSettingsNode:b=yes
+parent:i=1283042483
+AmbientSettings{
+ambientColor:p3=0.4, 0.4, 0.4
+ambientStrength:r=1
+ambientSource:i=0
+}
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+AntiAliasing{
+active:b=yes
+mode:i=2
+msaa_quality:i=1
+fxaa_quality:i=1
+}
+Sky{
+active:b=yes
+isHdr:b=yes
+__materialId:i64=5990970791006779606
+}
+Tonemap{
+active:b=no
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+RenderPipeline{
+hdrMode:i=1
+transparencySortMode:i=1
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}
+res{
+guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
+type:i=3
+refId:i64=5990970791006779606
+}
+instance{
+root:i=1755614422
+node{
+uid:i=909619914
+removedComps{compName:t="Inertia";}
+}
+node{
+uid:i=-1376515378
+Text3D{text:t="""
+Inertia default
+(y = 0.03)
+""";}
+}
+}
+instance{
+root:i=1501981581
+node{
+uid:i=-1376515378
+Text3D{text:t="Inertia y=0.1";}
+}
+}
+instance{
+root:i=461435713
+instance{
+root:i=909619914
+node{
+uid:i=909619914
+removedComps{compName:t="Inertia";}
+}
+}
+}
+instance{
+root:i=-1124843543
+instance{
+root:i=909619914
+node{
+uid:i=-1376515378
+Text3D{text:t="Inertia straightened";}
+}
+}
+}

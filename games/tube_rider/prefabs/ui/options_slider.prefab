@@ -1,0 +1,155 @@
+node{
+name:t="slider"
+uid:i=1246358855
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=800, 48
+pivot:p2=0.5, 0.5
+}
+}
+node{
+name:t="option_text"
+uid:i=-923454721
+parent:i=1246358855
+pos:p3=-400, -6, 0
+UIFrame{
+localPosition2D:p2=0, 30
+size:p2=0, 48
+pivot:p2=0, 0.5
+}
+UIText{
+text:t="<option>"
+color:p4=1, 1, 1, 1
+fontSize:r=48
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=0, 0.5
+left:r=0
+top:r=0
+right:r=-380
+bottom:r=-60
+}
+}
+node{
+name:t="slider"
+uid:i=-547132873
+parent:i=1246358855
+pos:p3=400, 0, 0
+UIFrame{
+localPosition2D:p2=800, 24
+size:p2=280, 48
+pivot:p2=1, 0.5
+}
+UIHorizontalSlider{
+interactable:b=yes
+minValue:r=0
+maxValue:r=1
+step:r=0
+handle:i=-1553633622
+filled:i=703614300
+slideArea:i=0
+value:r=1
+}
+UIAnchor{
+anchorMin:p2=1, 0.5
+anchorMax:p2=1, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=-60
+}
+UIColorState{
+targetNode:i=-1553633622
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=1, 0.8, 0.6, 1
+pressedColor:p4=1, 0.8, 0.6, 1
+focusedColor:p4=1, 1, 1, 1
+fadeDuration:r=0.1
+}
+}
+node{
+name:t="bar"
+uid:i=-113199011
+parent:i=-547132873
+pos:p3=-280, -6, 0
+UIFrame{
+localPosition2D:p2=0, 30
+size:p2=280, 5
+pivot:p2=0, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.498039, 0.498039, 0.498039, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="filled_bar"
+uid:i=703614300
+parent:i=-547132873
+pos:p3=-280, -6, 0
+UIFrame{
+localPosition2D:p2=0, 30
+size:p2=280, 5
+pivot:p2=0, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="handle"
+uid:i=-1553633622
+parent:i=-547132873
+pos:p3=-10, -6, 0
+UIFrame{
+localPosition2D:p2=270, 30
+size:p2=20, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}

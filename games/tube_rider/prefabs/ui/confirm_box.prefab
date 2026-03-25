@@ -1,0 +1,222 @@
+node{
+name:t="confirm_box"
+uid:i=1953450736
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1600, 900
+pivot:p2=0.5, 0.5
+}
+AutoAttachToCanvas{}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="window"
+uid:i=848817037
+parent:i=1953450736
+UIFrame{
+localPosition2D:p2=800, 450
+size:p2=600, 300
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0, 0, 0, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0.5, 0.5
+anchorMax:p2=0.5, 0.5
+left:r=0
+top:r=0
+right:r=-600
+bottom:r=-300
+}
+}
+node{
+name:t="image"
+uid:i=1037813708
+parent:i=848817037
+pos:p3=-300, 150, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=600, 5
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="image"
+uid:i=1904020472
+parent:i=848817037
+pos:p3=-300, -150, 0
+UIFrame{
+localPosition2D:p2=0, 300
+size:p2=600, 5
+pivot:p2=0, 1
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="layout_frame"
+uid:i=-2093997101
+parent:i=848817037
+pos:p3=-300, 150, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=600, 300
+pivot:p2=0, 0
+}
+UIVerticalLayout{
+alignment:t="MiddleCenter"
+spacing:r=50
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="text"
+uid:i=-150935916
+prefab:i64=7076567153810587790
+parent:i=-2093997101
+pos:p3=300, -75, 0
+}
+res{
+guid:t="019a9647-4db2-7899-a35f-351fadd2afbc"
+type:i=12
+refId:i64=7076567153810587790
+}
+node{
+name:t="layout_frame"
+uid:i=1470188861
+parent:i=-2093997101
+pos:p3=0, -149, 0
+UIFrame{
+localPosition2D:p2=0, 149
+size:p2=600, 100
+pivot:p2=0, 0
+}
+UIHorizontalLayout{
+alignment:t="MiddleCenter"
+spacing:r=50
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="confirm_button"
+uid:i=-1863307296
+prefab:i64=1382267385076481718
+parent:i=1470188861
+pos:p3=75, -20, 0
+}
+res{
+guid:t="01953270-a75f-7303-a740-072bd473243f"
+type:i=12
+refId:i64=1382267385076481718
+}
+node{
+name:t="cancel_button"
+uid:i=1687762338
+prefab:i64=1382267385076481718
+parent:i=1470188861
+pos:p3=325, -20, 0
+}
+instance{
+root:i=-150935916
+node{
+uid:i=-309508422
+UIFrame{
+localPosition2D:p2=300, 75
+size:p2=600, 48
+}
+}
+}
+instance{
+root:i=-1863307296
+node{
+uid:i=998342432
+UIFrame{
+localPosition2D:p2=75, 20
+size:p2=200, 60
+pivot:p2=0, 0
+}
+UIText{text:t="YES";}
+newComps{
+ButtonCloseWithActionBehavior{windowToCloseNode:i=1953450767;}
+}
+}
+node{
+pos:p3=0, 0, 0
+uid:i=-1783325023
+}
+externalRef{
+ref:i=1953450767
+up:i=1
+uid:i=1953450736
+}
+}
+instance{
+root:i=1687762338
+node{
+uid:i=998342432
+UIFrame{
+localPosition2D:p2=325, 20
+size:p2=200, 60
+pivot:p2=0, 0
+}
+UIText{text:t="NO";}
+newComps{
+ButtonCloseBehavior{windowToCloseNode:i=1953450767;}
+}
+}
+node{
+pos:p3=0, 0, 0
+uid:i=-1783325023
+}
+externalRef{
+ref:i=1953450767
+up:i=1
+uid:i=1953450736
+}
+}

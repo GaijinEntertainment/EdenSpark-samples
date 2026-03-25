@@ -1,0 +1,390 @@
+node{
+name:t="ui"
+uid:i=-1346213205
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1759, 1279
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="synth"
+uid:i=-167510203
+parent:i=-1346213205
+pos:p3=0, 81.13, 0
+UIFrame{
+localPosition2D:p2=879.5, 558.37
+size:p2=703.72, 735.58
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.210971, 0.210971, 0.210971, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0.5, 0.5
+anchorMax:p2=0.5, 0.5
+left:r=0
+top:r=-81.13
+right:r=0
+bottom:r=0
+}
+SFXComopnent{
+attackSlider:i=100407097
+decaySlider:i=-1990595768
+sustainSlider:i=682782448
+releaseSlider:i=-1124539181
+}
+}
+node{
+name:t="name"
+uid:i=1192314485
+parent:i=-167510203
+pos:p3=0, 327.48, 0
+UIFrame{
+localPosition2D:p2=351.86, 40.31
+size:p2=663.72, 50
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="SOUND FX SYNTH"
+color:p4=0.244833, 0.805907, 0, 1
+fontSize:r=20
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=20
+top:r=40.31
+right:r=20
+bottom:r=0
+}
+}
+node{
+name:t="divider"
+uid:i=-1769775417
+parent:i=1192314485
+pos:p3=0, -22.5, 0
+UIFrame{
+localPosition2D:p2=331.86, 47.5
+size:p2=663.72, 2
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.451477, 0.451477, 0.451477, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=1, 1
+left:r=0
+top:r=-2.5
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="sliders"
+uid:i=126747620
+parent:i=-167510203
+pos:p3=0, 120.205, -1755
+UIFrame{
+localPosition2D:p2=351.86, 247.585
+size:p2=663.72, 315.17
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 1
+left:r=20
+top:r=90
+right:r=20
+bottom:r=330.41
+}
+}
+node{
+name:t="attack"
+uid:i=100407097
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, 157.585, 1755
+}
+res{
+guid:t="0193ac32-b449-7f8f-995f-34d5aa779996"
+type:i=12
+refId:i64=273714387675724613
+}
+node{
+name:t="decay"
+uid:i=-1990595768
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, 97.585, 1755
+}
+node{
+name:t="sustain"
+uid:i=682782448
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, 37.585, 1755
+}
+node{
+name:t="release"
+uid:i=-1124539181
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, -22.415, 1755
+}
+node{
+name:t="preview"
+uid:i=543291189
+parent:i=-167510203
+pos:p3=0, -262.87, 0
+UIFrame{
+localPosition2D:p2=351.86, 630.66
+size:p2=703.72, 209.84
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=1, 1
+left:r=-0
+top:r=-104.92
+right:r=0
+bottom:r=308.76
+}
+}
+node{
+name:t="previewMesh"
+uid:i=559629318
+parent:i=543291189
+scl:p3=700, 200, 1
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+res{
+guid:t="0193c182-6cd3-77c2-b166-39e1825250fa"
+type:i=1
+refId:i64=-5041345716884882344
+}
+instance{
+root:i=100407097
+node{
+uid:i=1435199738
+UIFrame{
+size:p2=663.72, 60
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=0
+right:r=0
+bottom:r=-58.62
+}
+}
+}
+node{
+pos:p3=370.792, -30, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=370.792, 30
+size:p2=585.855, 30
+}
+}
+node{
+pos:p3=-292.927, 0.345, 0
+uid:i=-1962640238
+UIFrame{size:p2=292.927, 30;}
+}
+node{
+pos:p3=49.779, -30, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 30
+size:p2=99.558, 60
+}
+}
+}
+instance{
+root:i=-1990595768
+node{
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, 60
+size:p2=663.72, 58.62
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=60
+right:r=0
+bottom:r=0
+}
+}
+}
+node{
+pos:p3=370.792, -29.31, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=370.792, 29.31
+size:p2=585.855, 28.62
+}
+}
+node{
+pos:p3=-292.927, -0.344999, 0
+uid:i=-1962640238
+UIFrame{size:p2=292.927, 28.62;}
+}
+node{
+pos:p3=49.779, -29.31, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 29.31
+size:p2=99.558, 58.62
+}
+UIText{text:t="Decay";}
+}
+}
+instance{
+root:i=682782448
+node{
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, 120
+size:p2=663.72, 58.62
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=120
+right:r=0
+bottom:r=0
+}
+}
+}
+node{
+pos:p3=370.792, -29.31, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=370.792, 29.31
+size:p2=585.855, 28.62
+}
+}
+node{
+pos:p3=-292.927, -0.344999, 0
+uid:i=-1962640238
+UIFrame{size:p2=292.927, 28.62;}
+}
+node{
+pos:p3=49.779, -29.31, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 29.31
+size:p2=99.558, 58.62
+}
+UIText{text:t="Sustain";}
+}
+}
+instance{
+root:i=-1124539181
+node{
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, 180
+size:p2=663.72, 58.62
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=180
+right:r=0
+bottom:r=0
+}
+}
+}
+node{
+pos:p3=370.792, -29.31, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=370.792, 29.31
+size:p2=585.855, 28.62
+}
+}
+node{
+pos:p3=-292.927, -0.344999, 0
+uid:i=-1962640238
+UIFrame{size:p2=292.927, 28.62;}
+}
+node{
+pos:p3=49.779, -29.31, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 29.31
+size:p2=99.558, 58.62
+}
+UIText{text:t="Release";}
+}
+}

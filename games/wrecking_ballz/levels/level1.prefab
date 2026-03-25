@@ -1,0 +1,249 @@
+node{
+name:t="level1"
+uid:i=-573445440
+}
+node{
+name:t="bar15"
+uid:i=860348395
+prefab:i64=-684538276360615104
+parent:i=-573445440
+pos:p3=0, 26.5, 0
+}
+res{
+guid:t="01917f30-0021-7953-933a-ac27a973276c"
+type:i=12
+refId:i64=-684538276360615104
+}
+node{
+name:t="bar15"
+uid:i=19957090
+prefab:i64=-684538276360615104
+parent:i=-573445440
+pos:p3=0, 17.5, 0
+}
+node{
+name:t="bar8"
+uid:i=1089909533
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=-7, 13, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+res{
+guid:t="01917fe8-6b16-7260-8503-a2721468397c"
+type:i=12
+refId:i64=-2587709197996834760
+}
+node{
+name:t="bar8"
+uid:i=-1065160290
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=7, 13, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=449851860
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=-7, 22, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=20146862
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=7, 22, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=-352601799
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=-10.5, 8.5, 0
+}
+node{
+name:t="bar8"
+uid:i=-1885983579
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=10.5, 8.5, 0
+}
+node{
+name:t="bar8"
+uid:i=-1592597877
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=-14, 4, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=-1131102845
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=-10.5, 4, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=839945043
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=-7, 4, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=-219113276
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=7, 4, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=1441551713
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=10.5, 4, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar8"
+uid:i=-302893962
+prefab:i64=-2587709197996834760
+parent:i=-573445440
+pos:p3=14, 4, 0
+rot:p4=0, 0, 0.707107, 0.707107
+}
+node{
+name:t="bar5"
+uid:i=-1065836507
+prefab:i64=-5943077182287391698
+parent:i=-573445440
+pos:p3=0, 24.5, 0
+}
+res{
+guid:t="01917fec-39a3-7199-a3c8-e6b1142408ad"
+type:i=12
+refId:i64=-5943077182287391698
+}
+node{
+name:t="bar5"
+uid:i=-81511718
+prefab:i64=-5943077182287391698
+parent:i=-573445440
+pos:p3=0, 23.5, 0
+}
+node{
+name:t="bar5"
+uid:i=-1997158346
+prefab:i64=-5943077182287391698
+parent:i=-573445440
+pos:p3=0, 22.5, 0
+}
+node{
+name:t="bar5"
+uid:i=-1377291615
+prefab:i64=-5943077182287391698
+parent:i=-573445440
+pos:p3=0, 21.5, 0
+}
+node{
+name:t="bar5"
+uid:i=-3017494
+prefab:i64=-5943077182287391698
+parent:i=-573445440
+pos:p3=0, 20.5, 0
+}
+node{
+name:t="bar5"
+uid:i=9665273
+prefab:i64=-5943077182287391698
+parent:i=-573445440
+pos:p3=0, 19.5, 0
+}
+node{
+name:t="bar5"
+uid:i=131453264
+prefab:i64=-5943077182287391698
+parent:i=-573445440
+pos:p3=0, 18.5, 0
+}
+node{
+name:t="rock"
+uid:i=-1785726510
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=-13.25, 10.25, 0
+}
+res{
+guid:t="01917f30-6acf-73c2-b111-05a6ed0e1e0f"
+type:i=12
+refId:i64=4403533013426517268
+}
+node{
+name:t="rock"
+uid:i=-1736586902
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=-13.25, 12.75, 0
+}
+node{
+name:t="rock"
+uid:i=-110877382
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=-13.25, 15.25, 0
+}
+node{
+name:t="rock"
+uid:i=259805541
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=13.25, 10.25, 0
+}
+node{
+name:t="rock"
+uid:i=-735334104
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=13.25, 12.75, 0
+}
+node{
+name:t="rock"
+uid:i=-676263890
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=13.25, 15.25, 0
+}
+node{
+name:t="rock"
+uid:i=-1714345468
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=18, 1.25, 0
+}
+node{
+name:t="rock"
+uid:i=-1065260809
+prefab:i64=4403533013426517268
+parent:i=-573445440
+pos:p3=17.25, 3.75, 0
+}
+node{
+name:t="pig"
+uid:i=-935701845
+prefab:i64=-3897357626036987680
+parent:i=-573445440
+pos:p3=0, 2, 0
+}
+res{
+guid:t="01917fa4-608b-7ae8-81be-657a4858fd36"
+type:i=12
+refId:i64=-3897357626036987680
+}

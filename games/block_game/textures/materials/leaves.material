@@ -1,0 +1,46 @@
+shader:t="standard_diffuse_shader"
+textures{
+it{
+guid:t="019301de-6185-7a78-9472-9f5b4581a8ff"
+type:i=2
+}
+it{}
+it{}
+it{}
+it{}
+it{}
+}
+properties{
+faceCullMode{
+__variant_index:i=2
+i:i=1
+}
+transparencyMode{
+__variant_index:i=2
+i:i=0
+}
+emission{
+__variant_index:i=1
+f4:p4=0, 0, 0, 1
+}
+atest{
+__variant_index:i=0
+f:r=0.5
+}
+receiveShadows{
+__variant_index:i=2
+i:i=1
+}
+renderOrder{
+__variant_index:i=2
+i:i=0
+}
+color{
+__variant_index:i=1
+f4:p4=1, 1, 1, 1
+}
+uvRect{
+__variant_index:i=1
+f4:p4=0, 0, 1, 1
+}
+}

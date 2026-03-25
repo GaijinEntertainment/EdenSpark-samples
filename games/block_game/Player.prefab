@@ -1,0 +1,49 @@
+node{
+name:t="Player"
+uid:i=457119551
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=0.25, 2, 0.25
+__mesh:i64=0
+}
+}
+}
+CharacterController{
+maxSlopeAngle:r=0.785398
+stepHeight:r=0
+upDirection:p3=0, 1, 0
+gravityScale:r=1
+}
+Player{
+eye:i=1223616609
+speed:r=5
+jumpForce:r=5
+}
+}
+node{
+name:t="camera"
+uid:i=1223616609
+parent:i=457119551
+pos:p3=0, 0.75, 0
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=1.53938
+fovAxis:i=0
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+}

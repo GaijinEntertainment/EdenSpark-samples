@@ -1,0 +1,35 @@
+node{
+name:t="testUI"
+uid:i=-1385210442
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1727, 1279
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="slider"
+uid:i=-872575736
+prefab:i64=273714387675724613
+parent:i=-1385210442
+}
+res{
+guid:t="0193ac32-b449-7f8f-995f-34d5aa779996"
+type:i=12
+refId:i64=273714387675724613
+}
+instance{
+root:i=-872575736
+node{
+uid:i=1435199738
+UIFrame{localPosition2D:p2=863.5, 639.5;}
+}
+node{
+uid:i=-1962640238
+UIFrame{size:p2=220.617, 28.62;}
+}
+}

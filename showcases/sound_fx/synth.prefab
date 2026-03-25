@@ -1,0 +1,373 @@
+node{
+name:t="synth"
+uid:i=-167510203
+pos:p3=2.7146, 3.7429, 0
+UIFrame{
+localPosition2D:p2=2.7146, -3.7429
+size:p2=709.203, 646.237
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.210971, 0.210971, 0.210971, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+SFXComopnent{
+attackSlider:i=100407097
+decaySlider:i=-1990595768
+sustainSlider:i=682782448
+releaseSlider:i=-1124539181
+}
+UIAnchor{
+anchorMin:p2=0.5, 0.5
+anchorMax:p2=0.5, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="name"
+uid:i=1192314485
+parent:i=-167510203
+pos:p3=0.494507, 265.339, 0
+UIFrame{
+localPosition2D:p2=355.096, 57.7795
+size:p2=662.593, 50
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="SOUND FX SYNTH - Press F (or A on gamepad) to play"
+color:p4=0.244833, 0.805907, 0, 1
+fontSize:r=20
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=23.8
+top:r=57.78
+right:r=22.81
+bottom:r=0
+}
+}
+node{
+name:t="divider"
+uid:i=-1769775417
+parent:i=1192314485
+pos:p3=0.000488281, -22.5, 0
+UIFrame{
+localPosition2D:p2=331.297, 47.5
+size:p2=662.593, 2
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.451477, 0.451477, 0.451477, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=1, 1
+left:r=0
+top:r=-2.5
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="sliders"
+uid:i=126747620
+parent:i=-167510203
+pos:p3=0.000488281, 84.3955, 0
+UIFrame{
+localPosition2D:p2=354.602, 238.723
+size:p2=663.72, 239.6
+pivot:p2=0.5, 0.5
+}
+}
+node{
+name:t="attack"
+uid:i=100407097
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, 120.75, 0
+}
+res{
+guid:t="0193ac32-b449-7f8f-995f-34d5aa779996"
+type:i=12
+refId:i64=273714387675724613
+}
+node{
+name:t="decay"
+uid:i=-1990595768
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, 59.8, 0
+}
+node{
+name:t="sustain"
+uid:i=682782448
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, -0.199997, 0
+}
+node{
+name:t="release"
+uid:i=-1124539181
+prefab:i64=273714387675724613
+parent:i=126747620
+pos:p3=-331.86, -60.2, 0
+}
+node{
+name:t="preview"
+uid:i=543291189
+parent:i=-167510203
+pos:p3=0.959503, -180.948, 0
+UIFrame{
+localPosition2D:p2=355.561, 504.067
+size:p2=661.663, 209.84
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=1, 1
+left:r=24.73
+top:r=-142.17
+right:r=22.81
+bottom:r=308.76
+}
+SFXPreviewComponent{__textureId:i64=0;}
+}
+instance{
+root:i=100407097
+node{
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, -0.95
+size:p2=663.72, 60
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=-0.95
+right:r=0
+bottom:r=-58.62
+}
+}
+}
+node{
+pos:p3=77.865, -30, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=77.865, 30
+size:p2=585.855, 30
+pivot:p2=0, 0.5
+}
+}
+node{
+pos:p3=0, 0, 0
+name:t="attackValue"
+uid:i=-1962640238
+UIFrame{
+localPosition2D:p2=0, 15
+size:p2=292.927, 30
+}
+}
+node{
+pos:p3=49.779, -30, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 30
+size:p2=99.558, 60
+}
+}
+}
+instance{
+root:i=-1990595768
+node{
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, 60
+size:p2=663.72, 58.62
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=60
+right:r=0
+bottom:r=0
+}
+}
+}
+node{
+pos:p3=77.865, -29.31, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=77.865, 29.31
+size:p2=585.855, 30
+pivot:p2=0, 0.5
+}
+}
+node{
+pos:p3=0, 0, 0
+name:t="decayValue"
+uid:i=-1962640238
+UIFrame{
+localPosition2D:p2=0, 15
+size:p2=292.927, 30
+}
+}
+node{
+pos:p3=49.779, -29.31, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 29.31
+size:p2=99.558, 58.62
+}
+UIText{text:t="Decay";}
+}
+}
+instance{
+root:i=682782448
+node{
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, 120
+size:p2=663.72, 58.62
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=120
+right:r=0
+bottom:r=0
+}
+}
+}
+node{
+pos:p3=77.865, -29.31, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=77.865, 29.31
+size:p2=585.855, 30
+pivot:p2=0, 0.5
+}
+}
+node{
+pos:p3=0, 0, 0
+name:t="sustainValue"
+uid:i=-1962640238
+UIFrame{
+localPosition2D:p2=0, 15
+size:p2=292.927, 30
+}
+}
+node{
+pos:p3=49.779, -29.31, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 29.31
+size:p2=99.558, 58.62
+}
+UIText{text:t="Sustain";}
+}
+}
+instance{
+root:i=-1124539181
+node{
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, 180
+size:p2=663.72, 58.62
+pivot:p2=0, 0
+}
+newComps{
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=180
+right:r=0
+bottom:r=0
+}
+}
+}
+node{
+pos:p3=77.865, -29.31, 0
+uid:i=-742979567
+UIFrame{
+localPosition2D:p2=77.865, 29.31
+size:p2=585.855, 30
+pivot:p2=0, 0.5
+}
+}
+node{
+pos:p3=0, 0, 0
+name:t="releaseValue"
+uid:i=-1962640238
+UIFrame{
+localPosition2D:p2=0, 15
+size:p2=292.927, 30
+}
+}
+node{
+pos:p3=49.779, -29.31, 0
+uid:i=-2116487811
+UIFrame{
+localPosition2D:p2=49.779, 29.31
+size:p2=99.558, 58.62
+}
+UIText{text:t="Release";}
+}
+}

@@ -1,0 +1,28 @@
+node{
+name:t="nest"
+uid:i=193173409
+BirdNest{}
+}
+node{
+name:t="nest"
+uid:i=1017471298
+parent:i=193173409
+pos:p3=0, 4.25, 0
+scl:p3=1, 8.5, 1
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=232907952451310509
+visibility:i=2047
+isStatic:b=no
+}
+}
+res{
+guid:t="0193c182-6cd3-77c2-b166-39e1825250fa"
+type:i=1
+refId:i64=-5041345716884882344
+}
+res{
+guid:t="01918eba-4fae-7ec0-8851-91c5d910a7e8"
+type:i=3
+refId:i64=232907952451310509
+}

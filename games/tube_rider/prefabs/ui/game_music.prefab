@@ -1,0 +1,5 @@
+node{
+name:t="game_music"
+uid:i=2085237573
+MusicTrackApplyBehavior{stateToApply:t="Game";}
+}

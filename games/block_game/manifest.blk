@@ -1,0 +1,8 @@
+project_guid:t="0192e7be-6113-717f-9ddc-0fdd8808abe6"
+title:t="Block Game"
+description:t="""
+Just a sandbox game with blocks
+
+"""
+preview:t=".project/preview.jpg"
+defaultPrefab:t="0192e7c4-694e-7186-8207-ee9a3024a4ca"

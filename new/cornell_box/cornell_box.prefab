@@ -1,0 +1,288 @@
+node{
+name:t="cornell_box"
+uid:i=282808711
+}
+node{
+name:t="cube"
+uid:i=-2136079687
+parent:i=282808711
+pos:p3=5, 5, 0
+scl:p3=1, 10, 20
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=yes
+color:p4=1, 0, 0, 1
+}
+}
+node{
+name:t="cube"
+uid:i=1872122463
+parent:i=282808711
+pos:p3=-5, 5, 0
+scl:p3=1, 10, 20
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=yes
+color:p4=0, 1, 0, 1
+}
+}
+node{
+name:t="cube"
+uid:i=-1679211559
+parent:i=282808711
+pos:p3=0, 5, -10.5
+rot:p4=0, 0.707107, 0, 0.707107
+scl:p3=1, 12, 11
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=yes
+color:p4=0.980392, 1, 1, 1
+}
+}
+node{
+name:t="cube"
+uid:i=-1805538386
+parent:i=282808711
+pos:p3=0, 10.5, 0
+rot:p4=0, 0, 0.707107, 0.707107
+scl:p3=1, 11, 20
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=yes
+color:p4=0.980392, 1, 1, 1
+}
+}
+node{
+name:t="cube"
+uid:i=-1320625791
+parent:i=282808711
+pos:p3=0, -0.5, 0
+rot:p4=0, 0, 0.707107, 0.707107
+scl:p3=1, 11, 20
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=yes
+color:p4=0.980392, 1, 1, 1
+}
+}
+node{
+name:t="cube"
+uid:i=861744398
+parent:i=282808711
+pos:p3=1.9468, 2.5, -5.9886
+rot:p4=0, -0.241075, 0, 0.970506
+scl:p3=2, 5, 2
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=yes
+}
+}
+node{
+name:t="sphere"
+uid:i=849713774
+parent:i=282808711
+pos:p3=-1.9831, 1.6, -5.1471
+scl:p3=3.2, 3.2, 3.2
+Mesh{
+__meshId:i64=5696195008224956559
+__materialId:i64=-3858854727249290473
+visibility:i=2047
+isStatic:b=yes
+}
+}
+node{
+name:t="cube"
+uid:i=1021190068
+parent:i=282808711
+pos:p3=0.56, 0.3195, -2.2625
+scl:p3=2, 2, 2
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=4867066692916540941
+visibility:i=2047
+isStatic:b=yes
+color:p4=0, 0, 1, 1
+}
+}
+node{
+name:t="point_light"
+uid:i=-1745347225
+parent:i=282808711
+pos:p3=0, 9.9, -4
+PointLight{
+castShadows:b=yes
+castShadowsOnlyForStatic:b=no
+intensity:r=20
+color:p3=1, 0.840143, 0.691983
+radius:r=20
+}
+}
+node{
+name:t="sphere"
+uid:i=1447397690
+parent:i=-1745347225
+scl:p3=0.4, 0.4, 0.4
+Mesh{
+__meshId:i64=5696195008224956559
+__materialId:i64=1678692784958783714
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="camera"
+uid:i=1187283321
+parent:i=282808711
+pos:p3=0, 5, 15
+rot:p4=0, 1, -0, -0
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=0.698132
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+}
+node{
+name:t="sun"
+uid:i=500003649
+parent:i=282808711
+rot:p4=-0.254887, -0.167731, -0.0449435, 0.951251
+scl:p3=2, 2, 2
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="render_setting"
+uid:i=144479805
+isRenderSettingsNode:b=yes
+parent:i=282808711
+AmbientSettings{
+ambientColor:p3=0.4, 0.4, 0.4
+ambientStrength:r=1
+ambientSource:i=0
+}
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+AntiAliasing{
+active:b=yes
+mode:i=2
+msaa_quality:i=1
+fxaa_quality:i=1
+}
+Sky{
+active:b=yes
+isHdr:b=yes
+__materialId:i64=5990970791006779606
+}
+Tonemap{
+active:b=no
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+RenderPipeline{
+hdrMode:i=1
+transparencySortMode:i=1
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+SSRSettings{
+active:b=yes
+roughnessMode:i=1
+raymarchingQuality:i=2
+}
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}
+res{
+guid:t="0193c182-51f0-70c2-b3ee-0bd097d754d6"
+type:i=1
+refId:i64=5696195008224956559
+}
+res{
+guid:t="019c923d-2939-777c-ac80-c2c3c929e28c"
+type:i=3
+refId:i64=-3858854727249290473
+}
+res{
+guid:t="019c9303-bce1-76ab-8034-0eed8a8f74d3"
+type:i=3
+refId:i64=4867066692916540941
+}
+res{
+guid:t="019c9236-a88b-72ca-bf7c-44c61ce6ebd8"
+type:i=3
+refId:i64=1678692784958783714
+}
+res{
+guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
+type:i=3
+refId:i64=5990970791006779606
+}

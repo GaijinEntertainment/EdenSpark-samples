@@ -1,0 +1,11 @@
+guid:t="c9f9bc84-8a59-4446-92c0-64096ead7aa8"
+assetType:i=3
+fileName:t=""
+sceneScale:r=1
+removeRedundantMaterials:b=yes
+preTransformVertices:b=yes
+optimizeSceneTree:b=no
+flipUvs:b=no
+flipWindingOrder:b=no
+generateNormals:t="ImportNormals"
+

@@ -1,0 +1,26 @@
+node{
+name:t="menu_label"
+uid:i=-309508422
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=800, 48
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="<text>"
+color:p4=1, 1, 1, 1
+fontSize:r=48
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}

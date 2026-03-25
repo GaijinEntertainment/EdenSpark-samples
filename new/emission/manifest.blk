@@ -1,0 +1,9 @@
+project_guid:t="019b3281-c0f8-72c1-923c-2c6fbcdb9013"
+defaultPrefab:t="019b3282-63b9-7373-af29-41ff4d738b4c"
+hdRendering:b=yes
+title:t="Emission"
+description:t="""
+Emissive materials render sample.
+Model by Ed Mackey
+"""
+preview:t=".project/preview.jpg"

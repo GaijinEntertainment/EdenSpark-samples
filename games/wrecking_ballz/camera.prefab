@@ -1,0 +1,19 @@
+node{
+name:t="camera"
+uid:i=-755992588
+pos:p3=-37.6391, 6.89308, 0
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=1.53938
+fovAxis:i=0
+orthographic:b=yes
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.905882, 0.968627, 1
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+GameCamera{prevCamPos:p3=0, 0, 0;}
+}

@@ -1,0 +1,111 @@
+node{
+name:t="slider"
+uid:i=1435199738
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=519.1, 58.62
+pivot:p2=0.5, 0.5
+}
+UIHorizontalSlider{
+interactable:b=yes
+minValue:r=0
+maxValue:r=1
+step:r=0
+handle:i=0
+filled:i=-1962640238
+slideArea:i=-742979567
+value:r=0.5
+}
+}
+node{
+name:t="valueBg"
+uid:i=-742979567
+parent:i=1435199738
+pos:p3=38.932, 0, 0
+UIFrame{
+localPosition2D:p2=298.482, 29.31
+size:p2=441.235, 28.62
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.45098, 0.45098, 0.45098, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=1, 0.5
+left:r=77.865
+top:r=0
+right:r=0
+bottom:r=15
+}
+}
+node{
+name:t="value"
+uid:i=-1962640238
+parent:i=-742979567
+pos:p3=-220.617, -0.344999, 0
+UIFrame{
+localPosition2D:p2=0, 14.655
+size:p2=441.235, 28.62
+pivot:p2=0, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.243137, 0.807843, 0, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=1
+fillOrigin:i=1
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="name"
+uid:i=-2116487811
+parent:i=1435199738
+pos:p3=-220.617, 0, 0
+UIFrame{
+localPosition2D:p2=38.933, 29.31
+size:p2=77.865, 58.62
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Attack"
+color:p4=0.243137, 0.807843, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=0.15, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}

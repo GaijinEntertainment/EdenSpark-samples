@@ -1,0 +1,244 @@
+node{
+name:t="pause"
+uid:i=806476995
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1600, 900
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0, 0, 0, 0.862745
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+AutoTakeOverCanvas{}
+MenuCommonBehavior{}
+}
+node{
+name:t="menu"
+uid:i=1220837769
+parent:i=806476995
+pos:p3=0, 300, 0
+UIFrame{
+localPosition2D:p2=800, 150
+size:p2=800, 0
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0.5, 0.5
+anchorMax:p2=0.5, 0.5
+left:r=0
+top:r=-300
+right:r=0
+bottom:r=0
+}
+UIVerticalLayout{
+alignment:t="TopCenter"
+spacing:r=20
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="title"
+uid:i=-1505755924
+prefab:i64=2143795894821049952
+parent:i=1220837769
+pos:p3=0, -70, 0
+}
+res{
+guid:t="019a8fab-80e6-7d29-a689-021793a2a5fc"
+type:i=12
+refId:i64=2143795894821049952
+}
+node{
+name:t="delim"
+uid:i=-1430136050
+parent:i=1220837769
+pos:p3=-400, -160, 0
+UIFrame{
+localPosition2D:p2=0, 160
+size:p2=800, 5
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="score"
+uid:i=534456423
+prefab:i64=7076567153810587790
+parent:i=1220837769
+pos:p3=0, -209, 0
+}
+res{
+guid:t="019a9647-4db2-7899-a35f-351fadd2afbc"
+type:i=12
+refId:i64=7076567153810587790
+}
+node{
+name:t="top_score"
+uid:i=655605261
+prefab:i64=7076567153810587790
+parent:i=1220837769
+pos:p3=0, -277, 0
+}
+node{
+name:t="delim"
+uid:i=-461305371
+parent:i=1220837769
+pos:p3=-400, -321, 0
+UIFrame{
+localPosition2D:p2=0, 321
+size:p2=800, 5
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="space"
+uid:i=-1269071894
+parent:i=1220837769
+pos:p3=-400, -346, 0
+UIFrame{
+localPosition2D:p2=0, 346
+size:p2=800, 10
+pivot:p2=0, 0
+}
+}
+node{
+name:t="continue_button"
+uid:i=892421128
+prefab:i64=1382267385076481718
+parent:i=1220837769
+pos:p3=-400, -376, 0
+}
+res{
+guid:t="01953270-a75f-7303-a740-072bd473243f"
+type:i=12
+refId:i64=1382267385076481718
+}
+node{
+name:t="return_to_menu_button"
+uid:i=-1371264002
+prefab:i64=1382267385076481718
+parent:i=1220837769
+pos:p3=-400, -444, 0
+}
+node{
+name:t="menu_music"
+uid:i=1504506545
+prefab:i64=-5280788124329574750
+parent:i=806476995
+}
+res{
+guid:t="019a4b97-9200-7859-b158-aa4cd1148368"
+type:i=12
+refId:i64=-5280788124329574750
+}
+instance{
+root:i=-1505755924
+node{
+uid:i=-1126476080
+UIFrame{localPosition2D:p2=400, 70;}
+UIText{text:t="PAUSE";}
+}
+}
+instance{
+root:i=534456423
+node{
+uid:i=-309508422
+UIFrame{localPosition2D:p2=400, 209;}
+UIText{text:t="SCORE: 0";}
+newComps{
+ScoreSetMenuBehavior{}
+}
+}
+}
+instance{
+root:i=655605261
+node{
+uid:i=-309508422
+UIFrame{localPosition2D:p2=400, 277;}
+UIText{text:t="TOP SCORE: 0";}
+newComps{
+TopScoreSetBehavior{}
+}
+}
+}
+instance{
+root:i=892421128
+node{
+uid:i=998342432
+UIFrame{
+localPosition2D:p2=0, 376
+pivot:p2=0, 0
+}
+UIText{text:t="CONTINUE";}
+newComps{
+ButtonInstantiatePrefabBehavior{prefabName:t="prefabs/ui/game_hud";}
+}
+}
+node{
+pos:p3=0, 0, 0
+uid:i=-1783325023
+}
+}
+instance{
+root:i=-1371264002
+node{
+uid:i=998342432
+UIFrame{
+localPosition2D:p2=0, 444
+pivot:p2=0, 0
+}
+UIText{text:t="RETURN TO MENU";}
+newComps{
+ButtonInstantiatePrefabBehavior{prefabName:t="prefabs/ui/main_menu";}
+}
+}
+node{
+pos:p3=0, 0, 0
+uid:i=-1783325023
+}
+}

@@ -1,0 +1,10 @@
+guid:t="be82f732-d7d1-4c1a-95af-0e88ab1db5dc"
+assetType:i=3
+fileName:t=""
+sceneScale:r=1
+removeRedundantMaterials:b=yes
+preTransformVertices:b=yes
+optimizeSceneTree:b=yes
+flipUvs:b=no
+flipWindingOrder:b=no
+generateNormals:t="ImportNormals"

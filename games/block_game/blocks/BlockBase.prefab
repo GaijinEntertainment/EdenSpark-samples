@@ -1,0 +1,111 @@
+node{
+name:t="Block"
+uid:i=1251954776
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+Block{
+opaque:b=yes
+hardness:r=1
+xp:i=-115173207
+xn:i=-477687291
+yp:i=1754505038
+yn:i=1179971464
+zp:i=771767844
+zn:i=-280254693
+}
+}
+node{
+name:t="x+"
+uid:i=-115173207
+parent:i=1251954776
+pos:p3=0.5, 0, 0
+rot:p4=0, -0.707107, 0, 0.707107
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="x-"
+uid:i=-477687291
+parent:i=1251954776
+pos:p3=-0.5, 0, 0
+rot:p4=0, 0.707107, 0, 0.707107
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="y+"
+uid:i=1754505038
+parent:i=1251954776
+pos:p3=0, 0.5, 0
+rot:p4=0.5, 0.5, -0.5, 0.5
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="y-"
+uid:i=1179971464
+parent:i=1251954776
+pos:p3=0, -0.5, 0
+rot:p4=0.5, 0.5, 0.5, -0.5
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="z+"
+uid:i=771767844
+parent:i=1251954776
+pos:p3=0, 0, 0.5
+rot:p4=0, 1, 0, -3.35276e-07
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="z-"
+uid:i=-280254693
+parent:i=1251954776
+pos:p3=0, 0, -0.5
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+res{
+guid:t="0193c182-6cd3-77c2-b166-39e1825250fa"
+type:i=1
+refId:i64=-5041345716884882344
+}

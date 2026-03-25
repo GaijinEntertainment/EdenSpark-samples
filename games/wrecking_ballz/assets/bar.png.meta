@@ -1,0 +1,9 @@
+guid:t="9b0a4d59-7499-454a-8159-be3ca8ade632"
+assetType:i=0
+textureType:t="TextureRequest"
+filter:t="Bilinear"
+addressing:t="Wrap"
+anisotropicLevel:i=4
+sRGB:b=yes
+generateMipLevels:b=yes
+format:t="A8R8G8B8"

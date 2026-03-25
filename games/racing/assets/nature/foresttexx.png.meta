@@ -1,0 +1,10 @@
+guid:t="c147aa9e-cd75-4714-aaf6-fec64400b65f"
+assetType:i=0
+textureType:t="TextureRequest"
+path:t=""
+filter:t="Bilinear"
+addressing:t="Wrap"
+anisotropicLevel:i=4
+sRGB:b=yes
+generateMipLevels:b=yes
+format:t="A8R8G8B8"

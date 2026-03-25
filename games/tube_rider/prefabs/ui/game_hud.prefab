@@ -1,0 +1,276 @@
+node{
+name:t="game_hud"
+uid:i=-499100208
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1600, 900
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+AutoTakeOverCanvas{}
+GameUpdateBehavior{}
+}
+node{
+name:t="hp"
+uid:i=791028071
+parent:i=-499100208
+pos:p3=-800, -450, 0
+UIFrame{
+localPosition2D:p2=0, 900
+size:p2=340, 80
+pivot:p2=0, 1
+}
+UIImage{
+__textureId:i64=0
+color:p4=0, 0, 0, 0.862745
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=0, 1
+left:r=0
+top:r=0
+right:r=-300
+bottom:r=800
+}
+UIHorizontalLayout{
+alignment:t="MiddleLeft"
+spacing:r=5
+padding:p4=10, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UpdateHpBarBehavior{}
+}
+node{
+name:t="image"
+uid:i=1709849767
+parent:i=791028071
+pos:p3=0, 80, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=60, 60
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 0.8, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="image"
+uid:i=1978913880
+parent:i=791028071
+pos:p3=0, 80, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=60, 60
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 0.8, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="image"
+uid:i=558544002
+parent:i=791028071
+pos:p3=0, 80, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=60, 60
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 0.8, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="image"
+uid:i=-66078338
+parent:i=791028071
+pos:p3=0, 80, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=60, 60
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 0.8, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="image"
+uid:i=978321549
+parent:i=791028071
+pos:p3=0, 80, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=60, 60
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 0.8, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="score"
+uid:i=1020953334
+parent:i=-499100208
+pos:p3=800, -450, 0
+UIFrame{
+localPosition2D:p2=1600, 900
+size:p2=340, 80
+pivot:p2=1, 1
+}
+UIImage{
+__textureId:i64=0
+color:p4=0, 0, 0, 0.862745
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIText{
+text:t="0"
+color:p4=1, 1, 1, 1
+fontSize:r=50
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=1, 1
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=-300
+bottom:r=800
+}
+ScoreSetHudBehavior{}
+}
+node{
+name:t="game_music"
+uid:i=870333007
+prefab:i64=1990726942990331342
+parent:i=-499100208
+}
+res{
+guid:t="019a4b98-2128-7092-8cb0-8c22d9e5711e"
+type:i=12
+refId:i64=1990726942990331342
+}
+node{
+name:t="pause_hint"
+uid:i=652370033
+parent:i=-499100208
+pos:p3=-780, 450, 0
+UIFrame{
+localPosition2D:p2=20, 0
+size:p2=400, 60
+pivot:p2=0, 0
+}
+UIText{
+text:t="Press Escape to pause"
+color:p4=1, 1, 1, 1
+fontSize:r=24
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=1
+effectColor:p4=0, 0, 0, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=0, 0
+left:r=20
+top:r=0
+right:r=-420
+bottom:r=-60
+}
+}

@@ -1,0 +1,62 @@
+node{
+name:t="tank"
+uid:i=224606570
+Unit{
+alive:b=no
+unitType:i=0
+position:p2=0, 0
+prevPosition:p2=0, 0
+speed:r=0
+chassisAngle:r=0
+turretAngle:r=0
+weaponCooldown:r=0
+unitPositionNode:i=224606570
+chassisNode:i=1319225750
+turretNode:i=435143792
+control{
+move:p2=0, 0
+turretDirection:p2=0, 0
+fire:b=no
+}
+aiState{
+moveToTarget:b=no
+target:p2=0, 0
+wishTarget:p2=0, 0
+timeToChangeTarget:r=0
+}
+}
+}
+node{
+name:t="tank_turret"
+uid:i=435143792
+parent:i=224606570
+Mesh{
+__meshId:i64=8415895889295626306
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="tank_chassis"
+uid:i=1319225750
+parent:i=224606570
+Mesh{
+__meshId:i64=-2356582834242282045
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+}
+res{
+guid:t="c9f9bc84-8a59-4446-92c0-64096ead7aa8"
+id:t="RootNode"
+type:i=1
+refId:i64=8415895889295626306
+}
+res{
+guid:t="bc6269e8-f6ff-419c-8a14-f2898957e520"
+id:t="RootNode"
+type:i=1
+refId:i64=-2356582834242282045
+}

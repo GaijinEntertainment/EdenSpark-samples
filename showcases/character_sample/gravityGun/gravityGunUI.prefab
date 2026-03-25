@@ -1,0 +1,119 @@
+node{
+name:t="gravityGunUI"
+uid:i=-158494079
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1643, 1236
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="text"
+uid:i=-623502006
+parent:i=-158494079
+pos:p3=-621.5, 563, 0
+UIFrame{
+localPosition2D:p2=200, 55
+size:p2=400, 110
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="""
+Get closer to pull objects
+
+Hold RMB to pull
+Hold LMB to send
+Hold SHIFT to accelerate character
+"""
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=1
+effectColor:p4=0, 0, 0, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=10, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=0, 0
+left:r=200
+top:r=55
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="crosshair"
+uid:i=-1201827563
+parent:i=-158494079
+UIFrame{
+localPosition2D:p2=821.5, 618
+size:p2=0, 0
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0.5, 0.5
+anchorMax:p2=0.5, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="vert"
+uid:i=-1825357942
+parent:i=-1201827563
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=2, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="hor"
+uid:i=240761927
+parent:i=-1201827563
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=20, 2
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}

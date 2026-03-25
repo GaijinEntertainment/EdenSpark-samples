@@ -1,0 +1,6 @@
+project_guid:t="019b3cf4-acad-70c8-9ca5-8e30b55f552f"
+defaultPrefab:t="019b3282-63b9-7373-af29-41ff4d738b4c"
+hdRendering:b=yes
+title:t="Damaged Helmet"
+description:t="Showcase of PBR materials render with emissive textures.\nModel by Ed Mackey"
+preview:t=".project/preview.jpg"

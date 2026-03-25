@@ -1,0 +1,35 @@
+node{
+name:t="obstacle_box"
+uid:i=-880360422
+}
+node{
+name:t="obstacle"
+uid:i=-965612109
+parent:i=-880360422
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=0.5
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}

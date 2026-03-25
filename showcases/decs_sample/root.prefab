@@ -1,0 +1,54 @@
+node{
+name:t="root"
+uid:i=-939822752
+}
+node{
+name:t="canvas"
+uid:i=1904563469
+parent:i=-939822752
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=800, 600
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="node"
+uid:i=2057512952
+parent:i=1904563469
+pos:p3=0, 300, 0
+UIFrame{
+localPosition2D:p2=400, 0
+size:p2=800, 50
+pivot:p2=0.5, 0
+}
+UIText{
+text:t="Press SPACE (or A on gamepad) to change rotation direction"
+color:p4=1, 1, 1, 1
+fontSize:r=26
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=0
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 0
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}

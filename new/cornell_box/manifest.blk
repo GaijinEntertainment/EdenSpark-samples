@@ -1,0 +1,6 @@
+project_guid:t="019c9212-0afe-773a-a287-c2116fca65c5"
+hdRendering:b=yes
+defaultPrefab:t="019c9269-f24b-7645-89a1-5d34c727f203"
+title:t="Cornell Box"
+description:t="A classic rendering test scene"
+preview:t=".project/preview.jpeg"
