@@ -2,7 +2,7 @@
 
 This repository contains collection of sample projects used in [EdenSpark](https://edenspark.io) game engine.
 
-All samples are written in [daslang](https://github.com/GaijinEntertainment/daScript) — [high-performance](https://daslang.io/#performance), strong and statically typed scripting language which is used by EdenSpark for writing gameplay code.
+All samples are written in [Daslang](https://github.com/GaijinEntertainment/daScript) — [high-performance](https://daslang.io/#performance), strong and statically typed scripting language which is used by EdenSpark for writing gameplay code.
 
 ## Accessing samples from the EdenSpark Launcher
 
