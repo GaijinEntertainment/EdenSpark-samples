@@ -1,0 +1,312 @@
+node{
+name:t="base_scene"
+uid:i=373802683
+}
+node{
+name:t="ground"
+uid:i=-1323623125
+parent:i=373802683
+scl:p3=100, 1, 100
+Mesh{
+__meshId:i64=-4597744817949207731
+__materialId:i64=6817153453650775137
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="collision"
+uid:i=-1117224663
+parent:i=-1323623125
+pos:p3=0, -1, 0
+Collider{
+friction:r=1
+restitution:r=0
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 2, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="wall_mx"
+uid:i=828410987
+parent:i=373802683
+pos:p3=-51, 30, 0
+scl:p3=2, 60, 101
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=5168808418661906067
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=0.5
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="wall_px"
+uid:i=-370241695
+parent:i=373802683
+pos:p3=51, 30, 0
+rot:p4=0, 1, -0, -0
+scl:p3=2, 60, 101
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=5168808418661906067
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=0.5
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="wall_mz"
+uid:i=-1389948084
+parent:i=373802683
+pos:p3=0, 30, -51
+scl:p3=101, 60, 2
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=5168808418661906067
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=0.5
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="wall_pz"
+uid:i=-1296718079
+parent:i=373802683
+pos:p3=0, 30, 51
+rot:p4=0, 1, -0, -0
+scl:p3=101, 60, 2
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=5168808418661906067
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=0.5
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="obstacles"
+uid:i=-298674694
+parent:i=373802683
+}
+node{
+name:t="obstacle_box"
+uid:i=699080534
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=45, 5, 40
+scl:p3=10, 10, 1
+}
+res{
+guid:t="01935f20-e198-7309-8ade-fbe322346976"
+type:i=12
+refId:i64=8530930737991474105
+}
+node{
+name:t="obstacle_box"
+uid:i=1608025972
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=45, 15, 40
+scl:p3=10, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=-1004997840
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=45, 25, 40
+scl:p3=10, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=323469301
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=40, 25, 45
+rot:p4=0, 0.707107, 0, 0.707107
+scl:p3=10, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=-911952447
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=40, 15, 45
+rot:p4=0, 0.707107, 0, 0.707107
+scl:p3=10, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=980305966
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=25, 30, 45
+rot:p4=0.707107, 0, 0, 0.707107
+scl:p3=30, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=171745234
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=-5, 40, 45
+rot:p4=0.707107, 0, 0, 0.707107
+scl:p3=10, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=1118792406
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=-5, 40, 15
+rot:p4=0.707107, 0, 0, 0.707107
+scl:p3=10, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=1287156167
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=-5, 55, -15
+rot:p4=0.707107, 0, 0, 0.707107
+scl:p3=10, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=-799578422
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=-5, 42.9943, 5.6659
+rot:p4=0.890191, 0, 0, 0.455587
+scl:p3=1, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=-141720363
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=-0.5425, 46.2888, 1.0943
+rot:p4=0.645044, -0.613481, 0.313971, 0.330123
+scl:p3=1, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=-1290260588
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=6.9277, 48.6161, -2.2083
+rot:p4=0.836832, -0.22737, 0.214708, 0.449351
+scl:p3=1, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=244062485
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=7.2775, 51.7336, -9.398
+rot:p4=0.749182, 0.334902, -0.0674606, 0.567465
+scl:p3=1, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=170216081
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=1.6753, 53.0643, -17.1858
+rot:p4=0.610454, 0.451845, -0.376257, 0.530672
+scl:p3=1, 10, 1
+}
+node{
+name:t="obstacle_box"
+uid:i=-1875042983
+prefab:i64=8530930737991474105
+parent:i=-298674694
+pos:p3=10, 40, 40
+scl:p3=20, 20, 1
+}
+res{
+guid:t="0193c182-87d2-773e-86b9-235585394fc2"
+type:i=1
+refId:i64=-4597744817949207731
+}
+res{
+guid:t="01935506-3ca0-71e6-804d-aad262920f6b"
+type:i=3
+refId:i64=6817153453650775137
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}
+res{
+guid:t="01935f01-30d5-758e-9ed0-388fa8a6356b"
+type:i=3
+refId:i64=5168808418661906067
+}

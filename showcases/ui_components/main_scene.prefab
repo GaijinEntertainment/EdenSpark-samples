@@ -1,0 +1,2056 @@
+node{
+name:t="root"
+uid:i=-567973104
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1156, 550
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+UIFlowLayout{
+direction:t="Horizontal"
+alignment:t="MiddleCenter"
+spacing:p2=80, 80
+padding:p4=0, 0, 0, 0
+}
+}
+node{
+name:t="color_buttons"
+uid:i=-351958340
+parent:i=-567973104
+pos:p3=-480, 120, 0
+UIFrame{
+localPosition2D:p2=98, 155
+size:p2=160, 160
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="colored_button"
+uid:i=1605315904
+parent:i=-351958340
+pos:p3=0, 65, 0
+UIFrame{
+localPosition2D:p2=80, 15
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIButton{interactable:b=no;}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIText{
+text:t="Colored Button"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="colored_button"
+uid:i=-1144529242
+parent:i=-351958340
+pos:p3=0, 25, 0
+UIFrame{
+localPosition2D:p2=80, 55
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIButton{interactable:b=yes;}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIText{
+text:t="Colored Button"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="texture_buttons"
+uid:i=-332020016
+parent:i=-567973104
+pos:p3=-240, 120, 0
+UIFrame{
+localPosition2D:p2=338, 155
+size:p2=160, 160
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="textured_button"
+uid:i=-260634214
+parent:i=-332020016
+pos:p3=0, 65, 0
+UIFrame{
+localPosition2D:p2=80, 15
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=-7585922854952956827
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIButton{interactable:b=no;}
+UITextureState{
+targetNode:i=0
+__activeTexture:i64=-3379089805314058943
+__inactiveTexture:i64=-7585922854952956827
+__hoverTexture:i64=-5203065049993974166
+__pressedTexture:i64=-2054489916354339005
+__focusedTexture:i64=-5203065049993974166
+}
+UIText{
+text:t="Textured Button"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="textured_button"
+uid:i=30401796
+parent:i=-332020016
+pos:p3=0, 25, 0
+UIFrame{
+localPosition2D:p2=80, 55
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=-3379089805314058943
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIButton{interactable:b=yes;}
+UITextureState{
+targetNode:i=0
+__activeTexture:i64=-3379089805314058943
+__inactiveTexture:i64=-7585922854952956827
+__hoverTexture:i64=-5203065049993974166
+__pressedTexture:i64=-2054489916354339005
+__focusedTexture:i64=-5203065049993974166
+}
+UIText{
+text:t="Textured Button"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="checkboxes"
+uid:i=-91079240
+parent:i=-567973104
+pos:p3=0, 120, 0
+UIFrame{
+localPosition2D:p2=578, 155
+size:p2=160, 160
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="checkbox"
+uid:i=-2035081195
+parent:i=-91079240
+pos:p3=0, 70, 0
+UIFrame{
+localPosition2D:p2=80, 10
+size:p2=160, 20
+pivot:p2=0.5, 0.5
+}
+UIHorizontalLayout{
+alignment:t="MiddleLeft"
+spacing:r=5
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+UIColorState{
+targetNode:i=1085177729
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UICheckbox{
+interactable:b=no
+toggleNode:i=-976835150
+toggleFadeDuration:r=0.1
+value:b=no
+}
+}
+node{
+name:t="background"
+uid:i=1085177729
+parent:i=-2035081195
+pos:p3=-70, 0, 0
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="checkmark"
+uid:i=-976835150
+parent:i=1085177729
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=15, 15
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=36948049120971656
+color:p4=1, 1, 1, 0
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="text"
+uid:i=-1392768861
+parent:i=-2035081195
+pos:p3=12.5, 0, 0
+UIFrame{
+localPosition2D:p2=92.5, 10
+size:p2=135, 20
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Checkbox"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="checkbox"
+uid:i=1169935971
+parent:i=-91079240
+pos:p3=0, 40, 0
+UIFrame{
+localPosition2D:p2=80, 40
+size:p2=160, 20
+pivot:p2=0.5, 0.5
+}
+UIHorizontalLayout{
+alignment:t="MiddleLeft"
+spacing:r=5
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+UIColorState{
+targetNode:i=994685769
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UICheckbox{
+interactable:b=yes
+toggleNode:i=-715214150
+toggleFadeDuration:r=0.1
+value:b=no
+}
+}
+node{
+name:t="background"
+uid:i=994685769
+parent:i=1169935971
+pos:p3=-70, 0, 0
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="checkmark"
+uid:i=-715214150
+parent:i=994685769
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=15, 15
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=36948049120971656
+color:p4=1, 1, 1, 0
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="text"
+uid:i=1801163745
+parent:i=1169935971
+pos:p3=12.5, 0, 0
+UIFrame{
+localPosition2D:p2=92.5, 10
+size:p2=135, 20
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Checkbox"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="checkbox"
+uid:i=-1994398781
+parent:i=-91079240
+pos:p3=0, 10, 0
+UIFrame{
+localPosition2D:p2=80, 70
+size:p2=160, 20
+pivot:p2=0.5, 0.5
+}
+UIHorizontalLayout{
+alignment:t="MiddleLeft"
+spacing:r=5
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+UIColorState{
+targetNode:i=175281278
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UICheckbox{
+interactable:b=yes
+toggleNode:i=212544718
+toggleFadeDuration:r=0.1
+value:b=yes
+}
+}
+node{
+name:t="background"
+uid:i=175281278
+parent:i=-1994398781
+pos:p3=-70, 0, 0
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="checkmark"
+uid:i=212544718
+parent:i=175281278
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=15, 15
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=36948049120971656
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="text"
+uid:i=-1219189248
+parent:i=-1994398781
+pos:p3=12.5, 0, 0
+UIFrame{
+localPosition2D:p2=92.5, 10
+size:p2=135, 20
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Checkbox"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="text_inputs"
+uid:i=-1987348138
+parent:i=-567973104
+pos:p3=240, 120, 0
+UIFrame{
+localPosition2D:p2=818, 155
+size:p2=160, 160
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="text_input"
+uid:i=981241745
+parent:i=-1987348138
+pos:p3=0, 65, 0
+UIFrame{
+localPosition2D:p2=80, 15
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIHorizontalLayout{
+alignment:t="MiddleCenter"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=yes
+}
+UITextInput{
+interactable:b=no
+text:t=""
+placeholder:t="Enter text"
+maxLength:i=0
+validationScenario:t="Standard"
+textField:i=1785252479
+}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIMask{
+enabled:b=yes
+showMaskSource:b=yes
+}
+}
+node{
+name:t="text"
+uid:i=1785252479
+parent:i=981241745
+UIFrame{
+localPosition2D:p2=80, 15
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=8498310867130450079
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=2, 2, 2, 2
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIText{
+text:t="Enter text"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="text_input"
+uid:i=1905730843
+parent:i=-1987348138
+pos:p3=0, 25, 0
+UIFrame{
+localPosition2D:p2=80, 55
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIHorizontalLayout{
+alignment:t="MiddleCenter"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=yes
+}
+UITextInput{
+interactable:b=yes
+text:t=""
+placeholder:t="Enter text"
+maxLength:i=0
+validationScenario:t="Standard"
+textField:i=126454982
+}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIMask{
+enabled:b=yes
+showMaskSource:b=yes
+}
+}
+node{
+name:t="text"
+uid:i=126454982
+parent:i=1905730843
+UIFrame{
+localPosition2D:p2=80, 15
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=8498310867130450079
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=2, 2, 2, 2
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIText{
+text:t="Enter text"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="dropdowns"
+uid:i=1699452572
+parent:i=-567973104
+pos:p3=480, 120, 0
+UIFrame{
+localPosition2D:p2=1058, 155
+size:p2=160, 160
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="dropdown"
+uid:i=11196509
+parent:i=1699452572
+pos:p3=0, 65, 0
+UIFrame{
+localPosition2D:p2=80, 15
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIDropDown{
+interactable:b=no
+dropdownNode:i=1510837513
+itemsContainerNode:i=223544561
+textField:i=-1249840359
+__itemPrefab:i64=0
+_selectedIndex:i=0
+items{
+vs{
+v:t="Option 1"
+v:t="Option 2"
+v:t="Option 3"
+}
+}
+}
+}
+node{
+name:t="text"
+uid:i=-1249840359
+parent:i=11196509
+pos:p3=-15, 0, 0
+UIFrame{
+localPosition2D:p2=65, 15
+size:p2=130, 30
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Option 1"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=30
+bottom:r=0
+}
+}
+node{
+name:t="arrow_frame"
+uid:i=-1900613221
+parent:i=11196509
+pos:p3=65, 0, 0
+UIFrame{
+localPosition2D:p2=145, 15
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="MiddleCenter"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=1, 0.5
+anchorMax:p2=1, 0.5
+left:r=-15
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="arrow"
+uid:i=1179611314
+parent:i=-1900613221
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=15, 15
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=7671086374533409833
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="dropdown_scroll_container"
+uid:i=1510837513
+active:b=no
+parent:i=11196509
+pos:p3=-80, 15, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=160, 96
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIMask{
+enabled:b=yes
+showMaskSource:b=no
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=1, 1
+left:r=0
+top:r=3
+right:r=0
+bottom:r=0
+}
+UIScrollArea{
+interactable:b=yes
+content:i=223544561
+maskArea:i=1510837513
+verticalScrollbar:i=-1210582703
+horizontalScrollbar:i=0
+scrollSpeed:r=5
+scrollDirection:t="Vertical"
+enableOverscroll:b=no
+elasticity:r=0.1
+maxOverscrollRatio:r=0.5
+enableInertia:b=no
+decelerationRate:r=0.135
+scrollOffset:p2=0, 0
+}
+}
+node{
+name:t="content"
+uid:i=223544561
+parent:i=1510837513
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=160, 0
+pivot:p2=0, 0
+}
+UIContentSizeFitter{
+horizontalFit:b=yes
+verticalFit:b=yes
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=3
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="vertical_scrollbar"
+uid:i=-1210582703
+parent:i=1510837513
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=10, 96
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=1, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+UIColorState{
+targetNode:i=-775215605
+activeColor:p4=0.5, 0.5, 0.5, 0.6
+inactiveColor:p4=0, 0, 0, 0
+hoverColor:p4=0.5, 0.5, 0.5, 0.8
+pressedColor:p4=0.5, 0.5, 0.5, 1
+focusedColor:p4=0.5, 0.5, 0.5, 0.6
+fadeDuration:r=0.1
+}
+UIVerticalScrollbar{
+interactable:b=yes
+visibleRatio:r=0.5
+handle:i=-775215605
+track:i=0
+value:r=0
+}
+}
+node{
+name:t="handle"
+uid:i=-775215605
+parent:i=-1210582703
+pos:p3=0, 43, 0
+UIFrame{
+localPosition2D:p2=5, 5
+size:p2=10, 10
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.5, 0.5, 0.5, 0.6
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="dropdown"
+uid:i=601140974
+parent:i=1699452572
+pos:p3=0, 25, 0
+UIFrame{
+localPosition2D:p2=80, 55
+size:p2=160, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIDropDown{
+interactable:b=yes
+dropdownNode:i=-1742251607
+itemsContainerNode:i=320433639
+textField:i=833658755
+__itemPrefab:i64=0
+_selectedIndex:i=0
+items{
+vs{
+v:t="Option 1"
+v:t="Option 2"
+v:t="Option 3"
+}
+}
+}
+}
+node{
+name:t="text"
+uid:i=833658755
+parent:i=601140974
+pos:p3=-15, 0, 0
+UIFrame{
+localPosition2D:p2=65, 15
+size:p2=130, 30
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Option 1"
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=30
+bottom:r=0
+}
+}
+node{
+name:t="arrow_frame"
+uid:i=-76157403
+parent:i=601140974
+pos:p3=65, 0, 0
+UIFrame{
+localPosition2D:p2=145, 15
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="MiddleCenter"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=1, 0.5
+anchorMax:p2=1, 0.5
+left:r=-15
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="arrow"
+uid:i=1278628870
+parent:i=-76157403
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=15, 15
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=7671086374533409833
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="dropdown_scroll_container"
+uid:i=-1742251607
+active:b=no
+parent:i=601140974
+pos:p3=-80, 15, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=160, 96
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIMask{
+enabled:b=yes
+showMaskSource:b=no
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=1, 1
+left:r=0
+top:r=3
+right:r=0
+bottom:r=0
+}
+UIScrollArea{
+interactable:b=yes
+content:i=320433639
+maskArea:i=-1742251607
+verticalScrollbar:i=1184975219
+horizontalScrollbar:i=0
+scrollSpeed:r=5
+scrollDirection:t="Vertical"
+enableOverscroll:b=no
+elasticity:r=0.1
+maxOverscrollRatio:r=0.5
+enableInertia:b=no
+decelerationRate:r=0.135
+scrollOffset:p2=0, 0
+}
+}
+node{
+name:t="content"
+uid:i=320433639
+parent:i=-1742251607
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=160, 0
+pivot:p2=0, 0
+}
+UIContentSizeFitter{
+horizontalFit:b=yes
+verticalFit:b=yes
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=3
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="vertical_scrollbar"
+uid:i=1184975219
+parent:i=-1742251607
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=10, 96
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=1, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+UIColorState{
+targetNode:i=1214273163
+activeColor:p4=0.5, 0.5, 0.5, 0.6
+inactiveColor:p4=0, 0, 0, 0
+hoverColor:p4=0.5, 0.5, 0.5, 0.8
+pressedColor:p4=0.5, 0.5, 0.5, 1
+focusedColor:p4=0.5, 0.5, 0.5, 0.6
+fadeDuration:r=0.1
+}
+UIVerticalScrollbar{
+interactable:b=yes
+visibleRatio:r=0.5
+handle:i=1214273163
+track:i=0
+value:r=0
+}
+}
+node{
+name:t="handle"
+uid:i=1214273163
+parent:i=1184975219
+pos:p3=0, 43, 0
+UIFrame{
+localPosition2D:p2=5, 5
+size:p2=10, 10
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.5, 0.5, 0.5, 0.6
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="vertical_sliders"
+uid:i=-625301546
+parent:i=-567973104
+pos:p3=-260, -120, 0
+UIFrame{
+localPosition2D:p2=318, 395
+size:p2=200, 160
+pivot:p2=0.5, 0.5
+}
+UIHorizontalLayout{
+alignment:t="MiddleCenter"
+spacing:r=20
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="vertical_slider"
+uid:i=847217015
+parent:i=-625301546
+pos:p3=-20, 0, 0
+UIFrame{
+localPosition2D:p2=80, 80
+size:p2=20, 160
+pivot:p2=0.5, 0.5
+}
+UIColorState{
+targetNode:i=1901253903
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIVerticalSlider{
+interactable:b=no
+minValue:r=0
+maxValue:r=1
+step:r=0
+handle:i=1901253903
+filled:i=-1642059442
+slideArea:i=528170269
+value:r=0
+}
+}
+node{
+name:t="slide_area"
+uid:i=528170269
+parent:i=847217015
+UIFrame{
+localPosition2D:p2=10, 80
+size:p2=20, 160
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0.5, 0
+anchorMax:p2=0.5, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="background"
+uid:i=-521039129
+parent:i=528170269
+UIFrame{
+localPosition2D:p2=10, 80
+size:p2=10, 160
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0.5, 0
+anchorMax:p2=0.5, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="filled"
+uid:i=-1642059442
+parent:i=528170269
+pos:p3=0, 80, 0
+UIFrame{
+localPosition2D:p2=10, 0
+size:p2=10, 0
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.9, 0.9, 0.9, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="handle"
+uid:i=1901253903
+parent:i=528170269
+pos:p3=0, 70, 0
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="vertical_slider"
+uid:i=2028005355
+parent:i=-625301546
+pos:p3=20, 0, 0
+UIFrame{
+localPosition2D:p2=120, 80
+size:p2=20, 160
+pivot:p2=0.5, 0.5
+}
+UIColorState{
+targetNode:i=-478671902
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIVerticalSlider{
+interactable:b=yes
+minValue:r=0
+maxValue:r=1
+step:r=0
+handle:i=-478671902
+filled:i=1928232419
+slideArea:i=1163755291
+value:r=0
+}
+}
+node{
+name:t="slide_area"
+uid:i=1163755291
+parent:i=2028005355
+UIFrame{
+localPosition2D:p2=10, 80
+size:p2=20, 160
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0.5, 0
+anchorMax:p2=0.5, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="background"
+uid:i=-340399134
+parent:i=1163755291
+UIFrame{
+localPosition2D:p2=10, 80
+size:p2=10, 160
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0.5, 0
+anchorMax:p2=0.5, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="filled"
+uid:i=1928232419
+parent:i=1163755291
+pos:p3=0, 80, 0
+UIFrame{
+localPosition2D:p2=10, 0
+size:p2=10, 0
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.9, 0.9, 0.9, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="handle"
+uid:i=-478671902
+parent:i=1163755291
+pos:p3=0, 70, 0
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="horizontal_sliders"
+uid:i=1557126366
+parent:i=-567973104
+pos:p3=20, -120, 0
+UIFrame{
+localPosition2D:p2=598, 395
+size:p2=200, 160
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="MiddleCenter"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="horizontal_slider"
+uid:i=231662659
+parent:i=1557126366
+pos:p3=0, 15, 0
+UIFrame{
+localPosition2D:p2=100, 65
+size:p2=160, 20
+pivot:p2=0.5, 0.5
+}
+UIColorState{
+targetNode:i=1532496315
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIHorizontalSlider{
+interactable:b=no
+minValue:r=0
+maxValue:r=1
+step:r=0
+handle:i=1532496315
+filled:i=1355174788
+slideArea:i=932186080
+value:r=0
+}
+}
+node{
+name:t="slide_area"
+uid:i=932186080
+parent:i=231662659
+UIFrame{
+localPosition2D:p2=80, 10
+size:p2=160, 20
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=1, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="background"
+uid:i=695814527
+parent:i=932186080
+UIFrame{
+localPosition2D:p2=80, 10
+size:p2=160, 10
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=1, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="filled"
+uid:i=1355174788
+parent:i=932186080
+pos:p3=-80, 0, 0
+UIFrame{
+localPosition2D:p2=0, 10
+size:p2=0, 10
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.9, 0.9, 0.9, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="handle"
+uid:i=1532496315
+parent:i=932186080
+pos:p3=-70, 0, 0
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="horizontal_slider"
+uid:i=1839395249
+parent:i=1557126366
+pos:p3=0, -15, 0
+UIFrame{
+localPosition2D:p2=100, 95
+size:p2=160, 20
+pivot:p2=0.5, 0.5
+}
+UIColorState{
+targetNode:i=1707215519
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIHorizontalSlider{
+interactable:b=yes
+minValue:r=0
+maxValue:r=1
+step:r=0
+handle:i=1707215519
+filled:i=-83700681
+slideArea:i=417070942
+value:r=0
+}
+}
+node{
+name:t="slide_area"
+uid:i=417070942
+parent:i=1839395249
+UIFrame{
+localPosition2D:p2=80, 10
+size:p2=160, 20
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=1, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="background"
+uid:i=410822160
+parent:i=417070942
+UIFrame{
+localPosition2D:p2=80, 10
+size:p2=160, 10
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.6, 0.6, 0.6, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=1, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="filled"
+uid:i=-83700681
+parent:i=417070942
+pos:p3=-80, 0, 0
+UIFrame{
+localPosition2D:p2=0, 10
+size:p2=0, 10
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.9, 0.9, 0.9, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="handle"
+uid:i=1707215519
+parent:i=417070942
+pos:p3=-70, 0, 0
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="scroll_area"
+uid:i=-245974059
+parent:i=-567973104
+pos:p3=280, -120, 0
+UIFrame{
+localPosition2D:p2=858, 395
+size:p2=160, 160
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.9, 0.9, 0.9, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIMask{
+enabled:b=yes
+showMaskSource:b=yes
+}
+UIScrollArea{
+interactable:b=yes
+content:i=1862179730
+maskArea:i=-245974059
+verticalScrollbar:i=-832554149
+horizontalScrollbar:i=0
+scrollSpeed:r=5
+scrollDirection:t="Both"
+enableOverscroll:b=yes
+elasticity:r=0.1
+maxOverscrollRatio:r=0.5
+enableInertia:b=yes
+decelerationRate:r=0.135
+scrollOffset:p2=0, 0
+}
+}
+node{
+name:t="content"
+uid:i=1862179730
+parent:i=-245974059
+pos:p3=-80, 80, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=160, 672
+pivot:p2=0, 0
+}
+UIText{
+text:t="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=no
+autoResizeFrame:b=yes
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=0
+}
+}
+node{
+name:t="vertical_scrollbar"
+uid:i=-832554149
+parent:i=-245974059
+pos:p3=80, 0, 0
+UIFrame{
+localPosition2D:p2=160, 80
+size:p2=10, 160
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=1, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+UIColorState{
+targetNode:i=1312102776
+activeColor:p4=0.5, 0.5, 0.5, 0.6
+inactiveColor:p4=0, 0, 0, 0
+hoverColor:p4=0.5, 0.5, 0.5, 0.8
+pressedColor:p4=0.5, 0.5, 0.5, 1
+focusedColor:p4=0.5, 0.5, 0.5, 0.6
+fadeDuration:r=0.1
+}
+UIVerticalScrollbar{
+interactable:b=yes
+visibleRatio:r=0.5
+handle:i=1312102776
+track:i=0
+value:r=0
+}
+}
+node{
+name:t="handle"
+uid:i=1312102776
+parent:i=-832554149
+pos:p3=0, 60.9524, 0
+UIFrame{
+localPosition2D:p2=5, 19.0476
+size:p2=10, 38.0952
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0.5, 0.5, 0.5, 0.6
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+res{
+guid:t="0199299d-f5d4-702a-a688-2a1e00d5ca60"
+type:i=2
+refId:i64=-7585922854952956827
+}
+res{
+guid:t="0199299c-caa2-78da-93b3-4c6d1a351055"
+type:i=2
+refId:i64=-3379089805314058943
+}
+res{
+guid:t="0199299d-9619-7d64-9ebf-c90ff6f16d93"
+type:i=2
+refId:i64=-5203065049993974166
+}
+res{
+guid:t="0199299d-cc64-7f82-9712-0cc89c3110a4"
+type:i=2
+refId:i64=-2054489916354339005
+}
+res{
+guid:t="01987fb2-e882-7f10-b022-76d766afbe7d"
+type:i=2
+refId:i64=36948049120971656
+}
+res{
+guid:t="0198eb29-1f2a-7147-8bdc-5dc2defe3c88"
+type:i=2
+refId:i64=8498310867130450079
+}
+res{
+guid:t="0198eb66-f61a-7cbe-a059-7eb6b0b5debd"
+type:i=2
+refId:i64=7671086374533409833
+}

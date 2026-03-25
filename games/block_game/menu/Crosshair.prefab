@@ -1,0 +1,49 @@
+node{
+name:t="Crosshair"
+uid:i=-580815640
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1920, 1080
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=1
+}
+}
+node{
+name:t="image"
+uid:i=-286920571
+parent:i=-580815640
+UIFrame{
+localPosition2D:p2=960, 540
+size:p2=64, 64
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=8360813657277971629
+color:p4=1, 1, 1, 0.498039
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIAnchor{
+anchorMin:p2=0.5, 0.5
+anchorMax:p2=0.5, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+res{
+guid:t="019301f9-9dd7-7d8e-a629-b6104ce15c4b"
+type:i=2
+refId:i64=8360813657277971629
+}

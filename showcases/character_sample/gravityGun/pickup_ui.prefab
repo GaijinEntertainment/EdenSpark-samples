@@ -1,0 +1,49 @@
+node{
+name:t="pickupUI"
+uid:i=1897367546
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1540, 1236
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="pickupButton"
+uid:i=1349900225
+parent:i=1897367546
+pos:p3=-650.475, -601.25, 0
+UIFrame{
+localPosition2D:p2=119.525, 1219.25
+size:p2=239.05, 33.5
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Press E to pick up"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=10, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=0, 1
+left:r=119.525
+top:r=-16.75
+right:r=-239.05
+bottom:r=1202.5
+}
+}

@@ -1,0 +1,58 @@
+node{
+name:t="button"
+uid:i=998342432
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=800, 48
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="<button>"
+color:p4=1, 1, 1, 1
+fontSize:r=48
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIButton{interactable:b=yes;}
+UIVerticalLayout{
+alignment:t="MiddleCenter"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+ButtonHoverEffectBehavior{hoverEffectNode:i=-1783325023;}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=1, 0.8, 0.6, 1
+pressedColor:p4=1, 0.8, 0.6, 1
+focusedColor:p4=1, 1, 1, 1
+fadeDuration:r=0.1
+}
+ButtonClickSoundBehavior{}
+}
+node{
+name:t="button_select_effect"
+uid:i=-1783325023
+prefab:i64=3319714156941525830
+active:b=no
+parent:i=998342432
+pos:p3=-400, 24, 0
+}
+res{
+guid:t="019531eb-e666-7771-a408-3ef41013244a"
+type:i=12
+refId:i64=3319714156941525830
+}

@@ -1,0 +1,39 @@
+shader:t="standard_diffuse_shader"
+textures{
+it0{}
+it1{}
+it2{}
+it3{}
+it4{}
+it5{}
+}
+properties{
+renderOrder{
+__variant_index:i=2
+i:i=0
+}
+transparencyMode{
+__variant_index:i=2
+i:i=0
+}
+emission{
+__variant_index:i=1
+f4:p4=0, 0, 0, 1
+}
+color{
+__variant_index:i=1
+f4:p4=0.380762, 0.512381, 0.851955, 1
+}
+atest{
+__variant_index:i=0
+f:r=0
+}
+receiveShadows{
+__variant_index:i=2
+i:i=1
+}
+uvRect{
+__variant_index:i=1
+f4:p4=0, 0, 1, 1
+}
+}

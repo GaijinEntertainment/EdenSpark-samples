@@ -1,0 +1,87 @@
+node{
+name:t="Cube"
+uid:i=1275399399
+pos:p3=0, 0.5, 0
+RigidBody{
+enabled:b=yes
+mass:r=1
+linearDamping:r=0.05
+angularDamping:r=0.05
+useGravity:b=yes
+motionType:i=0
+collisionDetection:i=0
+allowedDofs:i=63
+maxVelocity:r=500
+maxAngularVelocity:r=47.124
+interpolation:i=0
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+CenterOfMass{
+value:p3=0, 0, 0
+reapply:b=no
+reset:b=no
+}
+}
+node{
+name:t="text"
+uid:i=834090835
+parent:i=1275399399
+pos:p3=0, 0.8, 0
+Text3D{
+useDepthScale:b=yes
+text:t="""
+0.5
+CoM default
+"""
+pivot:p2=0.5, 0.5
+size:p2=0, 0
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="mesh"
+uid:i=-1337557595
+parent:i=1275399399
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=2715359244539256193
+visibility:i=2047
+isStatic:b=no
+}
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}
+res{
+guid:t="019ce251-5926-7554-8a41-878115506c37"
+type:i=3
+refId:i64=2715359244539256193
+}

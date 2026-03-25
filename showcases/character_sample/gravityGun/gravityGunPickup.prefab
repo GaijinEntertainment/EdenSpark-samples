@@ -1,0 +1,58 @@
+node{
+name:t="gravityGunPickup"
+uid:i=1527176374
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=yes
+collisionLayer:i=3
+shapes{
+shape{
+shapeType:i=2
+translation:p3=0, 0.47, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1.52, 1, 1
+__mesh:i64=0
+}
+}
+}
+PickupComponent{hint:i=-387709470;}
+}
+node{
+name:t="model"
+uid:i=-1094254662
+prefab:i64=7037143253696242950
+parent:i=1527176374
+scl:p3=20, 20, 20
+}
+res{
+guid:t="01940db8-6353-74ba-aa3f-6f765d32c4b8"
+type:i=12
+refId:i64=7037143253696242950
+}
+node{
+name:t="hint"
+uid:i=-387709470
+active:b=no
+parent:i=1527176374
+pos:p3=0, 1.2356, -0.077
+Text3D{
+useDepthScale:b=no
+text:t="Press E to pick up"
+pivot:p2=0.5, 0.5
+size:p2=0, 0
+color:p4=1, 1, 1, 1
+fontSize:r=20
+fontScaling:b=yes
+__fontId:i64=0
+effect:i=1
+effectColor:p4=0, 0, 0, 1
+effectOffset:p2=3.7, 3.7
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}

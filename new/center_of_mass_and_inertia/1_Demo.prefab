@@ -1,0 +1,276 @@
+node{
+name:t="1_CenterOfMass_Demo"
+uid:i=854445947
+}
+node{
+name:t="floor"
+uid:i=1407819893
+parent:i=854445947
+pos:p3=-2.5, -0.05, 0
+scl:p3=5, 0.1, 5
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="Cube1"
+uid:i=1830877655
+prefab:i64=-2082670835012938242
+parent:i=854445947
+pos:p3=0, 0.5, 2
+}
+res{
+guid:t="019ce243-44d9-7ce5-b650-8d821b530622"
+type:i=12
+refId:i64=-2082670835012938242
+}
+node{
+name:t="Cube2"
+uid:i=287300392
+prefab:i64=-2082670835012938242
+parent:i=854445947
+pos:p3=0, 0.5, 0
+}
+node{
+name:t="Cube3"
+uid:i=1568841915
+prefab:i64=-2082670835012938242
+parent:i=854445947
+pos:p3=0.3, 0.5, -2
+}
+node{
+name:t="Cube4"
+uid:i=-1727295706
+prefab:i64=-2082670835012938242
+parent:i=854445947
+pos:p3=-3, 0.6, 1
+rot:p4=0, 0, -0.0871557, 0.996195
+}
+node{
+name:t="Cube5"
+uid:i=-1325870036
+prefab:i64=-2082670835012938242
+parent:i=854445947
+pos:p3=-3, 0.6, -1
+rot:p4=0, 0, -0.0871557, 0.996195
+}
+node{
+name:t="LongCube"
+uid:i=281243916
+prefab:i64=1602786912803099856
+parent:i=854445947
+pos:p3=-4.5, 0.5, 0
+}
+res{
+guid:t="019ced81-5167-7a3b-bfb2-866baab58c10"
+type:i=12
+refId:i64=1602786912803099856
+}
+node{
+name:t="camera"
+uid:i=1073490792
+parent:i=854445947
+pos:p3=-2, 3.5, -5
+rot:p4=0.300706, 0, 0, 0.953717
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=1.0472
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+}
+node{
+name:t="sun"
+uid:i=-488738509
+parent:i=854445947
+pos:p3=0, 10, 0
+rot:p4=0.353553, 0.353553, -0.146447, 0.853554
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="render_setting"
+uid:i=-304267699
+isRenderSettingsNode:b=yes
+parent:i=854445947
+AmbientSettings{
+ambientColor:p3=0.4, 0.4, 0.4
+ambientStrength:r=1
+ambientSource:i=0
+}
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+AntiAliasing{
+active:b=yes
+mode:i=2
+msaa_quality:i=1
+fxaa_quality:i=1
+}
+Sky{
+active:b=yes
+isHdr:b=yes
+__materialId:i64=5990970791006779606
+}
+Tonemap{
+active:b=no
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+RenderPipeline{
+hdrMode:i=1
+transparencySortMode:i=1
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}
+res{
+guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
+type:i=3
+refId:i64=5990970791006779606
+}
+instance{
+root:i=1830877655
+node{
+uid:i=1275399399
+removedComps{compName:t="CenterOfMass";}
+}
+node{
+uid:i=834090835
+Text3D{text:t="""
+0.5 hang
+CoM default
+""";}
+}
+}
+instance{
+root:i=287300392
+node{
+uid:i=1275399399
+CenterOfMass{value:p3=0.1, 0, 0;}
+}
+node{
+uid:i=834090835
+Text3D{text:t="""
+0.5 hand
+CoM .1,0,0
+""";}
+}
+}
+instance{
+root:i=1568841915
+node{
+uid:i=1275399399
+CenterOfMass{value:p3=-0.4, 0, 0;}
+}
+node{
+uid:i=834090835
+Text3D{text:t="""
+0.8 hang
+CoM -.4,0,0
+""";}
+}
+}
+instance{
+root:i=-1727295706
+node{
+uid:i=1275399399
+removedComps{compName:t="CenterOfMass";}
+}
+node{
+uid:i=834090835
+Text3D{text:t="""
+tilted
+CoM default
+""";}
+}
+}
+instance{
+root:i=-1325870036
+node{
+uid:i=1275399399
+CenterOfMass{value:p3=0.5, 0.5, 0;}
+}
+node{
+uid:i=834090835
+Text3D{text:t="""
+tilted
+CoM .5,.5,0
+""";}
+}
+}

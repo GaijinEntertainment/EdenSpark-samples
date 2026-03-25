@@ -1,0 +1,157 @@
+node{
+name:t="button_select_effect"
+uid:i=1811407781
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=800, 48
+pivot:p2=0.5, 0.5
+}
+}
+node{
+name:t="layout_frame"
+uid:i=-1636020627
+parent:i=1811407781
+pos:p3=-400, 0, 0
+UIFrame{
+localPosition2D:p2=0, 24
+size:p2=65, 48
+pivot:p2=0, 0.5
+}
+UIHorizontalLayout{
+alignment:t="MiddleLeft"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=0, 0.5
+anchorMax:p2=0, 0.5
+left:r=0
+top:r=0
+right:r=-65
+bottom:r=-30
+}
+}
+node{
+name:t="image"
+uid:i=1268264784
+parent:i=-1636020627
+pos:p3=0, 24, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=5, 48
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="image"
+uid:i=1481633902
+parent:i=-1636020627
+pos:p3=5, 2.5, 0
+UIFrame{
+localPosition2D:p2=5, 21.5
+size:p2=30, 5
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="layout_frame"
+uid:i=-1415893343
+parent:i=1811407781
+pos:p3=400, 0, 0
+UIFrame{
+localPosition2D:p2=800, 24
+size:p2=65, 48
+pivot:p2=1, 0.5
+}
+UIHorizontalLayout{
+alignment:t="MiddleRight"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=1, 0.5
+anchorMax:p2=1, 0.5
+left:r=0
+top:r=0
+right:r=735
+bottom:r=-30
+}
+}
+node{
+name:t="image"
+uid:i=-921193463
+parent:i=-1415893343
+pos:p3=-35, 2.5, 0
+UIFrame{
+localPosition2D:p2=30, 21.5
+size:p2=30, 5
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="image"
+uid:i=684600757
+parent:i=-1415893343
+pos:p3=-5, 24, 0
+UIFrame{
+localPosition2D:p2=60, 0
+size:p2=5, 48
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}

@@ -1,0 +1,536 @@
+node{
+name:t="ui"
+uid:i=-193628274
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=800, 600
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+UILinks{
+menu:i=957873616
+menuItemsContainer:i=1194273178
+hint:i=-539697684
+player1Info:i=1533749758
+player1ControlsInfo:i=1183580818
+player1SpeedInfo:i=-1551623234
+player2Info:i=325846637
+player2ControlsInfo:i=-135614378
+player2SpeedInfo:i=169530382
+}
+}
+node{
+name:t="hint"
+uid:i=-539697684
+parent:i=-193628274
+pos:p3=-380, 280, 0
+UIFrame{
+localPosition2D:p2=20, 20
+size:p2=0, 0
+pivot:p2=0, 0.5
+}
+UIText{
+text:t="Press 'Backspace' to return to menu"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=0
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=0, 0
+left:r=20
+top:r=20
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="menu_container"
+uid:i=-794552178
+parent:i=-193628274
+UIFrame{
+localPosition2D:p2=400, 300
+size:p2=0, 0
+pivot:p2=0.5, 0.5
+}
+UIHorizontalLayout{
+alignment:t="MiddleCenter"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=0.5, 0.5
+anchorMax:p2=0.5, 0.5
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="current_selection"
+uid:i=1194273178
+parent:i=-794552178
+pos:p3=-155, 72.5, 0
+UIFrame{
+localPosition2D:p2=-155, -72.5
+size:p2=0, 145
+pivot:p2=0, 0
+}
+UIVerticalLayout{
+alignment:t="BottomRight"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="1"
+uid:i=-1030399480
+parent:i=1194273178
+pos:p3=-12, -31, 0
+UIFrame{
+localPosition2D:p2=-12, 31
+size:p2=12, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=">"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="2"
+uid:i=-1328154795
+parent:i=1194273178
+pos:p3=-12, -62, 0
+UIFrame{
+localPosition2D:p2=-12, 62
+size:p2=12, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=">"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="3"
+uid:i=-721541438
+parent:i=1194273178
+pos:p3=-12, -93, 0
+UIFrame{
+localPosition2D:p2=-12, 93
+size:p2=12, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=">"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="4"
+uid:i=671722917
+parent:i=1194273178
+pos:p3=-12, -124, 0
+UIFrame{
+localPosition2D:p2=-12, 124
+size:p2=12, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=">"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="menu"
+uid:i=957873616
+parent:i=-794552178
+pos:p3=-145, 72.5, 0
+UIFrame{
+localPosition2D:p2=-145, -72.5
+size:p2=300, 145
+pivot:p2=0, 0
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=10
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="node (1)"
+uid:i=-750083578
+parent:i=957873616
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=300, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t="Select game mode:"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="node (2)"
+uid:i=-2027712613
+parent:i=957873616
+pos:p3=0, -31, 0
+UIFrame{
+localPosition2D:p2=0, 31
+size:p2=300, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=" - Solo"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="node (3)"
+uid:i=-1602586683
+parent:i=957873616
+pos:p3=0, -62, 0
+UIFrame{
+localPosition2D:p2=0, 62
+size:p2=300, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=" - Human vs Human"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="node (4)"
+uid:i=-652295183
+parent:i=957873616
+pos:p3=0, -93, 0
+UIFrame{
+localPosition2D:p2=0, 93
+size:p2=300, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=" - Human vs AI"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="node (5)"
+uid:i=1195705376
+parent:i=957873616
+pos:p3=0, -124, 0
+UIFrame{
+localPosition2D:p2=0, 124
+size:p2=300, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t=" - AI vs AI"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="player1_hint"
+uid:i=1533749758
+parent:i=-193628274
+pos:p3=-400, -300, 0
+UIFrame{
+localPosition2D:p2=0, 600
+size:p2=0, 0
+pivot:p2=0, 0
+}
+UIVerticalLayout{
+alignment:t="BottomLeft"
+spacing:r=10
+padding:p4=20, 0, 0, 20
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=0, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="p1_controls"
+uid:i=1183580818
+parent:i=1533749758
+pos:p3=20, 72, 0
+UIFrame{
+localPosition2D:p2=20, -72
+size:p2=0, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t="Controls: W, A, S, D"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="p1_speed"
+uid:i=-1551623234
+parent:i=1533749758
+pos:p3=20, 41, 0
+UIFrame{
+localPosition2D:p2=20, -41
+size:p2=0, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t="Speed: 0 km/h"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="player2_hint"
+uid:i=325846637
+parent:i=-193628274
+pos:p3=0, -300, 0
+UIFrame{
+localPosition2D:p2=400, 600
+size:p2=0, 0
+pivot:p2=0, 0
+}
+UIVerticalLayout{
+alignment:t="BottomLeft"
+spacing:r=10
+padding:p4=20, 0, 0, 20
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=0.5, 1
+anchorMax:p2=0.5, 1
+left:r=-0
+top:r=-0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="p2_controls"
+uid:i=-135614378
+parent:i=325846637
+pos:p3=20, 72, 0
+UIFrame{
+localPosition2D:p2=20, -72
+size:p2=0, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t="Controls: I, J, K, L, or Numpad keys"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}
+node{
+name:t="p2_speed"
+uid:i=169530382
+parent:i=325846637
+pos:p3=20, 41, 0
+UIFrame{
+localPosition2D:p2=20, -41
+size:p2=0, 21
+pivot:p2=0, 0
+}
+UIText{
+text:t="Speed: 0 km/h"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=0
+fontAutoSize:p2=0, 0
+wordWrapping:b=no
+margin:p4=0, 0, 0, 0
+horAlignment:i=0
+vertAlignment:i=1
+}
+}

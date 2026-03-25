@@ -1,0 +1,112 @@
+node{
+name:t="Top"
+uid:i=909619914
+pos:p3=0, 0.5, 0
+RigidBody{
+enabled:b=yes
+mass:r=1
+linearDamping:r=0.05
+angularDamping:r=0.05
+useGravity:b=no
+motionType:i=0
+collisionDetection:i=0
+allowedDofs:i=63
+maxVelocity:r=500
+maxAngularVelocity:r=47.124
+interpolation:i=0
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=3
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 1
+params:p3=1, 0.25, 1
+__mesh:i64=0
+}
+}
+}
+Top{}
+Inertia{
+value:p3=0.075, 0.1, 0.075
+rotation:p4=0, 0, 0, 1
+rotateOnly:b=no
+reapply:b=no
+reset:b=no
+}
+InertiaPrinter{reprint:b=no;}
+}
+node{
+name:t="text"
+uid:i=-1376515378
+parent:i=909619914
+pos:p3=0, 0.6687, 0
+Text3D{
+useDepthScale:b=no
+text:t="Inertia default"
+pivot:p2=0.5, 0.5
+size:p2=0, 0
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+}
+node{
+name:t="capsule"
+uid:i=1956862086
+parent:i=909619914
+scl:p3=0.5, 0.5, 0.5
+Mesh{
+__meshId:i64=-6959024684010202747
+__materialId:i64=2715359244539256193
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="sphere"
+uid:i=-418421033
+parent:i=1956862086
+pos:p3=0.5, 0.5, 0
+scl:p3=0.25, 0.25, 0.25
+Mesh{
+__meshId:i64=5696195008224956559
+__materialId:i64=-5965389899401574439
+visibility:i=2047
+isStatic:b=no
+}
+}
+res{
+guid:t="0193c182-9c86-7123-8ba6-41c7a1059ec3"
+type:i=1
+refId:i64=-6959024684010202747
+}
+res{
+guid:t="019ce251-5926-7554-8a41-878115506c37"
+type:i=3
+refId:i64=2715359244539256193
+}
+res{
+guid:t="0193c182-51f0-70c2-b3ee-0bd097d754d6"
+type:i=1
+refId:i64=5696195008224956559
+}
+res{
+guid:t="019ce3a3-6850-7b98-9ca9-494329b9930d"
+type:i=3
+refId:i64=-5965389899401574439
+}

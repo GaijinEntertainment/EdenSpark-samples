@@ -1,0 +1,27 @@
+shader:t="standard_diffuse_shader"
+textures{
+it0{}
+it1{}
+it2{}
+it3{}
+it4{}
+it5{}
+}
+properties{
+color{
+__variant_index:i=1
+f4:p4=0.02, 0.02, 0.02, 0.02
+}
+atest{
+__variant_index:i=0
+f:r=0
+}
+receiveShadows{
+__variant_index:i=2
+i:i=1
+}
+uvRect{
+__variant_index:i=1
+f4:p4=0, 0, 1, 1
+}
+}

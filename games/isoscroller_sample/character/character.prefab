@@ -1,0 +1,143 @@
+node{
+name:t="character"
+uid:i=1
+}
+node{
+name:t="Character"
+uid:i=2
+parent:i=1
+pos:p3=-0, 1.2, 0
+rot:p4=-0.707107, 0, 0, 0.707107
+scl:p3=40, 40, 40
+Mesh{
+__meshId:i64=1453098078966492505
+__materialId:i64=-5702175547862659713
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="CharacterArmature"
+uid:i=3
+parent:i=1
+rot:p4=-0.707107, 0, 0, 0.707107
+scl:p3=40, 40, 40
+}
+node{
+name:t="root"
+uid:i=4
+parent:i=3
+rot:p4=0.707107, 0, 0, 0.707107
+}
+node{
+name:t="Body"
+uid:i=5
+parent:i=4
+pos:p3=-0, 0.02, 0
+}
+node{
+name:t="Neck"
+uid:i=6
+parent:i=5
+pos:p3=-0, 0.02, 0
+}
+node{
+name:t="Face"
+uid:i=7
+parent:i=6
+pos:p3=-0, 0.005, 0
+rot:p4=0.707107, 5.33851e-08, 5.33851e-08, 0.707107
+}
+node{
+name:t="Face_end"
+uid:i=8
+parent:i=7
+pos:p3=-0, 0.005, 0
+}
+node{
+name:t="Arm1.L"
+uid:i=9
+parent:i=5
+pos:p3=-0.0075, 0.02, 0
+rot:p4=1.94707e-07, -8.51092e-15, 1, 4.37114e-08
+}
+node{
+name:t="Arm2.L"
+uid:i=10
+parent:i=9
+pos:p3=-0, 0.01, 0
+}
+node{
+name:t="Arm2.L_end"
+uid:i=11
+parent:i=10
+pos:p3=-0, 0.01, 0
+}
+node{
+name:t="Arm1.R"
+uid:i=12
+parent:i=5
+pos:p3=0.0075, 0.02, 0
+rot:p4=-1.94707e-07, 8.51092e-15, 1, 4.37114e-08
+}
+node{
+name:t="Arm2.R"
+uid:i=13
+parent:i=12
+pos:p3=-0, 0.01, 0
+}
+node{
+name:t="Arm2.R_end"
+uid:i=14
+parent:i=13
+pos:p3=-0, 0.01, 0
+}
+node{
+name:t="Leg1.L"
+uid:i=15
+parent:i=4
+pos:p3=-0.0025, 0.02, 0
+rot:p4=-7.54979e-08, 3.30012e-15, 1, 4.37114e-08
+}
+node{
+name:t="Leg2.L"
+uid:i=16
+parent:i=15
+pos:p3=-0, 0.01, 0
+}
+node{
+name:t="Leg2.L_end"
+uid:i=17
+parent:i=16
+pos:p3=-0, 0.01, 0
+}
+node{
+name:t="Leg1.R"
+uid:i=18
+parent:i=4
+pos:p3=0.0025, 0.02, 0
+rot:p4=-1.94707e-07, 8.51092e-15, 1, 4.37114e-08
+}
+node{
+name:t="Leg2.R"
+uid:i=19
+parent:i=18
+pos:p3=-0, 0.01, 0
+}
+node{
+name:t="Leg2.R_end"
+uid:i=20
+parent:i=19
+pos:p3=-0, 0.01, 0
+}
+res{
+guid:t="0194f216-8f0a-7972-b2b3-cffc1d39a892"
+id:t="Character"
+type:i=1
+refId:i64=1453098078966492505
+}
+res{
+guid:t="0194f214-5d40-7c97-9057-4776111c61d6"
+type:i=3
+refId:i64=-5702175547862659713
+}

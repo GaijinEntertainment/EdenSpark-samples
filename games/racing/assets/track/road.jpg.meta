@@ -1,0 +1,10 @@
+guid:t="fe2b7cfb-bdae-4d8f-b581-176b0ed3143f"
+assetType:i=0
+textureType:t="TextureRequest"
+path:t=""
+filter:t="Anisotropic"
+addressing:t="Wrap"
+anisotropicLevel:i=16
+sRGB:b=yes
+generateMipLevels:b=yes
+format:t="A8R8G8B8"

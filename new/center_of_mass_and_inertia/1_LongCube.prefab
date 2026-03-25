@@ -1,0 +1,41 @@
+node{
+name:t="LongCube"
+uid:i=1275399399
+prefab:i64=-2082670835012938242
+pos:p3=0, 0.5, 0
+}
+res{
+guid:t="019ce243-44d9-7ce5-b650-8d821b530622"
+type:i=12
+refId:i64=-2082670835012938242
+}
+instance{
+root:i=1275399399
+node{
+uid:i=1275399399
+Collider{
+shapes{
+shape{
+shapeType:i=0
+translation:p3=-0.5, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=2, 1, 1
+__mesh:i64=0
+}
+}
+}
+newComps{
+CenterOfMassPrinter{reprint:b=no;}
+}
+removedComps{compName:t="CenterOfMass";}
+}
+node{
+uid:i=834090835
+Text3D{text:t="CoM default";}
+}
+node{
+pos:p3=-0.5, 0, 0
+scl:p3=2, 1, 1
+uid:i=-1337557595
+}
+}

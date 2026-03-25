@@ -1,0 +1,8 @@
+title:t="Doodle Dynamics"
+description:t="""
+Doodle your physics shapes!
+LMB - draw
+RMB - remove
+"""
+project_guid:t="0193fe01-85b9-765a-8cca-3b1a3873b074"
+preview:t=".project/screenshots/preview.jpg"

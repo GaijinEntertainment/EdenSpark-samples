@@ -1,0 +1,465 @@
+node{
+name:t="main_scene"
+uid:i=487158536
+}
+node{
+name:t="plane"
+uid:i=-1946615031
+parent:i=487158536
+scl:p3=10, 10, 10
+Mesh{
+__meshId:i64=-4597744817949207731
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+color:p4=0.537051, 0.695385, 0.550692, 1
+}
+}
+node{
+name:t="camera"
+uid:i=1961382427
+parent:i=487158536
+pos:p3=-0.7403, 1.3059, 2.3275
+rot:p4=0.031802, 0.957343, -0.115851, 0.262797
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=1.0472
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+ArcballCamera{
+minFocusDistance:r=1
+distance:r=1.5
+focusPosition:p3=0, 0, 0
+euler:p3=0.426893, -2.58545, 0
+lerpTime:r=0.05
+useScaledTime:b=no
+}
+}
+node{
+name:t="directional_light"
+uid:i=1547322388
+parent:i=487158536
+pos:p3=-0.397781, 1.12467, 1.25373
+rot:p4=0.121198, 0.878193, -0.34416, 0.30926
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="render_setting"
+uid:i=-1237270289
+isRenderSettingsNode:b=yes
+parent:i=487158536
+AmbientSettings{
+ambientColor:p3=0.4, 0.4, 0.4
+ambientStrength:r=1
+ambientSource:i=0
+}
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=yes
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=15
+shadowStart:r=0
+}
+AntiAliasing{
+active:b=yes
+mode:i=2
+msaa_quality:i=1
+fxaa_quality:i=1
+}
+Sky{
+active:b=yes
+isHdr:b=yes
+__materialId:i64=5990970791006779606
+}
+Tonemap{
+active:b=no
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+RenderPipeline{
+hdrMode:i=1
+transparencySortMode:i=1
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+}
+node{
+name:t="canvas"
+uid:i=-878035679
+parent:i=487158536
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1542, 850
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="dropdown"
+uid:i=-300020871
+parent:i=-878035679
+pos:p3=-671, 375, 0
+UIFrame{
+localPosition2D:p2=100, 50
+size:p2=180, 30
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIColorState{
+targetNode:i=0
+activeColor:p4=1, 1, 1, 1
+inactiveColor:p4=0.6, 0.6, 0.6, 1
+hoverColor:p4=0.8, 0.9, 1, 1
+pressedColor:p4=0.6, 0.8, 1, 1
+focusedColor:p4=0.8, 0.9, 1, 1
+fadeDuration:r=0.1
+}
+UIDropDown{
+interactable:b=yes
+dropdownNode:i=1693983573
+itemsContainerNode:i=-1737449993
+textField:i=855200986
+__itemPrefab:i64=0
+_selectedIndex:i=0
+items{
+vs{}
+}
+}
+UIAnimationListDropdown{
+__model:i64=-723652444342239225
+playerNode:i=-591604865
+}
+}
+node{
+name:t="text"
+uid:i=855200986
+parent:i=-300020871
+pos:p3=-15, 0, 0
+UIFrame{
+localPosition2D:p2=75, 15
+size:p2=150, 30
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t=""
+color:p4=0, 0, 0, 1
+fontSize:r=16
+fontScaling:b=yes
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=30
+bottom:r=0
+}
+}
+node{
+name:t="arrow_frame"
+uid:i=783277685
+parent:i=-300020871
+pos:p3=75, 0, 0
+UIFrame{
+localPosition2D:p2=165, 15
+size:p2=20, 20
+pivot:p2=0.5, 0.5
+}
+UIVerticalLayout{
+alignment:t="MiddleCenter"
+spacing:r=0
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=no
+childForceExpandHeight:b=no
+}
+UIAnchor{
+anchorMin:p2=1, 0.5
+anchorMax:p2=1, 0.5
+left:r=-15
+top:r=0
+right:r=0
+bottom:r=0
+}
+}
+node{
+name:t="arrow"
+uid:i=-107341917
+parent:i=783277685
+UIFrame{
+localPosition2D:p2=10, 10
+size:p2=15, 15
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=7671086374533409833
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="dropdown_scroll_container"
+uid:i=1693983573
+active:b=no
+parent:i=-300020871
+pos:p3=-90, 15, 0
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=180, 96
+pivot:p2=0, 0
+}
+UIImage{
+__textureId:i64=0
+color:p4=1, 1, 1, 1
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+UIMask{
+enabled:b=yes
+showMaskSource:b=no
+}
+UIAnchor{
+anchorMin:p2=0, 1
+anchorMax:p2=1, 1
+left:r=0
+top:r=3
+right:r=0
+bottom:r=0
+}
+UIScrollArea{
+interactable:b=yes
+content:i=-1737449993
+maskArea:i=1693983573
+verticalScrollbar:i=1074634808
+horizontalScrollbar:i=0
+scrollSpeed:r=5
+scrollDirection:t="Vertical"
+enableOverscroll:b=no
+elasticity:r=0.1
+maxOverscrollRatio:r=0.5
+enableInertia:b=no
+decelerationRate:r=0.135
+scrollOffset:p2=0, 0
+}
+}
+node{
+name:t="content"
+uid:i=-1737449993
+parent:i=1693983573
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=180, 0
+pivot:p2=0, 0
+}
+UIContentSizeFitter{
+horizontalFit:b=yes
+verticalFit:b=yes
+}
+UIVerticalLayout{
+alignment:t="TopLeft"
+spacing:r=3
+padding:p4=0, 0, 0, 0
+childForceExpandWidth:b=yes
+childForceExpandHeight:b=no
+}
+}
+node{
+name:t="vertical_scrollbar"
+uid:i=1074634808
+parent:i=1693983573
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=10, 96
+pivot:p2=0.5, 0.5
+}
+UIAnchor{
+anchorMin:p2=1, 0
+anchorMax:p2=1, 1
+left:r=0
+top:r=0
+right:r=0
+bottom:r=0
+}
+UIColorState{
+targetNode:i=623593898
+activeColor:p4=0.5, 0.5, 0.5, 0.6
+inactiveColor:p4=0, 0, 0, 0
+hoverColor:p4=0.5, 0.5, 0.5, 0.8
+pressedColor:p4=0.5, 0.5, 0.5, 1
+focusedColor:p4=0.5, 0.5, 0.5, 0.6
+fadeDuration:r=0.1
+}
+UIVerticalScrollbar{
+interactable:b=no
+visibleRatio:r=1
+handle:i=623593898
+track:i=0
+value:r=0
+}
+}
+node{
+name:t="handle"
+uid:i=623593898
+parent:i=1074634808
+UIFrame{
+localPosition2D:p2=5, 48
+size:p2=10, 96
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+color:p4=0, 0, 0, 0
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}
+node{
+name:t="robot"
+uid:i=-591604865
+prefab:i64=8945972296017090618
+parent:i=487158536
+}
+res{
+guid:t="019d1b74-43cd-7474-90eb-ebc907938442"
+type:i=12
+refId:i64=8945972296017090618
+}
+res{
+guid:t="0193c182-87d2-773e-86b9-235585394fc2"
+type:i=1
+refId:i64=-4597744817949207731
+}
+res{
+guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
+type:i=3
+refId:i64=5990970791006779606
+}
+res{
+guid:t="019d1b74-43cd-7474-90eb-ebc907938442"
+type:i=4
+refId:i64=-723652444342239225
+}
+res{
+guid:t="0198eb66-f61a-7cbe-a059-7eb6b0b5debd"
+type:i=2
+refId:i64=7671086374533409833
+}
+instance{
+root:i=-591604865
+node{
+uid:i=1
+newComps{
+Animator{enabled:b=yes;}
+SingleAnimationPlayer{
+enabled:b=yes
+loop:b=yes
+__animation:i64=-9029758521314109012
+speed:r=1
+progress:r=0
+}
+}
+}
+res{
+guid:t="019d1b74-43cd-7474-90eb-ebc907938442"
+id:t="Robot_Dance"
+type:i=7
+refId:i64=-9029758521314109012
+}
+}

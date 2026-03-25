@@ -1,0 +1,10 @@
+guid:t="1f74b61d-6c5a-4ac0-a7f7-0ee396c82179"
+assetType:i=0
+textureType:t="TextureRequest"
+path:t=""
+filter:t="Bilinear"
+addressing:t="Clamp"
+anisotropicLevel:i=4
+sRGB:b=yes
+generateMipLevels:b=yes
+format:t="A8R8G8B8"
