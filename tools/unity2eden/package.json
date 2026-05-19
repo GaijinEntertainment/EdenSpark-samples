@@ -1,0 +1,20 @@
+{
+  "name": "com.gaijin.edenspark-converter",
+  "version": "0.1.0",
+  "displayName": "EdenSpark Converter",
+  "description": "Editor tools for exporting Unity scenes and prefabs to the EdenSpark engine.",
+  "unity": "6000.3",
+  "unityRelease": "14f1",
+  "author": {
+    "name": "Gaijin Games KFT",
+    "url": "https://gaijin.net"
+  },
+  "keywords": [
+    "editor",
+    "exporter",
+    "converter",
+    "edenspark",
+    "daslang"
+  ],
+  "dependencies": {}
+}
