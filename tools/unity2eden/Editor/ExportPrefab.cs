@@ -1,7 +1,7 @@
 using System;
 using System.IO;
-using System.Text;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -40,12 +40,6 @@ public enum Interpolation : byte
 
 public class ExportPrefab
 {
-    static public string EscapeStr(string s)
-    {
-        if (s == null)
-            return s;
-        return s.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("\n", "\\n").Replace("\r", "\\r").Replace("\t", "\\t");
-    }
     public static uint GenNodeUid(System.Random rng)
     {
         var bytes = new byte[4];
@@ -58,35 +52,68 @@ public class ExportPrefab
         return val;
     }
 
-    public static void DoExportPrefab(Transform root, string prefabPath)
+    public static void DoExportPrefab(string path)
     {
-        var ctx = new PrefabExportContext { models = AssetDatabase.FindAssets("t:Model"), nodeRng = new System.Random(prefabPath.GetHashCode()) };
-
-        ExportTransform(root, ctx, 0);
-        ctx.ExportResLinks();
-        ctx.AddGeneratedFile(prefabPath, ctx.body, AssetFabriqueType.Prefab);
-
-        ctx.FlushFiles();
+        var globalCtx = new GlobalPrefabExportContext();
+        globalCtx.EnqueuePrefab(path);
+        while (globalCtx.pendingPrefabs.Count > 0)
+            DoExportPrefabImpl(globalCtx.pendingPrefabs.Dequeue(), globalCtx);
+        globalCtx.FlushFiles();
     }
 
-    public static void DoExportScene(Scene scene, string scenePath)
+    private static void DoExportPrefabImpl(string path, GlobalPrefabExportContext globalCtx)
     {
-        var ctx = new PrefabExportContext { models = AssetDatabase.FindAssets("t:Model"), nodeRng = new System.Random(scenePath.GetHashCode()) };
+        var isScene = path.EndsWith(".unity", StringComparison.OrdinalIgnoreCase);
 
-        var rootUid = GenNodeUid(ctx.nodeRng);
-        var rootName = Path.GetFileNameWithoutExtension(scenePath);
-        ctx.body.AppendLine("node{");
-        ctx.body.AppendLine($"name:t=\"{EscapeStr(rootName)}\"");
-        ctx.body.AppendLine($"uid:i={(int)rootUid}");
-        ctx.body.AppendLine("}");
+        Transform[] roots;
+        Scene scene = default;
+        GameObject prefabContents = null;
+        var sceneOpenedAdditively = false;
+        if (isScene)
+        {
+            var loaded = SceneManager.GetSceneByPath(path);
+            sceneOpenedAdditively = !loaded.isLoaded;
+            scene = sceneOpenedAdditively
+                ? EditorSceneManager.OpenScene(path, OpenSceneMode.Additive)
+                : loaded;
+            roots = Array.ConvertAll(scene.GetRootGameObjects(), go => go.transform);
+        }
+        else
+        {
+            prefabContents = PrefabUtility.LoadPrefabContents(path);
+            roots = new[] { prefabContents.transform };
+        }
 
-        foreach (var go in scene.GetRootGameObjects())
-            ExportTransform(go.transform, ctx, rootUid);
+        var ctx = new PrefabExportContext
+        {
+            globalCtx = globalCtx,
+            nodeRng = new System.Random(path.GetHashCode()),
+        };
 
-        ctx.ExportResLinks();
-        ctx.AddGeneratedFile(scenePath, ctx.body, AssetFabriqueType.Prefab);
+        uint parentUid = 0;
+        if (isScene)
+        {
+            parentUid = GenNodeUid(ctx.nodeRng);
+            ctx.body.OpenBlock("node");
+            ctx.body.AddString("name", Path.GetFileNameWithoutExtension(path));
+            ctx.body.AddInt("uid", (int)parentUid);
+            ctx.body.CloseBlock(); // node
+        }
 
-        ctx.FlushFiles();
+        foreach (var root in roots)
+            ExportTransform(root, ctx, parentUid);
+
+        ctx.globalCtx.AddGeneratedFile(path, ctx.body, AssetFabriqueType.Prefab);
+
+        if (isScene)
+        {
+            if (sceneOpenedAdditively)
+                EditorSceneManager.CloseScene(scene, true);
+        }
+        else
+        {
+            PrefabUtility.UnloadPrefabContents(prefabContents);
+        }
     }
 
     static bool FindMeshAsset(PrefabExportContext ctx, Mesh mesh, out string path)
@@ -94,7 +121,7 @@ public class ExportPrefab
         path = null;
         if (mesh == null)
             return false;
-        foreach (var guid in ctx.models)
+        foreach (var guid in ctx.globalCtx.models)
         {
             var assetPath = AssetDatabase.GUIDToAssetPath(guid);
             GameObject model = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
@@ -122,33 +149,34 @@ public class ExportPrefab
             return existingId;
 
         var c = mat.HasProperty("_Color") ? mat.color : Color.white;
-        var matBlk = new StringBuilder();
-        matBlk.AppendLine("shader:t=\"mobile_shader\"");
-        matBlk.AppendLine("userShader{}");
-        matBlk.AppendLine("textures{");
-        for (int i = 0; i < 6; i++) matBlk.AppendLine("it{}");
-        matBlk.AppendLine("}");
-        matBlk.AppendLine("properties{");
-        matBlk.AppendLine("color{");
-        matBlk.AppendLine("__variant_index:i=1");
-        matBlk.AppendLine($"f4:p4={BlkTools.Float(c.r)}, {BlkTools.Float(c.g)}, {BlkTools.Float(c.b)}, {BlkTools.Float(c.a)}");
-        matBlk.AppendLine("}");
+        var matBlk = new DataBlock();
+        matBlk.AddString("shader", "mobile_shader");
+        matBlk.OpenBlock("userShader");
+        matBlk.CloseBlock(); // userShader
+        matBlk.OpenBlock("textures");
+        for (int i = 0; i < 6; i++) { matBlk.OpenBlock("it"); matBlk.CloseBlock(); /* it */ }
+        matBlk.CloseBlock(); // textures
+        matBlk.OpenBlock("properties");
+        matBlk.OpenBlock("color");
+        matBlk.AddInt("__variant_index", 1);
+        matBlk.AddColor("f4", c);
+        matBlk.CloseBlock(); // color
         var mainTex = mat.HasProperty("_MainTex") ? mat.mainTexture : null;
         if (mainTex)
         {
             var texAssetPath = AssetDatabase.GetAssetPath(mainTex);
-            ctx.copyAssets.Add(texAssetPath);
+            ctx.globalCtx.copyAssets.Add(texAssetPath);
             var texGuid = AssetDatabase.AssetPathToGUID(texAssetPath);
             ctx.RegisterResourceRef(texGuid, ResourceFabriqueType.Texture);
-            matBlk.AppendLine("diffuse{");
-            matBlk.AppendLine("__variant_index:i=5");
-            matBlk.AppendLine($"guid:t=\"{ResourceTools.UnityGuidToEdenGuid(texGuid)}\"");
-            matBlk.AppendLine($"type:i={(int)ResourceFabriqueType.Texture}");
-            matBlk.AppendLine("}");
+            matBlk.OpenBlock("diffuse");
+            matBlk.AddInt("__variant_index", 5);
+            matBlk.AddString("guid", ResourceTools.UnityGuidToEdenGuid(texGuid));
+            matBlk.AddInt("type", (int)ResourceFabriqueType.Texture);
+            matBlk.CloseBlock(); // diffuse
         }
-        matBlk.AppendLine("}");
+        matBlk.CloseBlock(); // properties
 
-        ctx.AddGeneratedFile(matAssetPath, matBlk, AssetFabriqueType.Material);
+        ctx.globalCtx.AddGeneratedFile(matAssetPath, matBlk, AssetFabriqueType.Material);
         return ctx.RegisterResourceRef(matGuid, ResourceFabriqueType.Material);
     }
 
@@ -157,26 +185,50 @@ public class ExportPrefab
         // == MAIN INFO
         var uid = GenNodeUid(ctx.nodeRng);
         ctx.transformUids[tm] = uid;
-        ctx.body.AppendLine("node{");
-        ctx.body.AppendLine($"name:t=\"{EscapeStr(tm.name)}\"");
-        ctx.body.AppendLine($"uid:i={(int)uid}");
+        ctx.body.OpenBlock("node");
+        ctx.body.AddString("name", tm.name);
+        ctx.body.AddInt("uid", (int)uid);
+        var prefabAssetPath = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(tm.gameObject);
+        var isNestedPrefabRoot = !string.IsNullOrEmpty(prefabAssetPath);
+        if (isNestedPrefabRoot)
+        {
+            var prefabGuid = AssetDatabase.AssetPathToGUID(prefabAssetPath);
+            var prefabRefId = ctx.RegisterResourceRef(prefabGuid, ResourceFabriqueType.Prefab);
+            ctx.body.AddInt64("prefab", prefabRefId);
+
+            if (prefabAssetPath.EndsWith(".prefab", StringComparison.OrdinalIgnoreCase))
+            {
+                ctx.globalCtx.EnqueuePrefab(prefabAssetPath);
+            }
+            else
+            {
+                ctx.globalCtx.copyAssets.Add(prefabAssetPath);
+                var modelMeta = new MetaAsset(prefabAssetPath, AssetFabriqueType.Model);
+                modelMeta.content.AddFloat("sceneScale", 1);
+                ctx.globalCtx.metaAssets.Add(modelMeta);
+            }
+        }
         if (parentUid != 0)
-            ctx.body.AppendLine($"parent:i={(int)parentUid}");
+            ctx.body.AddInt("parent", (int)parentUid);
         if (!tm.gameObject.activeSelf)
-            ctx.body.AppendLine("active:b=false");
+            ctx.body.AddBool("active", false);
         var lp = tm.localPosition;
         if (lp != Vector3.zero)
-            ctx.body.AppendLine($"pos:p3={BlkTools.Vec3(lp)}");
+            ctx.body.AddVec3("pos", lp);
         var lr = tm.localRotation;
         if (lr != Quaternion.identity)
-            ctx.body.AppendLine($"rot:p4={BlkTools.Quat(lr)}");
+            ctx.body.AddQuat("rot", lr);
         var ls = tm.localScale;
         if (ls != Vector3.one)
-            ctx.body.AppendLine($"scl:p3={BlkTools.Vec3(ls)}");
+            ctx.body.AddVec3("scl", ls);
 
         var tag = tm.tag;
         if (tag != "Untagged")
-            ctx.body.AppendLine($"Tag{{name:t=\"{tag}\";}}");
+        {
+            ctx.body.OpenBlock("Tag");
+            ctx.body.AddString("name", tag);
+            ctx.body.CloseBlock(); // Tag
+        }
 
 
         // COLLIDER
@@ -223,22 +275,22 @@ public class ExportPrefab
 
         if (boxCollider || sphereCollider || capsuleCollider)
         {
-            ctx.body.AppendLine("Collider{");
-            ctx.body.AppendLine($"friction:r={BlkTools.Float(friction)}");
-            ctx.body.AppendLine($"restitution:r={BlkTools.Float(restitution)}");
-            ctx.body.AppendLine($"isSensor:b={(isTrigger ? "yes" : "no")}");
-            ctx.body.AppendLine("collisionLayer:i=0");
-            ctx.body.AppendLine("shapes{");
+            ctx.body.OpenBlock("Collider");
+            ctx.body.AddFloat("friction", friction);
+            ctx.body.AddFloat("restitution", restitution);
+            ctx.body.AddBool("isSensor", isTrigger);
+            ctx.body.AddInt("collisionLayer", 0);
+            ctx.body.OpenBlock("shapes");
 
             void EmitShape(int shapeType, Vector3 translation, Vector3 shapeParams, Quaternion rotation)
             {
-                ctx.body.AppendLine("shape{");
-                ctx.body.AppendLine($"shapeType:i={shapeType}");
-                ctx.body.AppendLine($"translation:p3={BlkTools.Vec3(translation)}");
-                ctx.body.AppendLine($"rotation:p4={BlkTools.Quat(rotation)}");
-                ctx.body.AppendLine($"params:p3={BlkTools.Vec3(shapeParams)}");
-                ctx.body.AppendLine($"__mesh:i64=0");
-                ctx.body.AppendLine("}");
+                ctx.body.OpenBlock("shape");
+                ctx.body.AddInt("shapeType", shapeType);
+                ctx.body.AddVec3("translation", translation);
+                ctx.body.AddQuat("rotation", rotation);
+                ctx.body.AddVec3("params", shapeParams);
+                ctx.body.AddInt64("__mesh", 0);
+                ctx.body.CloseBlock(); // shape
             }
 
             if (boxCollider)
@@ -259,24 +311,23 @@ public class ExportPrefab
                     new Vector3(capsuleCollider.height, capsuleCollider.radius, capsuleCollider.direction),
                     Quaternion.identity);
 
-            ctx.body.AppendLine("}"); // shapes
-            ctx.body.AppendLine("}"); // Collider
+            ctx.body.CloseBlock(); // shapes
+            ctx.body.CloseBlock(); // Collider
         }
 
         var rigidBody = tm.GetComponent<Rigidbody>();
         if (rigidBody)
         {
-            ctx.body.AppendLine("RigidBody{");
-            ctx.body.AppendLine("enabled:b=yes");
-            ctx.body.AppendLine($"mass:r={BlkTools.Float(rigidBody.mass)}");
-            ctx.body.AppendLine($"linearDamping:r={BlkTools.Float(rigidBody.linearDamping)}");
-            ctx.body.AppendLine($"angularDamping:r={BlkTools.Float(rigidBody.angularDamping)}");
-            var useGravity = rigidBody.useGravity ? "yes" : "no";
-            ctx.body.AppendLine($"useGravity:b={useGravity}");
+            ctx.body.OpenBlock("RigidBody");
+            ctx.body.AddBool("enabled", true);
+            ctx.body.AddFloat("mass", rigidBody.mass);
+            ctx.body.AddFloat("linearDamping", rigidBody.linearDamping);
+            ctx.body.AddFloat("angularDamping", rigidBody.angularDamping);
+            ctx.body.AddBool("useGravity", rigidBody.useGravity);
             var motionType = rigidBody.isKinematic ? MotionType.Kinematic : MotionType.Dynamic;
-            ctx.body.AppendLine($"motionType:i={(int)motionType}");
+            ctx.body.AddInt("motionType", (int)motionType);
             var collisionMode = rigidBody.collisionDetectionMode == CollisionDetectionMode.Discrete ? CollisionDetection.Discrete : CollisionDetection.Continuous;
-            ctx.body.AppendLine($"collisionDetection:i={(int)collisionMode}");
+            ctx.body.AddInt("collisionDetection", (int)collisionMode);
             var c = rigidBody.constraints;
             int dofs = 0;
             if ((c & RigidbodyConstraints.FreezePositionX) == 0) dofs |= 1;  // AllowTranslationX
@@ -285,9 +336,9 @@ public class ExportPrefab
             if ((c & RigidbodyConstraints.FreezeRotationX) == 0) dofs |= 8;  // AllowRotationX
             if ((c & RigidbodyConstraints.FreezeRotationY) == 0) dofs |= 16; // AllowRotationY
             if ((c & RigidbodyConstraints.FreezeRotationZ) == 0) dofs |= 32; // AllowRotationZ
-            ctx.body.AppendLine($"allowedDofs:i={dofs}");
-            ctx.body.AppendLine($"maxVelocity:r={BlkTools.Float(rigidBody.maxLinearVelocity)}");
-            ctx.body.AppendLine($"maxAngularVelocity:r={BlkTools.Float(rigidBody.maxAngularVelocity)}");
+            ctx.body.AddInt("allowedDofs", dofs);
+            ctx.body.AddFloat("maxVelocity", rigidBody.maxLinearVelocity);
+            ctx.body.AddFloat("maxAngularVelocity", rigidBody.maxAngularVelocity);
             var interpolation = rigidBody.interpolation switch
             {
                 RigidbodyInterpolation.None        => Interpolation.None,
@@ -295,8 +346,8 @@ public class ExportPrefab
                 RigidbodyInterpolation.Extrapolate => Interpolation.Extrapolate,
                 _                                  => Interpolation.None,
             };
-            ctx.body.AppendLine($"interpolation:i={(int)interpolation}");
-            ctx.body.AppendLine("}"); // RigidBody
+            ctx.body.AddInt("interpolation", (int)interpolation);
+            ctx.body.CloseBlock(); // RigidBody
 
         }
 
@@ -325,14 +376,14 @@ public class ExportPrefab
             ulong meshId = 0;
             if (FindMeshAsset(ctx, meshData, out var path))
             {
-                ctx.copyAssets.Add(path);
+                ctx.globalCtx.copyAssets.Add(path);
 
                 var guid = AssetDatabase.AssetPathToGUID(path);
                 meshId = ctx.RegisterResourceRef(guid, ResourceFabriqueType.Mesh, meshData.name);
 
                 var meshMeta = new MetaAsset(path, AssetFabriqueType.Model);
-                meshMeta.content.AppendLine($"sceneScale:r=1");
-                ctx.metaAssets.Add(meshMeta);
+                meshMeta.content.AddFloat("sceneScale", 1);
+                ctx.globalCtx.metaAssets.Add(meshMeta);
             }
             else if (meshData != null)
             {
@@ -348,19 +399,24 @@ public class ExportPrefab
 
             var materialId = ExportMaterial(renderer.sharedMaterial, ctx);
 
-            ctx.body.AppendLine("Mesh{");
-            ctx.body.AppendLine($"__meshId:i64={meshId}");
-            ctx.body.AppendLine($"__materialId:i64={materialId}");
-            ctx.body.AppendLine($"visibility:i={RendererVisibility(renderer)}");
-            ctx.body.AppendLine("isStatic:b=no");
-            ctx.body.AppendLine("}"); // Mesh
+            ctx.body.OpenBlock("Mesh");
+            ctx.body.AddInt64("__meshId", meshId);
+            ctx.body.AddInt64("__materialId", materialId);
+            ctx.body.AddInt("visibility", RendererVisibility(renderer));
+            ctx.body.AddBool("isStatic", false);
+            ctx.body.CloseBlock(); // Mesh
         }
 
-        ctx.body.AppendLine("}"); // node
+        ctx.body.CloseBlock(); // node
 
-        foreach (Transform child in tm)
+        ctx.EmitAccumulatedRefLinks();
+
+        if (!isNestedPrefabRoot)
         {
-            ExportTransform(child, ctx, uid);
+            foreach (Transform child in tm)
+            {
+                ExportTransform(child, ctx, uid);
+            }
         }
     }
 }

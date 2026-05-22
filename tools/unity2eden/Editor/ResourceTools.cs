@@ -57,7 +57,7 @@ public class MetaAsset
 {
     public string path; // Unity asset path (e.g. Assets/Prefabs/Foo.prefab)
     public AssetFabriqueType assetType;
-    public StringBuilder content = new();
+    public DataBlock content = new();
 
     public MetaAsset(string path, AssetFabriqueType assetType)
     {
@@ -65,8 +65,8 @@ public class MetaAsset
         this.assetType = assetType;
 
         var guid = AssetDatabase.AssetPathToGUID(path);
-        content.AppendLine($"guid:t=\"{ResourceTools.UnityGuidToEdenGuid(guid)}\"");
-        content.AppendLine($"assetType:i={(int)assetType}");
+        content.AddString("guid", ResourceTools.UnityGuidToEdenGuid(guid));
+        content.AddInt("assetType", (int)assetType);
     }
 }
 
@@ -77,24 +77,55 @@ public struct ResourceEntry
     public string id;
 }
 
-public class PrefabExportContext
+public class GlobalPrefabExportContext
 {
+    public Queue<string> pendingPrefabs = new Queue<string>();
+    public HashSet<string> processedPrefabs = new HashSet<string>();
     public HashSet<string> copyAssets = new HashSet<string>();
     public List<MetaAsset> metaAssets = new List<MetaAsset>();
-    public Dictionary<string, StringBuilder> generatedFiles = new Dictionary<string, StringBuilder>(); // unityPath -> content
-    public int id;
-    public System.Random nodeRng = new(0);
-    public StringBuilder body = new StringBuilder();
-    public Dictionary<Transform, uint> transformUids = new Dictionary<Transform, uint>();
-    public string[] models;
-    public Dictionary<string, ResourceEntry> resources = new Dictionary<string, ResourceEntry>();
-    public List<string> resourceOrder = new List<string>();
+    public Dictionary<string, DataBlock> generatedFiles = new Dictionary<string, DataBlock>(); // unityPath -> content
+    public string[] models = AssetDatabase.FindAssets("t:Model");
 
-    public void AddGeneratedFile(string unityPath, StringBuilder content, AssetFabriqueType assetType)
+    public void EnqueuePrefab(string path)
+    {
+        if (processedPrefabs.Add(path))
+            pendingPrefabs.Enqueue(path);
+    }
+
+    public void AddGeneratedFile(string unityPath, DataBlock content, AssetFabriqueType assetType)
     {
         generatedFiles[unityPath] = content;
         metaAssets.Add(new MetaAsset(unityPath, assetType));
     }
+
+    public void FlushFiles()
+    {
+        if (ExportGlobalConfig.IsExportFolderValid())
+        {
+            foreach (var path in copyAssets)
+            {
+                var physPath = Path.GetFullPath(path);
+                var newPath = FileTools.UnityPathToExportPath(path);
+                Debug.Log($"copying {physPath} to {newPath}");
+                FileTools.EnsureDir(newPath);
+                File.Copy(physPath, newPath, true);
+            }
+            foreach (var kv in generatedFiles)
+                FileTools.WriteTextFile(kv.Key, kv.Value);
+            foreach (var asset in metaAssets)
+                FileTools.WriteTextFile(asset.path + ".meta", asset.content);
+        }
+    }
+}
+
+public class PrefabExportContext
+{
+    public GlobalPrefabExportContext globalCtx;
+    public System.Random nodeRng = new(0);
+    public DataBlock body = new DataBlock();
+    public Dictionary<Transform, uint> transformUids = new Dictionary<Transform, uint>();
+    public Dictionary<string, ResourceEntry> resources = new Dictionary<string, ResourceEntry>();
+    public List<string> resourceOrder = new List<string>();
 
     public bool TryGetResource(string guid, out ulong refId)
     {
@@ -126,34 +157,17 @@ public class PrefabExportContext
         return RegisterResourceRef(unityGuid, assetType, id);
     }
 
-    public void ExportResLinks()
+    private int emittedResCount = 0;
+
+    public void EmitAccumulatedRefLinks()
     {
-        if (resourceOrder.Count == 0)
-            return;
-        foreach (var guid in resourceOrder)
+        for (int i = emittedResCount; i < resourceOrder.Count; i++)
         {
+            var guid = resourceOrder[i];
             var entry = resources[guid];
             ResourceLink.Serialize(body, ResourceTools.UnityGuidToEdenGuid(guid), entry.assetType, entry.refId, entry.id);
         }
-    }
-
-    public void FlushFiles()
-    {
-        if (ExportGlobalConfig.IsExportFolderValid())
-        {
-            foreach (var path in copyAssets)
-            {
-                var physPath = Path.GetFullPath(path);
-                var newPath = FileTools.UnityPathToExportPath(path);
-                Debug.Log($"copying {physPath} to {newPath}");
-                FileTools.EnsureDir(newPath);
-                File.Copy(physPath, newPath, true);
-            }
-            foreach (var kv in generatedFiles)
-                FileTools.WriteTextFile(kv.Key, kv.Value);
-            foreach (var asset in metaAssets)
-                FileTools.WriteTextFile(asset.path + ".meta", asset.content);
-        }
+        emittedResCount = resourceOrder.Count;
     }
 }
 
@@ -170,7 +184,7 @@ public static class FileTools
             Directory.CreateDirectory(dir);
     }
 
-    public static void WriteTextFile(string unityPath, StringBuilder content)
+    public static void WriteTextFile(string unityPath, DataBlock content)
     {
         if (!string.IsNullOrEmpty(unityPath))
         {
@@ -218,15 +232,15 @@ public static class FileTools
 //   byte  N-1    : type as uint8
 public static class ResourceLink
 {
-    public static void Serialize(StringBuilder sb, string edenGuid, ResourceFabriqueType assetType, ulong id, string name = "")
+    public static void Serialize(DataBlock sb, string edenGuid, ResourceFabriqueType assetType, ulong id, string name = "")
     {
-        sb.AppendLine("res{");
-        sb.AppendLine($"guid:t=\"{edenGuid}\"");
+        sb.OpenBlock("res");
+        sb.AddString("guid", edenGuid);
         if (!string.IsNullOrEmpty(name))
-            sb.AppendLine($"id:t=\"{name}\"");
-        sb.AppendLine($"type:i={(int)assetType}");
-        sb.AppendLine($"refId:i64={(long)id}");
-        sb.AppendLine("}");
+            sb.AddString("id", name);
+        sb.AddInt("type", (int)assetType);
+        sb.AddInt64("refId", id);
+        sb.CloseBlock(); // res
     }
 
     public static ulong ComputeId(byte[] guidBytes, string name, byte type)

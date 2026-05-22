@@ -23,8 +23,7 @@ Click **Create main.das in export folder** to drop a starter `main.das` at the e
 
 In the Project window context menu in **Eden** submenu, the following options are available:
 
-- **Export Prefab** — export selected prefab.
-- **Export Scene** — export selected scene.
+- **Export** — export selected prefab(s) and/or scene(s).
 - **Configure Export…** — open the settings panel (see above).
 - **Open Export Folder** — reveal the target folder in the filesystem.
 
@@ -33,4 +32,3 @@ In the Project window context menu in **Eden** submenu, the following options ar
 - Scripts export
 - Scriptable object export
 - Custom components support
-- Nested prefabs support
