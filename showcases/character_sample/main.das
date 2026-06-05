@@ -146,7 +146,7 @@ def on_initialize() {
 
 
 [export]
-def on_update() {
+def on_fixed_update() {
     get_component(player1) $(var charCtrl : CharacterController?) {
         // Process input
         let forwardLocal = cross(camera.localRight, UP) // support movement while looking up/down
@@ -220,7 +220,10 @@ Players have collision listeners (press to toggle): [5] {has_component(player1, 
             charCtrl.velocity *= float3(1, 0, 1)
         }
     }
+}
 
+[export]
+def on_update() {
     if (is_action_just_pressed("keyboardOption1")) {
         if (has_component(player1, type<RigidBody>)) {
             remove_component(player1, type<RigidBody>)
