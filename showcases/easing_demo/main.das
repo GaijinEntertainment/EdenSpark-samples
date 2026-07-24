@@ -178,7 +178,7 @@ def on_initialize() {
     add_component(camera, new Camera(orthographic = true, fovAxis = FovAxis.Horizontal, orthographicSize = 8f, fov = TO_RAD * 90f))
 
     let sun = create_node()
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     for (x in range(0, int(grid.x) + 1)) {
         let pos = float3((float(x) - grid.x * 0.5) * cellSize.x, 0, 0)

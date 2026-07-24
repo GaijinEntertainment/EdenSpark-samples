@@ -1,0 +1,43 @@
+shader:t="standard_user_shader"
+userShader{
+guid:t="019dfcdf-e829-7b5a-8a17-fcfafef679a4"
+type:i=14
+}
+textures{
+it{}
+it{}
+it{}
+it{}
+it{}
+it{}
+}
+properties{
+noiseScale{
+__variant_index:i=0
+f:r=4
+}
+transparencyMode{
+__variant_index:i=2
+i:i=1
+}
+edgeHotColor{
+__variant_index:i=4
+f3:p3=3, 2.5, 0.5
+}
+edgeColor{
+__variant_index:i=4
+f3:p3=2, 0.6, 0.1
+}
+dissolveAmount{
+__variant_index:i=0
+f:r=0.5
+}
+edgeWidth{
+__variant_index:i=0
+f:r=0.08
+}
+baseColor{
+__variant_index:i=4
+f3:p3=0.7, 0.7, 0.75
+}
+}

@@ -98,6 +98,6 @@ class Top : Component {}
 [export]
 def on_post_initialize() {
     for (comp in find_components(type<Top>)) {
-        comp.nodeId?.RigidBody.apply_rigid_body_angular_impulse(float3(0, 1, 0))
+        comp.nodeId?.RigidBody.apply_angular_impulse(float3(0, 1, 0))
     }
 }

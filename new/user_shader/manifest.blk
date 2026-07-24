@@ -1,0 +1,8 @@
+project_guid:t="019dcf11-2dda-7fcc-b8fd-a2cccf0578e4"
+defaultPrefab:t="019dcf11-8d4c-7b5b-bcaa-5449d507995d"
+hdRendering:b=yes
+title:t="3D Shader Showcase"
+description:t="User-written pixel shaders on 3D meshes: fresnel, hologram, force field, lava, dissolve, toon and more."
+preview:t=".project/preview.jpeg"
+genre:t="simulation"
+numberOfPlayers:t="single"

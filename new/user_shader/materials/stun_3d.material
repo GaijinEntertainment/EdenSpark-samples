@@ -1,0 +1,15 @@
+shader:t="standard_user_shader"
+userShader{
+guid:t="019e0813-cfcb-713a-95d5-a56686657ceb"
+type:i=14
+}
+textures{
+it{}
+it{}
+it{}
+it{}
+it{}
+it{}
+}
+properties{
+}

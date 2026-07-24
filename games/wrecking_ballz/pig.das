@@ -36,7 +36,7 @@ def pig_death(pigNode : NodeId) {
             let explosionDir = normalize(hit.pointOnBody - pigPos)
             let explosionStrengthByDist = pigDeathExplosionStrength * explosion_formula(hit.distance, pigRadius, pigDeathExplosionRadiusMul)
             get_component(hit.nodeId) $(var rigidBody : RigidBody?) {
-                apply_rigid_body_impulse(rigidBody, explosionDir * explosionStrengthByDist, hit.pointOnBody)
+                apply_impulse(rigidBody, explosionDir * explosionStrengthByDist, hit.pointOnBody)
             }
         }
     }

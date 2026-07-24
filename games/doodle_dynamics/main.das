@@ -241,7 +241,7 @@ def angle_between(a : float2, b : float2) : float {
     if (lengthMul == 0.) {
         return 0.
     }
-    let angle = acos(dot(a, b) / lengthMul)
+    let angle = safe_acos(dot(a, b) / lengthMul)
     let isCcw = cross(a, b) >= 0.
     return angle * (isCcw ? 1. : -1.)
 }

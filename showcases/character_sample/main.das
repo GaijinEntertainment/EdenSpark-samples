@@ -146,7 +146,7 @@ def on_initialize() {
 
 
 [export]
-def on_update() {
+def on_fixed_update() {
     get_component(player1) $(var charCtrl : CharacterController?) {
         // Process input
         let forwardLocal = cross(camera.localRight, UP) // support movement while looking up/down
@@ -161,7 +161,7 @@ def on_update() {
         let rotateSpeed = PI * 4. * get_delta_time()
         if (length_sq(inputVel) > 0.) {
             let inputYaw = acos(inputVel.z) * (asin(inputVel.x) >= 0. ? 1. : -1.)
-            let curYaw = acos(player1.localForward.z) * (asin(player1.localForward.x) >= 0. ? 1. : -1.)
+            let curYaw = safe_acos(player1.localForward.z) * (safe_asin(player1.localForward.x) >= 0. ? 1. : -1.)
             let yawDiff = clamp(angle_diff(curYaw, inputYaw), -rotateSpeed, rotateSpeed)
             player1.worldRotation = quat4(0, curYaw + yawDiff, 0)
         }
@@ -220,7 +220,10 @@ Players have collision listeners (press to toggle): [5] {has_component(player1, 
             charCtrl.velocity *= float3(1, 0, 1)
         }
     }
+}
 
+[export]
+def on_update() {
     if (is_action_just_pressed("keyboardOption1")) {
         if (has_component(player1, type<RigidBody>)) {
             remove_component(player1, type<RigidBody>)
@@ -281,7 +284,7 @@ class ThirdPersonCamera : Component {
     def override on_initialize() {
         if (!!centerNode) {
             let rightLocal = centerNode.worldRotation * FORWARD
-            yaw = acos(rightLocal.z) * (asin(rightLocal.x) >= 0. ? 1. : -1.)
+            yaw = safe_acos(rightLocal.z) * (safe_asin(rightLocal.x) >= 0. ? 1. : -1.)
         }
         set_mouse_cursor_locked(true)
     }

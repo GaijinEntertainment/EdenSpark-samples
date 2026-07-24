@@ -1,0 +1,130 @@
+guid:t="29a784bc-1918-49f0-b4b0-c1ed2e14691d"
+assetType:i=0
+filter:t="Point"
+addressing:t="Clamp"
+anisotropicLevel:i=4
+generateMipLevels:b=no
+usage:t="Sprite2D"
+compressTexture:b=no
+sprites{
+it{
+name:t="hexmini_0"
+rect:ip4=0, 0, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_1"
+rect:ip4=18, 0, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_2"
+rect:ip4=36, 0, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_3"
+rect:ip4=54, 0, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_4"
+rect:ip4=72, 0, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_5"
+rect:ip4=0, 18, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_6"
+rect:ip4=18, 18, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_7"
+rect:ip4=36, 18, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_8"
+rect:ip4=54, 18, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_9"
+rect:ip4=72, 18, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_10"
+rect:ip4=0, 36, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_11"
+rect:ip4=18, 36, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_12"
+rect:ip4=36, 36, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_13"
+rect:ip4=54, 36, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_14"
+rect:ip4=72, 36, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_15"
+rect:ip4=0, 54, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_16"
+rect:ip4=18, 54, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_17"
+rect:ip4=36, 54, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_18"
+rect:ip4=54, 54, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="hexmini_19"
+rect:ip4=72, 54, 18, 18
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+}

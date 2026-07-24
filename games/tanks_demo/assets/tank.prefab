@@ -23,6 +23,7 @@ moveToTarget:b=no
 target:p2=0, 0
 wishTarget:p2=0, 0
 timeToChangeTarget:r=0
+waitBeforeWandering:r=0
 }
 }
 }

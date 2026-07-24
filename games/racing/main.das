@@ -588,7 +588,7 @@ def create_track(seed : int) {
 
 def setup_light() {
     sunLight = create_node(NodeData(rotation = make_quat_from_basis_zy(float3(1, -2, 0), float3(0, 1, 0))))
-    add_component(sunLight, new DirectionLight(color = float3(1.0, 1.0, 0.98), intensity = 3.0))
+    add_component(sunLight, new DirectionalLight(color = float3(1.0, 1.0, 0.98), intensity = 3.0))
     sunLight.localRotation = make_quat_from_basis_zy(float3(0.0, -1.3, 1.0), float3(0, 1, 0))
 
     let renderSettings = create_render_settings()

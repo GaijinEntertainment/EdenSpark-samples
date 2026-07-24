@@ -3,9 +3,9 @@ assetType:i=10
 filter:t="Bilinear"
 addressing:t="Wrap"
 anisotropicLevel:i=4
-sRGB:b=yes
 generateMipLevels:b=yes
-format:t="A8R8G8B8"
+usage:t="Color"
+compressTexture:b=no
 slices{
 it{
 guid:t="0193737c-c32c-741f-9041-eb89ff2c8b45"

@@ -12,7 +12,7 @@ def init_camera() {
     let camera = create_free_camera(cameraPos, quat4(cameraEuler))
 
     let sun = create_node(NodeData(rotation = quat4(sunDirection)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let renderSettings = create_render_settings()
     get_component(renderSettings) $(var shadow : ShadowSettings?) {

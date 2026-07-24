@@ -1,0 +1,23 @@
+shader:t="standard_user_shader"
+userShader{
+guid:t="019d9748-4913-7fb7-a3ab-4d221646567a"
+type:i=14
+}
+textures{
+it{}
+it{}
+it{}
+it{}
+it{}
+it{}
+}
+properties{
+Color{
+__variant_index:i=4
+f3:p3=0.956923, 0.975744, 1
+}
+fresnelColor{
+__variant_index:i=4
+f3:p3=0, 0.16837, 0.72
+}
+}

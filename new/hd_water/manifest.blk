@@ -1,0 +1,7 @@
+title:t="HD Water"
+description:t="Sample demonstrating HDWater"
+preview:t=".project/preview.jpeg"
+genre:t="simulation"
+numberOfPlayers:t="single"
+project_guid:t="019e6052-4866-71db-9095-811a4be5bd43"
+hdRendering:b=yes

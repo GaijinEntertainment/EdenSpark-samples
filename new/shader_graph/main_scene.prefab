@@ -1,0 +1,189 @@
+node{
+name:t="main_scene"
+uid:i=596210056
+}
+node{
+name:t="render_setting"
+uid:i=-1799394508
+isRenderSettingsNode:b=yes
+parent:i=596210056
+AmbientSettings{
+ambientColor:p3=0.4, 0.4, 0.4
+ambientStrength:r=1
+ambientSource:i=0
+}
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+AntiAliasing{
+active:b=yes
+mode:i=2
+msaa_quality:i=1
+fxaa_quality:i=1
+}
+Sky{
+active:b=yes
+isHdr:b=yes
+__materialId:i64=5990970791006779606
+}
+Tonemap{
+active:b=no
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+RenderPipeline{
+hdrMode:i=1
+transparencySortMode:i=1
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+}
+node{
+name:t="mesh1"
+uid:i=499250666
+parent:i=596210056
+pos:p3=-1, -0.3145, 0
+Mesh{
+__meshId:i64=-6162809765373925292
+__materialId:i64=-2392575987032585926
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="mesh2"
+uid:i=-277760903
+parent:i=596210056
+pos:p3=1, -0.3145, 0
+Mesh{
+__meshId:i64=-6162809765373925292
+__materialId:i64=-1887026399944199304
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="directional_light"
+uid:i=-1326468772
+parent:i=596210056
+pos:p3=-15.8694, 2.21565, 4.40136
+rot:p4=-0.0295442, 0.0905927, 0.00268871, 0.995446
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="camera"
+uid:i=-620170674
+parent:i=596210056
+pos:p3=1.81146, 1.95254, 2.72957
+rot:p4=0.00278573, -0.981384, 0.191502, 0.0142759
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=1.0472
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+ArcballCamera{
+minFocusDistance:r=0.3
+distance:r=4
+focusPosition:p3=0, 0.5, 0
+euler:p3=0.4056, -3.1, 0
+lerpTime:r=0.05
+useScaledTime:b=no
+}
+}
+node{
+name:t="plane"
+uid:i=1629465452
+parent:i=596210056
+scl:p3=1000, 1000, 1000
+Mesh{
+__meshId:i64=-4597744817949207731
+__materialId:i64=-7498271946878470184
+visibility:i=2047
+isStatic:b=no
+}
+}
+res{
+guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
+type:i=3
+refId:i64=5990970791006779606
+}
+res{
+guid:t="019d54b8-d0e0-7826-8691-4bb8bf2915e2"
+id:t="defaultobject"
+type:i=1
+refId:i64=-6162809765373925292
+}
+res{
+guid:t="019d02a0-33e2-73ac-bde4-a359ba03c101"
+type:i=3
+refId:i64=-2392575987032585926
+}
+res{
+guid:t="019d0297-c231-7153-b840-f656d36c73f4"
+type:i=3
+refId:i64=-1887026399944199304
+}
+res{
+guid:t="0193c182-87d2-773e-86b9-235585394fc2"
+type:i=1
+refId:i64=-4597744817949207731
+}
+res{
+guid:t="019d54e7-c1af-761d-9f09-e6ff67f4347c"
+type:i=3
+refId:i64=-7498271946878470184
+}

@@ -8,10 +8,10 @@ isSensor:b=no
 collisionLayer:i=0
 shapes{
 shape{
-shapeType:i=0
+shapeType:i=2
 translation:p3=0, 0, 0
 rotation:p4=0, 0, 0, 1
-params:p3=0.25, 2, 0.25
+params:p3=1.8, 0.45, 1
 __mesh:i64=0
 }
 }
@@ -20,12 +20,12 @@ CharacterController{
 maxSlopeAngle:r=0.785398
 stepHeight:r=0
 upDirection:p3=0, 1, 0
-gravityScale:r=1
+gravityScale:r=2.5
 }
 Player{
 eye:i=1223616609
 speed:r=5
-jumpForce:r=5
+jumpForce:r=8
 }
 }
 node{

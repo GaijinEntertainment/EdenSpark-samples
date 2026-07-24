@@ -121,7 +121,7 @@ def on_initialize() {
     toggle_free_camera(freeCamera, freeCameraPos, quat4(look_at(freeCameraPos, float3(0, 0, -100), float3(0, 1, 0))), true)
 
     let sun = create_node(NodeData(rotation = quat4(PI / 3f, -PI * 0.25f, PI / 3f)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let water = create_node(NodeData(position = float3(0, waterHeight, 0), scale = worldScale))
     let waterMaterial = request_material("assets/water/water.material")

@@ -8,6 +8,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=0, 0, 0, 0.862745
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -80,6 +81,7 @@ pivot:p2=0, 0
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -164,6 +166,7 @@ pivot:p2=0, 0
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -210,7 +213,7 @@ guid:t="019a4b97-9200-7859-b158-aa4cd1148368"
 type:i=12
 refId:i64=-5280788124329574750
 }
-instance{
+diff{
 root:i=-1278889532
 node{
 uid:i=-1126476080
@@ -218,7 +221,7 @@ UIFrame{localPosition2D:p2=400, 80;}
 UIText{text:t="OPTIONS";}
 }
 }
-instance{
+diff{
 root:i=765594941
 node{
 uid:i=1246358855
@@ -235,7 +238,7 @@ SetVolumeBehavior{soundsCategory:t="Music";}
 }
 }
 }
-instance{
+diff{
 root:i=-939761887
 node{
 uid:i=1246358855
@@ -252,7 +255,7 @@ SetVolumeBehavior{soundsCategory:t="SFX";}
 }
 }
 }
-instance{
+diff{
 root:i=1135663326
 node{
 uid:i=1246358855
@@ -269,9 +272,9 @@ SetInputSensitivityBehavior{}
 }
 }
 }
-instance{
+diff{
 root:i=1784540550
-instance{
+diff{
 root:i=-1592314532
 node{
 uid:i=998342432
@@ -290,7 +293,7 @@ uid:i=-923454721
 UIText{text:t="TURN MODE";}
 }
 }
-instance{
+diff{
 root:i=771213271
 node{
 uid:i=998342432

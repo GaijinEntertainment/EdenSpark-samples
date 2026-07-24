@@ -18,38 +18,39 @@ let OBSTACLE_FOR_UNIT = 1 << 1
 
 let levels : array<string> <- [
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
-    "a..........................a" +
-    "a............1..xxxxxxxx...a" +
-    "a...............x......x...a" +
-    "a...aaaaaaaaa...x..2...x...a" +
-    "a...........a...xxxxxxxx...a" +
-    "a...........a..............a" +
-    "a.....0.....x..............a" +
-    "a...........x......a.......a" +
-    "a...........aooooo.a..1....a" +
-    "a..................a.......a" +
-    "a..................aaaaa...a" +
-    "a..........................a" +
-    "a..........................a" +
-    "a..........................a" +
+    "a0...aa..............aa...1a" +
+    "a....a................a....a" +
+    "a....a....o......o....a....a" +
+    "aaa..a....aaxaaxaa....a..aaa" +
+    "a.........a......a.........a" +
+    "a.........x......x.........a" +
+    "a......aaa..xxxx..aaa......a" +
+    "a......aaa..xxxx..aaa......a" +
+    "a.........x......x.........a" +
+    "a.........a......a.........a" +
+    "aaa..a....aaxaaxaa....a..aaa" +
+    "a....a....o......o....a....a" +
+    "a....a................a....a" +
+    "a1...aa..............aa...1a" +
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
 
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
     "a..........................a" +
+    "a....aaaaaa......aaaaaa....a" +
+    "a....a....a......a....a....a" +
+    "a.0....xx.xxx..xxx.xx....1.a" +
+    "a....a....a......a....a....a" +
+    "aaaaaaa..aa......aa..aaaaaaa" +
+    ".....a.......oo.......a....." +
+    ".....a.......oo.......a....." +
+    "aaaaaaa..aa......aa..aaaaaaa" +
+    "a....a....a......a....a....a" +
+    "a.1....xx.xxx..xxx.xx....1.a" +
+    "a....a....a......a....a....a" +
+    "a....aaaaaa......aaaaaa....a" +
     "a..........................a" +
-    "a..........................a" +
-    "a...................1......a" +
-    "a..........................a" +
-    "a..........................a" +
-    "a..........................a" +
-    "a.........0................a" +
-    "a..........................a" +
-    "a..........................a" +
-    "a..........................a" +
-    "a..........................a" +
-    "a..........................a" +
-    "a..........................a" +
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 ]
 
 
@@ -145,6 +146,7 @@ struct AIState {
     target : float2
     wishTarget : float2
     timeToChangeTarget : float
+    waitBeforeWandering : float
 }
 
 class Unit : Component {
@@ -168,7 +170,7 @@ class Unit : Component {
     }
 }
 
-let unitTypeDescriptions : UnitTypeDescription[3] <- fixed_array(
+let unitTypeDescriptions : UnitTypeDescription[2] <- fixed_array(
     UnitTypeDescription(
         maxSpeed = 3.0,
         acceleration = 15.0,
@@ -176,7 +178,7 @@ let unitTypeDescriptions : UnitTypeDescription[3] <- fixed_array(
         outerSoftRadius = 0.49,
         chassisAngularSpeed = 7.0,
         turretAngularSpeed = 10.0,
-        color = color32_to_float4(0xFFFFFFFF),
+        color = color32_to_float4(0xFFDEBD37),
         explosionRadius = 4.0,
         weapon = 0
     ),
@@ -188,27 +190,15 @@ let unitTypeDescriptions : UnitTypeDescription[3] <- fixed_array(
         outerSoftRadius = 0.49,
         chassisAngularSpeed = 7.0,
         turretAngularSpeed = 10.0,
-        color = color32_to_float4(0xFFAF90FF),
+        color = color32_to_float4(0xFFDADBDC),
         explosionRadius = 4.0,
         weapon = 0
     ),
-
-    UnitTypeDescription(
-        maxSpeed = 3.0,
-        acceleration = 8.0,
-        innerRadius = 0.44,
-        outerSoftRadius = 0.49,
-        chassisAngularSpeed = 7.0,
-        turretAngularSpeed = 10.0,
-        color = color32_to_float4(0xFFFF905F),
-        explosionRadius = 4.0,
-        weapon = 0
-    )
 )
 
 
 
-let bulletTypeDescriptions : BulletTypeDescription[3] <- fixed_array(
+let bulletTypeDescriptions : BulletTypeDescription[2] <- fixed_array(
     BulletTypeDescription(
         speed = 6.0,
         radius = 0.1,
@@ -238,21 +228,6 @@ let bulletTypeDescriptions : BulletTypeDescription[3] <- fixed_array(
         particleColor = 0x70FFFFFF,
         particleTimeToLive = 1.0
     ),
-
-    BulletTypeDescription(
-        speed = 6.0,
-        radius = 0.1,
-        explosionRadius = 0.0,
-        maxCollisions = 2,
-        timeToLive = 8.0,
-        color = 0xFFFF00FF,
-        timeToSpawnParticle = 0.04,
-        resource = request_prefab("assets/bullet.fbx"),
-        particleTexture = explosion_texture,
-        particleSize = 0.25,
-        particleColor = 0xE0FFFFFF,
-        particleTimeToLive = 1.0
-    )
 )
 
 
@@ -297,7 +272,7 @@ let cellDescriptions : CellDescription[4] <- fixed_array(
 
     CellDescription(
         levelSymbol = 'x',
-        color = 0xFFFFCF90,
+        color = 0xFFDE9433,
         height = 2,
         obstacle = OBSTACLE_FOR_BULLET | OBSTACLE_FOR_UNIT,
         descructableByBullet = true,
@@ -307,7 +282,7 @@ let cellDescriptions : CellDescription[4] <- fixed_array(
 
     CellDescription(
         levelSymbol = 'o',
-        color = 0xFFA0A0FF,
+        color = 0xFFE5DC79,
         height = 0,
         obstacle = OBSTACLE_FOR_UNIT,
         descructableByBullet = false,
@@ -325,6 +300,12 @@ var player_index : int
 var bullets : array<Bullet>
 var particles : array<Particle>
 var cursor_node : NodeId
+var game_result_node : NodeId
+var game_result_subtitle_node : NodeId
+var game_overlay_node : NodeId
+var restart_timer : float = -1.0
+var prev_enter_pressed : bool = false
+var game_over_is_victory : bool = false
 
 
 def load_level(str : string) {
@@ -634,7 +615,18 @@ def estimate_ai_position(unit_index : int, target_pos : float2) : float {
     if (trace_hit(u.position, target_pos, 0.4, OBSTACLE_FOR_UNIT)) {
         return -1e6
     }
-    var score = -length(target_pos - units[player_index].position)
+    var nearestEnemyPos = u.position
+    var nearestDist = 1e9
+    for (other, otherIdx in units, count()) {
+        if (other.alive && otherIdx != unit_index) {
+            let d = length(other.position - u.position)
+            if (d < nearestDist) {
+                nearestDist = d
+                nearestEnemyPos = other.position
+            }
+        }
+    }
+    var score = -length(target_pos - nearestEnemyPos)
     let ds1 = dot(angle_to_direction(u.chassisAngle), normalize(target_pos - u.position))
     let ds2 = dot(angle_to_direction(u.chassisAngle + PI), normalize(target_pos - u.position))
     score += max(ds1, ds2) * 3.0
@@ -644,7 +636,7 @@ def estimate_ai_position(unit_index : int, target_pos : float2) : float {
             score += max(length(target_pos - otherUnit.position) - 3.0, 0.0)
         }
     }
-    if (!trace_hit(target_pos, units[player_index].position, 0.5, OBSTACLE_FOR_BULLET)) {
+    if (!trace_hit(target_pos, nearestEnemyPos, 0.5, OBSTACLE_FOR_BULLET)) {
         score += 50.0
     }
     return score
@@ -653,6 +645,24 @@ def estimate_ai_position(unit_index : int, target_pos : float2) : float {
 
 def get_next_ai_move_target(unit_index : int) : float2 {
     assume u = units[unit_index]
+    if (u.aiState.waitBeforeWandering < 0.0) {
+        var bestPos = u.position
+        var bestScore = -1e9
+        for (i in range(20)) {
+            let pos = float2(
+                random_range(1.0, float(MAP_SIZE_X - 1)),
+                random_range(1.0, float(MAP_SIZE_Y - 1))
+            )
+            if (!trace_hit(u.position, pos, 0.4, OBSTACLE_FOR_UNIT)) {
+                let score = get_level_sdf(pos, OBSTACLE_FOR_UNIT)
+                if (score > bestScore) {
+                    bestScore = score
+                    bestPos = pos
+                }
+            }
+        }
+        return bestPos
+    }
     var bestPos = u.position
     var bestScore = estimate_ai_position(unit_index, bestPos)
     for (i in range(30)) {
@@ -697,15 +707,59 @@ def update_units_ai(dt : float) {
                 u.aiState.moveToTarget = true
             }
 
-            var dirToPlayer = units[player_index].position - u.position
-            let playerVisible = !trace_hit(u.position, units[player_index].position, 0.1, OBSTACLE_FOR_BULLET)
+            var targetPos = u.position
+            var enemyVisible = false
+            for (other, otherIdx in units, count()) {
+                if (other.alive && otherIdx != index) {
+                    if (!trace_hit(u.position, other.position, 0.1, OBSTACLE_FOR_BULLET)) {
+                        let d = length(other.position - u.position)
+                        if (!enemyVisible || d < length(targetPos - u.position)) {
+                            enemyVisible = true
+                            targetPos = other.position
+                        }
+                    }
+                }
+            }
+            if (enemyVisible) {
+                u.aiState.waitBeforeWandering = 3.0
+            }
+            var dirToPlayer = targetPos - u.position
+            let dirNorm = length(dirToPlayer) > 1e-6 ? normalize(dirToPlayer) : float2(1, 0)
+            var destructibleDir = float2(0, 0)
+            if (!enemyVisible) {
+                var bestDist = 1e9
+                for (dy in range(7)) {
+                    for (dx in range(7)) {
+                        let cx = int(u.position.x) + dx - 3
+                        let cy = int(u.position.y) + dy - 3
+                        if (cellDescriptions[get_cell_safe(cx, cy)].descructableByBullet) {
+                            let cellPos = float2(float(cx) + 0.5, float(cy) + 0.5)
+                            let d = length(cellPos - u.position)
+                            if (d < bestDist) {
+                                bestDist = d
+                                destructibleDir = normalize(cellPos - u.position)
+                            }
+                        }
+                    }
+                }
+            }
+            let destructibleAhead = length(destructibleDir) > 0.5
+            if (!enemyVisible && !destructibleAhead) {
+                u.aiState.waitBeforeWandering -= dt
+                if (u.aiState.waitBeforeWandering < 0.0) {
+                    u.aiState.waitBeforeWandering = -1.0
+                }
+            }
+            let aimDir = enemyVisible ? dirNorm : (destructibleAhead ? destructibleDir : angle_to_direction(u.chassisAngle))
             var turretAngle = atan2(u.control.turretDirection.y, u.control.turretDirection.x)
-            turretAngle = angle_move_to(turretAngle,
-                playerVisible ? atan2(dirToPlayer.y, dirToPlayer.x) : u.chassisAngle, dt, unitTypeDesc.turretAngularSpeed)
+            turretAngle = angle_move_to(turretAngle, atan2(aimDir.y, aimDir.x), dt, unitTypeDesc.turretAngularSpeed)
             u.control.turretDirection = angle_to_direction(turretAngle)
-            u.control.fire = (sin(float(index) + t) > 0.5 && playerVisible &&
+            u.control.fire = (sin(float(index) + t) > 0.5 && enemyVisible &&
                 get_level_sdf(u.position + u.control.turretDirection * 2.0, OBSTACLE_FOR_BULLET) > 0.6 &&
-                dot(u.control.turretDirection, normalize(dirToPlayer)) > 0.99)
+                dot(u.control.turretDirection, dirNorm) > 0.99)
+            if (destructibleAhead && dot(u.control.turretDirection, destructibleDir) > 0.95) {
+                u.control.fire = sin(float(index) + t) > 0.5
+            }
         }
     }
 }
@@ -850,9 +904,49 @@ def get_destructable_cell(position, offset : float2) : int2 {
 }
 
 
+def show_game_result(msg : string, subtitle : string) {
+    let canvas = create_node()
+    add_component(canvas, new UICanvas())
+    game_overlay_node = canvas
+    let panel = create_node()
+    panel.set_parent(canvas, AddChildStrategy.KeepLocalTransform)
+    add_component(panel, new UIImage(color = float4(0, 0, 0, 0.6)))
+    add_component(panel, new UIAnchor(anchorMin = TOP_LEFT_ANCHOR, anchorMax = BOTTOM_RIGHT_ANCHOR))
+    game_result_node = create_debug_text(canvas, msg, float2(0, -30), MIDDLE_CENTER_ANCHOR)
+    set_text_font_size(game_result_node, 96.0)
+    set_text_color(game_result_node, float4(1, 1, 0, 1))
+    game_result_node?.UIText.fontScaling = false
+    game_result_node?.UIText.autoResizeFrame = true
+    game_result_subtitle_node = create_debug_text(canvas, subtitle, float2(0, 50), MIDDLE_CENTER_ANCHOR)
+    set_text_font_size(game_result_subtitle_node, 48.0)
+    set_text_color(game_result_subtitle_node, float4(1, 1, 0, 1))
+    game_result_subtitle_node?.UIText.fontScaling = false
+    game_result_subtitle_node?.UIText.autoResizeFrame = true
+}
+
+def check_game_over(dying_unit : Unit?) {
+    if (game_result_node.isAlive) {
+        return
+    }
+    if (dying_unit == units[player_index]) {
+        show_game_result("You lose", "Click or Space to restart")
+        game_over_is_victory = false
+        return
+    }
+    for (u in units) {
+        if (u.alive && u != dying_unit && u != units[player_index]) {
+            return
+        }
+    }
+    show_game_result("You win", "Click or Space for next level")
+    game_over_is_victory = true
+}
+
+
 def destroy_unit(var u : Unit?) {
     set_pitch(play_sound(explosion_sound), random_range(0.95, 1.05))
     spawn_explosion(u.position, 0.9)
+    check_game_over(u)
     u.alive = false
     remove_node(u.nodeId)
 }
@@ -936,7 +1030,7 @@ def update_particles(dt : float) {
 
 def create_light() {
     let sun = create_node(NodeData(rotation = quat4(float3(30, -30, -10) * PI / 180.0)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let renderSettings = create_render_settings()
     get_component(renderSettings) $(var shadow : ShadowSettings?) {
@@ -957,10 +1051,25 @@ def create_light() {
     }
 }
 
-def restart() {
-    current_level = 0
+def load_current_level() {
+    restart_timer = -1.0
+    if (game_result_node.isAlive) {
+        remove_node(game_result_node)
+    }
+    if (game_result_subtitle_node.isAlive) {
+        remove_node(game_result_subtitle_node)
+    }
+    if (game_overlay_node.isAlive) {
+        remove_node(game_overlay_node)
+    }
     clear_scene()
+    resize(units, 0)
+    resize(bullets, 0)
+    resize(particles, 0)
     load_level(levels[current_level])
+    if (!empty(units)) {
+        units[player_index].weaponCooldown = 0.5
+    }
     create_cursor()
     create_camera()
     create_light()
@@ -968,6 +1077,16 @@ def restart() {
         float2(20, -20),
         "WASD/arrows to move, LMB/space to fire"
     )
+}
+
+def restart() {
+    current_level = 0
+    load_current_level()
+}
+
+def next_level() {
+    current_level = (current_level + 1) % length(levels)
+    load_current_level()
 }
 
 
@@ -1022,6 +1141,15 @@ def guaranteed_step_update(dt : float) {
 
 [export]
 def on_update() {
+    let enter_pressed = is_action_pressed("fire")
+    if (game_result_node.isAlive && enter_pressed && !prev_enter_pressed) {
+        if (game_over_is_victory) {
+            next_level()
+        } else {
+            restart()
+        }
+    }
+    prev_enter_pressed = enter_pressed
     update_input()
     guaranteed_step_update(get_delta_time())
 

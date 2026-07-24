@@ -31,7 +31,7 @@ class World : Component {
                 zDim |> resize(level_depth)
                 for (zRaw, cell in count(), zDim) {
                     let z = zRaw - level_depth / 2
-                    let glyph = level_compressed[level_height - yRaw - 1][xRaw][zRaw]
+                    let glyph = get_block_type(xRaw, yRaw, zRaw)
                     if (glyph == "a") {
                         continue
                     }

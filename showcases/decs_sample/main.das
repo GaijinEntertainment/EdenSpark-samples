@@ -47,7 +47,7 @@ def on_initialize() {
 
     create_render_settings()
     let sun = create_node(NodeData(rotation = quat4(0, 0.5, 0)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let camera = create_node(NodeData(name = "camera", position = float3(0, -1.5, -10)))
     add_component(camera, new Camera())

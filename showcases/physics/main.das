@@ -85,7 +85,7 @@ def init_scene() {
 
     let sunDirection = float3(PI / 12f, -PI * 0.25f, 0f)
     let sun = create_node(NodeData(rotation = quat4(sunDirection)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let renderSettings = create_render_settings()
 
@@ -279,16 +279,16 @@ class DampingRestitutionSample : Component {
     def override on_update() {
         get_component(ball) $(var rigidBody : RigidBody?) {
             if (is_action_pressed("moveDown")) {
-                apply_rigid_body_impulse(rigidBody, float3(0, 0, -1) * get_delta_time() * 10.)
+                apply_impulse(rigidBody, float3(0, 0, -1) * get_delta_time() * 10.)
             }
             if (is_action_pressed("moveUp")) {
-                apply_rigid_body_impulse(rigidBody, float3(0, 0, 1) * get_delta_time() * 10.)
+                apply_impulse(rigidBody, float3(0, 0, 1) * get_delta_time() * 10.)
             }
             if (is_action_pressed("moveRight")) {
-                apply_rigid_body_impulse(rigidBody, float3(1, 0, 0) * get_delta_time() * 10.)
+                apply_impulse(rigidBody, float3(1, 0, 0) * get_delta_time() * 10.)
             }
             if (is_action_pressed("moveLeft")) {
-                apply_rigid_body_impulse(rigidBody, float3(-1, 0, 0) * get_delta_time() * 10.)
+                apply_impulse(rigidBody, float3(-1, 0, 0) * get_delta_time() * 10.)
             }
         }
 
@@ -874,6 +874,11 @@ class RaycastSample : Component {
 
         if (is_action_just_pressed("nextRaycast")) {
             traceExample += 1
+            if (traceExample == 5) {
+                raycastSrc.add_component(new CharacterController())
+            } elif (raycastSrc.has_component(type<CharacterController>)){
+                raycastSrc.remove_component(type<CharacterController>)
+            }
         }
 
         match (traceExample) {
@@ -933,7 +938,7 @@ class RaycastSample : Component {
                 (get_component(raycastGhost, type<Mesh>)).meshId = CAPSULE_MESH_ID
                 set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nCapsule ShapeCast")
             }
-            if (4) {
+            if (4 || 5) {
                 sweep_test(NodeCast(
                     nodeId = raycastSrc,
                     from = newPos,
@@ -944,7 +949,7 @@ class RaycastSample : Component {
                 })
                 (get_component(raycastSrc, type<Mesh>)).meshId = CUBE_MESH_ID
                 (get_component(raycastGhost, type<Mesh>)).meshId = CUBE_MESH_ID
-                set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nSweep Test")
+                set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nSweep Test{traceExample == 5 ? " (with CharacterController)" : ""}")
             }
             if (_) {
                 traceExample = 0

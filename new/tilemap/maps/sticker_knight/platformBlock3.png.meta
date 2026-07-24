@@ -1,0 +1,9 @@
+guid:t="019f89e2-2123-7370-9c74-1b40290ea9ba"
+assetType:i=0
+filter:t="Point"
+addressing:t="Clamp"
+anisotropicLevel:i=4
+generateMipLevels:b=yes
+usage:t="Color"
+compressTexture:b=no
+sprites{}

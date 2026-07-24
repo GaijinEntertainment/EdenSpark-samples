@@ -1,0 +1,132 @@
+linkFromToPin:ip2=11, 6
+linkFromToPin:ip2=9, 15
+linkFromToPin:ip2=13, 16
+linkFromToPin:ip2=30, 26
+linkFromToPin:ip2=32, 27
+linkFromToPin:ip2=28, 22
+linkFromToPin:ip2=17, 21
+linkFromToPin:ip2=23, 34
+linkFromToPin:ip2=19, 37
+linkFromToPin:ip2=38, 25
+linkFromToPin:ip2=40, 7
+linkFromToPin:ip2=42, 8
+linkFromToPin:ip2=23, 47
+linkFromToPin:ip2=35, 48
+linkFromToPin:ip2=2, 49
+linkFromToPin:ip2=4, 50
+properties{
+prop{
+name:t="FresnelColor"
+type:t="Color"
+default:p4=1, 0.609231, 0, 0
+}
+}
+nodes{
+floatConst{
+id:i=1
+constValue:p4=0, 0, 0, 0
+pos:p2=16, 400
+out_:i=2
+}
+floatConst{
+id:i=3
+constValue:p4=0.5, 0, 0, 0
+pos:p2=16, 520
+out_:i=4
+}
+fresnel{
+id:i=5
+pos:p2=-297, -238
+in_power:i=6
+in_worldNorm:i=7
+in_viewDir:i=8
+out_fresnel:i=9
+}
+floatConst{
+id:i=10
+constValue:p4=3, 0, 0, 0
+pos:p2=-480, -243
+out_:i=11
+}
+colorVar{
+id:i=12
+propertyIndex:i=0
+pos:p2=-273, -48
+out_:i=13
+}
+mul{
+id:i=14
+pos:p2=-24, -142
+in_x:i=15
+in_y:i=16
+out_result:i=17
+}
+gTime{
+id:i=18
+pos:p2=-417, 66
+out_time:i=19
+}
+mul{
+id:i=20
+pos:p2=184, 16
+in_x:i=21
+in_y:i=22
+out_result:i=23
+}
+remap{
+id:i=24
+pos:p2=-120, 176
+in_x:i=25
+in_inRange:i=26
+in_outRange:i=27
+out_result:i=28
+}
+float2Const{
+id:i=29
+constValue:p4=-1, 1, 0, 0
+pos:p2=-415, 242
+out_:i=30
+}
+float2Const{
+id:i=31
+constValue:p4=0, 1, 0, 0
+pos:p2=-424, 349
+out_:i=32
+}
+len_f3{
+id:i=33
+pos:p2=287, 162
+in_x:i=34
+out_result:i=35
+}
+sin{
+id:i=36
+pos:p2=-289, 112
+in_x:i=37
+out_result:i=38
+}
+worldNormal{
+id:i=39
+pos:p2=-615, -158
+out_normal:i=40
+}
+viewDir{
+id:i=41
+pos:p2=-623, -30
+out_dir:i=42
+}
+pbrMasterOutput{
+id:i=43
+pos:p2=552, 80
+in_albedo:i=44
+in_alpha:i=45
+in_alphaCutoff:i=46
+in_emission:i=47
+in_emissionStrength:i=48
+in_metalness:i=49
+in_roughness:i=50
+in_ao:i=51
+in_normalMap:i=52
+previewOpen:b=yes
+}
+}

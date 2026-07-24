@@ -7,3 +7,5 @@ Emissive materials render sample.
 Model by Ed Mackey
 """
 preview:t=".project/preview.jpg"
+genre:t="simulation"
+numberOfPlayers:t="single"

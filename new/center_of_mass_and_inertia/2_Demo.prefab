@@ -216,7 +216,7 @@ guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
 type:i=3
 refId:i64=5990970791006779606
 }
-instance{
+diff{
 root:i=1755614422
 node{
 uid:i=909619914
@@ -230,16 +230,16 @@ Inertia default
 """;}
 }
 }
-instance{
+diff{
 root:i=1501981581
 node{
 uid:i=-1376515378
 Text3D{text:t="Inertia y=0.1";}
 }
 }
-instance{
+diff{
 root:i=461435713
-instance{
+diff{
 root:i=909619914
 node{
 uid:i=909619914
@@ -247,9 +247,9 @@ removedComps{compName:t="Inertia";}
 }
 }
 }
-instance{
+diff{
 root:i=-1124843543
-instance{
+diff{
 root:i=909619914
 node{
 uid:i=-1376515378

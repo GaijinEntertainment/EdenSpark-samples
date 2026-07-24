@@ -104,7 +104,7 @@ def on_initialize() {
     create_free_camera(float3(0, 25, -190))
 
     // create light
-    add_component(create_node(NodeData(rotation = quat4(0.2, PI, 0f), name = "sun")), new DirectionLight())
+    add_component(create_node(NodeData(rotation = quat4(0.2, PI, 0f), name = "sun")), new DirectionalLight())
 
     // add default render settings
     let renderSettings = create_render_settings()

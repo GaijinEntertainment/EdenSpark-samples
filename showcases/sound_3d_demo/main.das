@@ -43,7 +43,7 @@ def on_initialize() {
     (get_component(renderSettings, type<Tonemap>)).active = true
 
     let sun = create_node(NodeData(rotation = quat4(deg_to_rad(float3(30, -45, 0)))))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     head = create_node(NodeData(scale = float3(2.)))
     add_component(head, new Mesh(meshId = SPHERE_MESH_ID))

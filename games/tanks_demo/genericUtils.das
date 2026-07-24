@@ -12,4 +12,6 @@ def set_debug_status_string(str : string) {
 [export]
 def create_status_string(position : float2, text : string = "") {
     statusNode = create_debug_text(text, position, BOTTOM_LEFT_ANCHOR)
+    set_text_color(statusNode, float4(1, 1, 0, 1))
+    set_text_font_size(statusNode, 24.0)
 }

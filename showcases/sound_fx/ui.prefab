@@ -218,7 +218,7 @@ guid:t="0193c182-6cd3-77c2-b166-39e1825250fa"
 type:i=1
 refId:i64=-5041345716884882344
 }
-instance{
+diff{
 root:i=100407097
 node{
 uid:i=1435199738
@@ -259,7 +259,7 @@ size:p2=99.558, 60
 }
 }
 }
-instance{
+diff{
 root:i=-1990595768
 node{
 uid:i=1435199738
@@ -302,7 +302,7 @@ size:p2=99.558, 58.62
 UIText{text:t="Decay";}
 }
 }
-instance{
+diff{
 root:i=682782448
 node{
 uid:i=1435199738
@@ -345,7 +345,7 @@ size:p2=99.558, 58.62
 UIText{text:t="Sustain";}
 }
 }
-instance{
+diff{
 root:i=-1124539181
 node{
 uid:i=1435199738

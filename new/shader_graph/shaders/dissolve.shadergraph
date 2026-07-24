@@ -1,0 +1,206 @@
+linkFromToPin:ip2=15, 11
+linkFromToPin:ip2=17, 12
+linkFromToPin:ip2=27, 19
+linkFromToPin:ip2=29, 5
+linkFromToPin:ip2=25, 34
+linkFromToPin:ip2=31, 33
+linkFromToPin:ip2=37, 2
+linkFromToPin:ip2=35, 45
+linkFromToPin:ip2=6, 48
+linkFromToPin:ip2=52, 54
+linkFromToPin:ip2=13, 55
+linkFromToPin:ip2=56, 58
+linkFromToPin:ip2=59, 20
+linkFromToPin:ip2=61, 4
+linkFromToPin:ip2=61, 51
+linkFromToPin:ip2=8, 63
+linkFromToPin:ip2=64, 10
+linkFromToPin:ip2=59, 68
+linkFromToPin:ip2=35, 69
+linkFromToPin:ip2=43, 71
+linkFromToPin:ip2=41, 72
+linkFromToPin:ip2=46, 70
+linkFromToPin:ip2=49, 67
+linkFromToPin:ip2=21, 24
+linkFromToPin:ip2=49, 23
+properties{
+prop{
+name:t="DissolveWidth"
+type:t="Float"
+default:p4=0.05, 0, 0, 0
+}
+prop{
+name:t="NoiseScale"
+type:t="Float"
+default:p4=3, 0, 0, 0
+}
+prop{
+name:t="EmissionColor"
+type:t="Color"
+default:p4=1, 1, 1, 0
+}
+prop{
+name:t="Color"
+type:t="Color"
+default:p4=1, 1, 1, 0
+}
+}
+nodes{
+out_albedo{
+id:i=1
+pos:p2=200, -112
+in_color:i=2
+}
+mul{
+id:i=3
+pos:p2=-1080, 112
+in_x:i=4
+in_y:i=5
+out_result:i=6
+}
+gTime{
+id:i=7
+pos:p2=-1105, 498
+out_time:i=8
+}
+remap{
+id:i=9
+pos:p2=-776, 592
+in_x:i=10
+in_inRange:i=11
+in_outRange:i=12
+out_result:i=13
+}
+float2Const{
+id:i=14
+constValue:p4=-1, 1, 0, 0
+pos:p2=-1016, 669
+out_:i=15
+}
+float2Const{
+id:i=16
+constValue:p4=-1, 1.5, 0, 0
+pos:p2=-1016, 765
+out_:i=17
+}
+add{
+id:i=18
+pos:p2=-536, 370
+in_x:i=19
+in_y:i=20
+out_result:i=21
+}
+step{
+id:i=22
+pos:p2=-376, 240
+in_edge:i=23
+in_x:i=24
+out_result:i=25
+}
+floatVar{
+id:i=26
+propertyIndex:i=0
+pos:p2=-783, 368
+out_:i=27
+}
+floatVar{
+id:i=28
+propertyIndex:i=1
+pos:p2=-1265, 176
+out_:i=29
+}
+colorVar{
+id:i=30
+propertyIndex:i=2
+pos:p2=-384, 32
+out_:i=31
+}
+mul{
+id:i=32
+pos:p2=-88, 112
+in_x:i=33
+in_y:i=34
+out_result:i=35
+}
+colorVar{
+id:i=36
+propertyIndex:i=3
+pos:p2=-239, -128
+out_:i=37
+}
+float2Const{
+id:i=38
+constValue:p4=0, 1, 0, 0
+pos:p2=-1080, 333
+out_:i=39
+}
+floatConst{
+id:i=40
+constValue:p4=0.5, 0, 0, 0
+pos:p2=-80, 813
+out_:i=41
+}
+floatConst{
+id:i=42
+constValue:p4=0, 0, 0, 0
+pos:p2=-64, 653
+out_:i=43
+}
+len_f3{
+id:i=44
+pos:p2=-1, 288
+in_x:i=45
+out_result:i=46
+previewOpen:b=yes
+}
+perlinNoise3D{
+id:i=47
+pos:p2=-859, 112
+in_position:i=48
+out_noise:i=49
+previewOpen:b=yes
+}
+splatY{
+id:i=50
+pos:p2=-849, 464
+in_v:i=51
+out_result:i=52
+}
+sub{
+id:i=53
+pos:p2=-504, 594
+in_x:i=54
+in_y:i=55
+out_result:i=56
+}
+oneMinus{
+id:i=57
+pos:p2=-289, 544
+in_x:i=58
+out_result:i=59
+}
+localPos{
+id:i=60
+pos:p2=-1272, 18
+out_pos:i=61
+}
+sin{
+id:i=62
+pos:p2=-968, 544
+in_x:i=63
+out_result:i=64
+}
+pbrMasterOutput{
+id:i=65
+pos:p2=360, 352
+in_albedo:i=66
+in_alpha:i=67
+in_alphaCutoff:i=68
+in_emission:i=69
+in_emissionStrength:i=70
+in_metalness:i=71
+in_roughness:i=72
+in_ao:i=73
+in_normalMap:i=74
+}
+}

@@ -24,6 +24,7 @@ def add_debug_line(text : string) {
     for (node, line in debug_text_node, lines) {
         update_debug_text(node, line)
     }
+    print(text)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////

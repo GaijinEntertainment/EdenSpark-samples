@@ -328,7 +328,7 @@ def goto_level(index : int) {
 
 def create_light() {
     let sunLight = create_node()
-    add_component(sunLight, new DirectionLight())
+    add_component(sunLight, new DirectionalLight())
     sunLight.localRotation = make_quat_from_basis_zy(float3(-1.5, -2.3, -1.0), float3(0, 1, 0))
 
     let renderSettings = create_render_settings()

@@ -9,6 +9,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=0.210971, 0.210971, 0.210971, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -83,6 +84,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=0.451477, 0.451477, 0.451477, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -159,6 +161,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -180,7 +183,7 @@ bottom:r=308.76
 }
 SFXPreviewComponent{__textureId:i64=0;}
 }
-instance{
+diff{
 root:i=100407097
 node{
 uid:i=1435199738
@@ -227,7 +230,7 @@ size:p2=99.558, 60
 }
 }
 }
-instance{
+diff{
 root:i=-1990595768
 node{
 uid:i=1435199738
@@ -275,7 +278,7 @@ size:p2=99.558, 58.62
 UIText{text:t="Decay";}
 }
 }
-instance{
+diff{
 root:i=682782448
 node{
 uid:i=1435199738
@@ -323,7 +326,7 @@ size:p2=99.558, 58.62
 UIText{text:t="Sustain";}
 }
 }
-instance{
+diff{
 root:i=-1124539181
 node{
 uid:i=1435199738

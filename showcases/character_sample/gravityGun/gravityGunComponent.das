@@ -168,7 +168,7 @@ def pullPhysObjectPointingAt(var gun : GravityGunComponent, camera : Camera?) {
     let dir = normalize(gun.nodeId.worldPosition - gun.attachedObject.worldPosition)
     let force = distance(gun.attachedObject.worldPosition, gun.nodeId.worldPosition)
 
-    apply_rigid_body_force(gun.attachedObject?.RigidBody, dir * force * multiplier)
+    apply_force(gun.attachedObject?.RigidBody, dir * force * multiplier)
 }
 
 def sendObjectFlying(var gun : GravityGunComponent, camera : Camera?) {
@@ -181,7 +181,7 @@ def sendObjectFlying(var gun : GravityGunComponent, camera : Camera?) {
     add_component(gun.nodeId, new RechargeTag())
 
     get_component(obj) $(r : RigidBody?) {
-        apply_rigid_body_impulse(r, ray.direction * sendForce)
+        apply_impulse(r, ray.direction * sendForce)
         play_sound(blastSound) |> set_volume(0.2) |> set_pitch(2.0 * 10.0 / r.mass)
     }
 }

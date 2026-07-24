@@ -1,0 +1,39 @@
+shader:t="standard_user_shader"
+userShader{
+guid:t="019dfcf8-1825-78db-a6a4-cc5e436bfa16"
+type:i=14
+}
+textures{
+it{}
+it{}
+it{}
+it{}
+it{}
+it{}
+}
+properties{
+deepColor{
+__variant_index:i=4
+f3:p3=0.0, 0.15, 0.35
+}
+shallowColor{
+__variant_index:i=4
+f3:p3=0.2, 0.6, 0.8
+}
+foamColor{
+__variant_index:i=4
+f3:p3=0.9, 0.95, 1.0
+}
+waveSpeed{
+__variant_index:i=0
+f:r=0.4
+}
+waveScale{
+__variant_index:i=0
+f:r=3.0
+}
+foamThreshold{
+__variant_index:i=0
+f:r=0.65
+}
+}

@@ -212,7 +212,7 @@ def init_camera() {
     camera = create_free_camera(cameraPos, quat4(cameraEuler))
 
     let sun = create_node(NodeData(name = "Sun", rotation = quat4(sunDirection)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let renderSettings = create_render_settings()
 

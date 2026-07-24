@@ -1,0 +1,260 @@
+node{
+name:t="suv"
+uid:i=-459420957
+prefab:i64=-1561880104619406959
+pos:p3=-0.0698, 0.0518, -2.8685
+}
+res{
+guid:t="019ef064-3639-781e-98f5-724b2257bd61"
+type:i=12
+refId:i64=-1561880104619406959
+}
+diff{
+root:i=-459420957
+node{
+uid:i=1
+newComps{
+VehicleController{
+maxTorque:r=500
+minRPM:r=1000
+maxRPM:r=6000
+inertia:r=0.5
+maxPitchRollAngle:r=3.14159
+angularDamping:r=0.2
+useCylinderShapes:b=yes
+wheelsCollisionLayer:i=0
+wheelsAngularDamping:r=0.5
+wheelsMaxBrakeTorque:r=1500
+wheelsMaxHandBrakeTorque:r=4000
+wheelsSuspensionRange:p2=0, 0.1
+wheelsSuspensionSpring:p2=1.5, 0.5
+isAutomatic:b=yes
+switchTime:r=0.5
+clutchReleaseTime:r=0.3
+switchLatency:r=0.5
+shiftUpRPM:r=4000
+shiftDownRPM:r=2000
+clutchStrength:r=10
+enableMotorcycleLean:b=no
+leanMaxAngle:r=0.785398
+leanSpring:p2=5000, 1000
+leanSpringIntegrationCoefficient:r=0
+leanSpringIntegrationCoefficientDecay:r=4
+leanSmoothingFactor:r=0.8
+wheels{
+elem{
+position:p3=-0.42, 0.4, 0.76
+rotation:p4=0, 0, 0, 1
+radius:r=0.3
+width:r=0.35
+maxSteeringAngle:r=0.5
+mass:r=20
+visualNode:i=7
+}
+elem{
+position:p3=0.42, 0.4, 0.76
+rotation:p4=0, 0, 0, 1
+radius:r=0.3
+width:r=0.35
+maxSteeringAngle:r=0.5
+mass:r=20
+visualNode:i=8
+}
+elem{
+position:p3=-0.42, 0.4, -0.55
+rotation:p4=0, 0, 0, 1
+radius:r=0.3
+width:r=0.35
+maxSteeringAngle:r=0
+mass:r=20
+visualNode:i=5
+}
+elem{
+position:p3=0.42, 0.4, -0.55
+rotation:p4=0, 0, 0, 1
+radius:r=0.3
+width:r=0.35
+maxSteeringAngle:r=0
+mass:r=20
+visualNode:i=6
+}
+}
+axles{
+elem{
+leftWheel:i=0
+rightWheel:i=1
+torque:r=0.4
+differentialRatio:r=3.42
+limitedSlipRatio:r=2
+}
+elem{
+leftWheel:i=2
+rightWheel:i=3
+torque:r=0.6
+differentialRatio:r=3.42
+limitedSlipRatio:r=1.5
+}
+}
+wheelsLongitudinalFriction{
+elem:p2=0, 0
+elem:p2=0.06, 1.2
+elem:p2=0.2, 1
+}
+wheelsLateralFriction{
+elem:p2=0, 1
+elem:p2=0.0873, 0.8
+elem:p2=0.3491, 0.7
+}
+torqueCurve{
+elem:p2=0, 0.8
+elem:p2=0.66, 1
+elem:p2=1, 0.8
+}
+gearRatios{
+elem:r=4.171
+elem:r=2.34
+elem:r=1.521
+elem:r=1.143
+elem:r=0.867
+elem:r=0.691
+}
+reverseGearRatios{elem:r=-3.403;}
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=-2.42963e-05, 0.501915, 0.000751257
+rotation:p4=0, 0, 0, 1
+params:p3=1.32098, 0.604862, 2.72144
+__mesh:i64=0
+}
+shape{
+shapeType:i=0
+translation:p3=0, 1.05014, -0.23564
+rotation:p4=0, 0, 0, 1
+params:p3=1, 0.499718, 1.8339
+__mesh:i64=0
+}
+}
+}
+RigidBody{
+enabled:b=yes
+mass:r=1900
+linearDamping:r=0.05
+angularDamping:r=0.05
+useGravity:b=yes
+motionType:i=0
+collisionDetection:i=0
+allowedDofs:i=63
+maxVelocity:r=500
+maxAngularVelocity:r=47.124
+interpolation:i=0
+}
+}
+}
+node{
+pos:p3=-0.42, 0.3, -0.55
+uid:i=5
+removedComps{compName:t="Mesh";}
+}
+node{
+pos:p3=0.42, 0.3, -0.55
+uid:i=6
+removedComps{compName:t="Mesh";}
+}
+node{
+pos:p3=-0.42, 0.3, 0.76
+uid:i=7
+removedComps{compName:t="Mesh";}
+}
+node{
+pos:p3=0.42, 0.3, 0.76
+uid:i=8
+removedComps{compName:t="Mesh";}
+}
+newNodes{
+node{
+name:t="wheel-back-left"
+uid:i=-1234334058
+parent:i=5
+pos:p3=0.12, 0, 0
+Mesh{
+__meshId:i64=8623585510412464488
+__materialId:i64=5055615804919743945
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="wheel-back-right"
+uid:i=1672534588
+parent:i=6
+pos:p3=-0.12, 0, 0
+Mesh{
+__meshId:i64=-1891351901083160991
+__materialId:i64=5055615804919743945
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="wheel-front-left"
+uid:i=-2089559920
+parent:i=7
+pos:p3=0.12, 0, 0
+Mesh{
+__meshId:i64=9041343321607371017
+__materialId:i64=5055615804919743945
+visibility:i=2047
+isStatic:b=no
+}
+}
+node{
+name:t="wheel-front-right"
+uid:i=774090654
+parent:i=8
+pos:p3=-0.12, 0, 0
+Mesh{
+__meshId:i64=7087923609075913770
+__materialId:i64=5055615804919743945
+visibility:i=2047
+isStatic:b=no
+}
+}
+}
+res{
+guid:t="019ef064-3639-781e-98f5-724b2257bd61"
+id:t="colormap"
+type:i=3
+refId:i64=5055615804919743945
+}
+res{
+guid:t="019ef064-3639-781e-98f5-724b2257bd61"
+id:t="wheel-back-left"
+type:i=1
+refId:i64=8623585510412464488
+}
+res{
+guid:t="019ef064-3639-781e-98f5-724b2257bd61"
+id:t="wheel-back-right"
+type:i=1
+refId:i64=-1891351901083160991
+}
+res{
+guid:t="019ef064-3639-781e-98f5-724b2257bd61"
+id:t="wheel-front-left"
+type:i=1
+refId:i64=9041343321607371017
+}
+res{
+guid:t="019ef064-3639-781e-98f5-724b2257bd61"
+id:t="wheel-front-right"
+type:i=1
+refId:i64=7087923609075913770
+}
+}

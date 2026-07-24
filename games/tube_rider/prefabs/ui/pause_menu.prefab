@@ -8,6 +8,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=0, 0, 0, 0.862745
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -80,6 +81,7 @@ pivot:p2=0, 0
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -123,6 +125,7 @@ pivot:p2=0, 0
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -176,7 +179,7 @@ guid:t="019a4b97-9200-7859-b158-aa4cd1148368"
 type:i=12
 refId:i64=-5280788124329574750
 }
-instance{
+diff{
 root:i=-1505755924
 node{
 uid:i=-1126476080
@@ -184,7 +187,7 @@ UIFrame{localPosition2D:p2=400, 70;}
 UIText{text:t="PAUSE";}
 }
 }
-instance{
+diff{
 root:i=534456423
 node{
 uid:i=-309508422
@@ -195,7 +198,7 @@ ScoreSetMenuBehavior{}
 }
 }
 }
-instance{
+diff{
 root:i=655605261
 node{
 uid:i=-309508422
@@ -206,7 +209,7 @@ TopScoreSetBehavior{}
 }
 }
 }
-instance{
+diff{
 root:i=892421128
 node{
 uid:i=998342432
@@ -224,7 +227,7 @@ pos:p3=0, 0, 0
 uid:i=-1783325023
 }
 }
-instance{
+diff{
 root:i=-1371264002
 node{
 uid:i=998342432

@@ -6,3 +6,5 @@ Just a sandbox game with blocks
 """
 preview:t=".project/preview.jpg"
 defaultPrefab:t="0192e7c4-694e-7186-8207-ee9a3024a4ca"
+genre:t="sandbox"
+numberOfPlayers:t="single"

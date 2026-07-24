@@ -68,7 +68,7 @@ class Bird : Component {
             if (length_sq(slingDir) > 0f && dot(birdNestPos - birdPos, slingDir) > 0f) {
                 let slingForce = slingDir * slingStiffness * dt
                 get_component(nodeId) $(var rigidBody : RigidBody?) {
-                    apply_rigid_body_impulse(rigidBody, float3(slingForce, 0f))
+                    apply_impulse(rigidBody, float3(slingForce, 0f))
                 }
             } else {
                 slingDir = float2(0, 0)

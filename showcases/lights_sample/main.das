@@ -66,7 +66,7 @@ def init_world() {
     camera = create_free_camera(float3(0, 20, 40), quat4(float3(PI / 12., PI, 0.)))
 
     sun = create_node(NodeData(rotation = quat4(sunDirection)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     renderSettings = create_render_settings()
 

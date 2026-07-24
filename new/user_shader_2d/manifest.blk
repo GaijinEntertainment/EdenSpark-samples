@@ -1,0 +1,7 @@
+project_guid:t="019e06e5-0e1a-7c70-a0d6-169a10b56c56"
+hdRendering:b=yes
+title:t="2D Shader Showcase"
+description:t="User-written 2D pixel shaders on quads: sepia, vignette, pixelate, blur, dissolve, wipe transitions, glitch, plasma and more."
+preview:t=".project/preview.jpeg"
+genre:t="simulation"
+numberOfPlayers:t="single"

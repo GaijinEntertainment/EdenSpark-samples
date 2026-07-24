@@ -12,7 +12,7 @@ require engine.core
     add_component(camera, new Camera())
 
     let sun = create_node(NodeData(name = "sun", rotation = quat4(PI / 3f, -PI * 0.25f, 0f)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let renderSettings = create_render_settings()
 }

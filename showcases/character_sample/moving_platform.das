@@ -8,7 +8,7 @@ class MovingPlatform : Component {
     animSpeed : float = 1.0
     animPos : float = 0.0
 
-    def override on_update() {// will be called each frame
+    def on_fixed_update() {
         let hasRigidBody = get_component(nodeId) $(var rigidBody : RigidBody?) {
             rigidBody.velocity = (animPos < 1. ? pos2 - pos1 : pos1 - pos2) * animSpeed
 
@@ -25,6 +25,14 @@ class MovingPlatform : Component {
     }
 }
 
+[export]
+def on_fixed_update() {
+    var platforms = find_components(type<MovingPlatform>)
+
+    for (platform in platforms) {
+        platform.on_fixed_update()
+    }
+}
 
 class CharacterTrigger : CollisionListener {
     showBodyOnCollision : NodeId

@@ -63,7 +63,7 @@ def on_initialize() {
     let triangleMaterial = create_material(MaterialImport(
         shaderName = "standard_unlit_shader",
         diffuse = triangleTexture,
-        transparencyMode = TransparencyMode.Translucent,
+        transparencyMode = TransparencyMode.AlphaBlend,
         faceCullMode = FaceCullMode.None
     ))
     add_component(triangleNode, new Mesh(meshId = quadMesh, materialId = triangleMaterial))

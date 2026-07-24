@@ -21,7 +21,7 @@ def on_initialize() {
 
     let sunDirection = float3(PI / 3.0, -PI / 3.0, 0f)
     let sun = create_node(NodeData(rotation = quat4(sunDirection)))
-    add_component(sun, new DirectionLight())
+    add_component(sun, new DirectionalLight())
 
     let barrierStart = create_node(NodeData(position = float3(-10, 0, 0), scale = float3(10, 100, 10)))
     add_component(barrierStart, new Mesh(meshId = CUBE_MESH_ID))
@@ -102,6 +102,7 @@ def cameraBounce(x, maxVal) {
 [export]
 def on_update() {
     let dt = get_delta_time()
+    flyTime += dt
 
     if (is_action_just_pressed("pushBalls")) {
         for (ballTag in find_components(type<BallTag>)) {
@@ -124,5 +125,4 @@ def on_update() {
     if (flyTime < 0.) {
         return
     }
-    flyTime += dt
 }

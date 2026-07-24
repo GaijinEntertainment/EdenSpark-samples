@@ -1,0 +1,8 @@
+project_guid:t="019ce3fe-4824-7432-bce7-10203085ce9d"
+defaultPrefab:t="019d027d-ef40-7b24-9b39-535ccaf8a85b"
+hdRendering:b=yes
+title:t="Shader Graph"
+description:t="Sample contains shader-graphs implementing fresnel emission and dissolve effect."
+preview:t=".project/preview.jpeg"
+genre:t="simulation"
+numberOfPlayers:t="single"

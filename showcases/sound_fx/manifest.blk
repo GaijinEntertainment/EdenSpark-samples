@@ -14,3 +14,5 @@ deleted_at:i=0
 likes:i=0
 downloads:i=0
 launches:i=0
+genre:t="simulation"
+numberOfPlayers:t="single"

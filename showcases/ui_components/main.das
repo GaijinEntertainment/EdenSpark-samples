@@ -8,8 +8,13 @@ def on_initialize() {
     let camera = create_node(NodeData(name = "camera"))
     add_component(camera, new Camera())
 
+    add_ui_event_listener(UIMouseEventType.MouseDown, @@down_evt)
     add_ui_event_listener(UIFocusEventType.FocusIn, @@focus_evt)
     add_ui_event_listener(UIFocusEventType.FocusOut, @@focus_evt)
+}
+
+def down_evt(evt : UIMouseEvent) {
+    print("Mouse down event: phase {evt.phase}, currentTarget: {evt.currentTarget}, local pos: {get_ui_mouse_position(evt.currentTarget)}")
 }
 
 [export]

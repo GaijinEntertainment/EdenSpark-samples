@@ -1,0 +1,177 @@
+node{
+name:t="bad_weather"
+uid:i=-1192609630
+}
+node{
+name:t="render_setting"
+uid:i=-457245982
+isRenderSettingsNode:b=yes
+parent:i=-1192609630
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+Tonemap{
+active:b=yes
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+Bloom{
+active:b=yes
+threshold:r=1
+scatter:r=0.8
+intensity:r=0.05
+}
+HDGlobalIllumination{
+coveredDistance:r=100
+verticalScale:r=0.5
+baseSDFVoxelSize:r=0.1
+albedoVoxelScale:r=4
+}
+HDSky{
+__customSky:i64=0
+clouds{
+seed:i=1
+renderMode:i=0
+layers{
+elem{
+startHeight:r=0.8
+thickness:r=8
+density:r=0.5
+coverage:r=0.2
+volume:r=0.5
+volumeVariance:r=0.5
+frequency:r=2
+}
+}
+form{
+extinction:r=0.7
+shapeNoiseScale:r=9
+erosionNoiseScale:r=2.5
+epicness:r=0
+worldSize:r=1
+turbulenceStrength:r=0.21
+turbulenceFrequency:r=2
+cumulonimbusShapeScale:r=4
+cumulonimbusCoverage:r=0.6
+strataAmount:r=0.8
+strataAltitude:r=8
+strataType:i=0
+}
+lighting{
+ambientDesaturation:r=0.5
+msContribution:r=0.7
+msAttenuation:r=0.3
+}
+}
+atmosphere{
+groundColor:p3=0.1, 0.1, 0.1
+mediaTint:p3=1, 1, 1
+mediaDensity:r=12
+mediaAbsorption:r=1
+mediaHeight:r=0.4
+atmosphereTint:p3=1, 1, 1
+atmosphereDensity:r=1
+atmosphereHeight:r=1
+ozoneImpact:r=0.5
+}
+}
+HDExposureAdaptation{
+exposureScale:r=1.5
+maxExposure:r=50
+minExposure:r=0.1
+downSpeed:r=5
+upSpeed:r=5
+brightnessPerceptionPower:r=0.6
+centerWeight:r=0.7
+}
+HDWater{
+active:b=yes
+resolution:i=2
+level:r=0
+wavesStrength:r=6
+wavesDirection:r=45
+color:p3=0.04, 0.08, 0.1
+density:r=0.3
+cameraDroplets:b=yes
+underwaterVignette:r=0.1
+underwaterAberrations:r=0.4
+}
+}
+node{
+name:t="directional_light"
+uid:i=-648764622
+parent:i=-1192609630
+rot:p4=0.130885, -0.868163, 0.359605, 0.315985
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="camera"
+uid:i=1317481553
+parent:i=-1192609630
+pos:p3=0, 30, 0
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=0.872665
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+NodeSubmerger{
+upHeight:r=30
+downHeight:r=-15
+}
+}

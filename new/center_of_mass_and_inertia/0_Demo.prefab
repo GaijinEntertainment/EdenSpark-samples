@@ -141,7 +141,7 @@ guid:t="0192f7ae-f381-7981-aca1-68dcd2f42029"
 type:i=3
 refId:i64=5990970791006779606
 }
-instance{
+diff{
 root:i=776256349
 removedNodes{
 uid:i=1073490792
@@ -149,7 +149,7 @@ uid:i=-488738509
 uid:i=-304267699
 }
 }
-instance{
+diff{
 root:i=688846625
 removedNodes{
 uid:i=630942501

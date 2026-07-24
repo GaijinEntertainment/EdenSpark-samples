@@ -61,6 +61,11 @@ class Player : Component {
     }
 
     def override on_update() {
+        if (nodeId.worldPosition.y < -128.0) {
+            nodeId.localPosition = float3(0.0, 15.0, 0.0)
+            vertVel = 0.0
+        }
+
         if (!is_mouse_cursor_locked()) {
             return
         }
@@ -85,7 +90,7 @@ class Player : Component {
                 vertVel = jumpForce
             }
         } else {
-            vertVel += get_gravity().y * get_delta_time()
+            vertVel += controller.gravityScale * get_gravity().y * get_delta_time()
         }
 
         controller.velocity = dir * speed + UP * vertVel

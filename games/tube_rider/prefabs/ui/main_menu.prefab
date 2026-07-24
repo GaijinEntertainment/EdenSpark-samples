@@ -8,6 +8,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=0, 0, 0, 0.862745
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -81,6 +82,7 @@ pivot:p2=0, 0
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -117,6 +119,7 @@ pivot:p2=0, 0
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -172,7 +175,7 @@ guid:t="019a4b97-9200-7859-b158-aa4cd1148368"
 type:i=12
 refId:i64=-5280788124329574750
 }
-instance{
+diff{
 root:i=-1780041223
 node{
 uid:i=-1126476080
@@ -180,7 +183,7 @@ UIFrame{localPosition2D:p2=400, 80;}
 UIText{text:t="TUBE RIDER";}
 }
 }
-instance{
+diff{
 root:i=-1790039677
 node{
 uid:i=998342432
@@ -193,7 +196,7 @@ ClearTopScoreBehavior{}
 removedComps{compName:t="ButtonHoverEffectBehavior";}
 }
 }
-instance{
+diff{
 root:i=-1564262563
 node{
 uid:i=998342432
@@ -204,7 +207,7 @@ ButtonInstantiatePrefabBehavior{prefabName:t="prefabs/ui/game_hud";}
 }
 }
 }
-instance{
+diff{
 root:i=1981478647
 node{
 uid:i=998342432
@@ -215,7 +218,7 @@ ButtonInstantiatePrefabBehavior{prefabName:t="prefabs/ui/options_menu";}
 }
 }
 }
-instance{
+diff{
 root:i=-1869210574
 node{
 uid:i=998342432
