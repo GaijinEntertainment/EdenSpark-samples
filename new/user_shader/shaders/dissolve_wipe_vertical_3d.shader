@@ -7,8 +7,8 @@ var {
     edgeWidth = 0.08
 }
 
-[shader(stage="pixel", type="pbr")]
-def dissolve_wipe_vertical_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def dissolve_wipe_vertical_3d(inp : PbrInput) {
     let threshold = remap(sin(g_Time * 0.8), float2(-1.0, 1.0), float2(-0.1, 1.1))
     let n = (noise(inp.worldPos * noiseScale) * 2.0 - 1.0) * 0.3
     let dissolve = inp.localPos.y * 0.5 + 0.5 + n

@@ -1,0 +1,7 @@
+project_guid:t="019f8640-8ea5-7074-84ad-87573e8a4213"
+hdRendering:b=yes
+title:t="Vehicle Controller"
+description:t="A demonstration of driving behavior for different vehicles using the VehicleController component."
+preview:t=".project/preview.jpg"
+genre:t="simulation"
+numberOfPlayers:t="single"

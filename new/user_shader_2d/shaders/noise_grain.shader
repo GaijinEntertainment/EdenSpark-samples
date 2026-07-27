@@ -7,8 +7,8 @@ var {
     grainSpeed = 30.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def noise_grain(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def noise_grain(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let n = noise(inp.uv * grainScale + float2(g_Time * grainSpeed, 0.0))
     let result = c + float3(n - 0.5) * grainStrength

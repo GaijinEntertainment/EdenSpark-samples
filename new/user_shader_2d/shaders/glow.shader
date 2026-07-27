@@ -7,8 +7,8 @@ var {
     pulse = 0.3
 }
 
-[shader(stage="pixel", type="pbr")]
-def glow(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def glow(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let n = tex2d(albedo_texture, inp.uv + float2(0, glowSize)).xyz
     let e = tex2d(albedo_texture, inp.uv + float2(glowSize, 0)).xyz

@@ -6,8 +6,8 @@ var {
     albedo_texture = Sampler2D("%builtin_package/logo.png")
 }
 
-[shader(stage="pixel", type="pbr")]
-def new_shader_pure(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def new_shader_pure(inp : PbrInput) {
     let textureColor = tex2d(albedo_texture, inp.uv)
     return PbrOutput(
         albedo = albedo * textureColor.xyz,

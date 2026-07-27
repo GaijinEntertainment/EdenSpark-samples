@@ -7,8 +7,8 @@ var {
     rings = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def shield_hit(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def shield_hit(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let uv = inp.uv - float2(0.5, 0.5)
     let dist = length(uv)

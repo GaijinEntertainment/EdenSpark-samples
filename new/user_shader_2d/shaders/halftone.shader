@@ -5,8 +5,8 @@ var {
     dotSize = 22.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def halftone(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def halftone(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let gray = dot(c, float3(0.299, 0.587, 0.114))
     let cell = frac(inp.uv * dotSize) - float2(0.5, 0.5)

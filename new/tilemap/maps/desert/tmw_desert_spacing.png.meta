@@ -1,0 +1,298 @@
+guid:t="019f89e2-2097-7830-a9e1-fb0e01cd17f1"
+assetType:i=0
+filter:t="Point"
+addressing:t="Clamp"
+anisotropicLevel:i=4
+generateMipLevels:b=no
+usage:t="Sprite2D"
+compressTexture:b=no
+sprites{
+it{
+name:t="tmw_desert_spacing_0"
+rect:ip4=1, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_1"
+rect:ip4=34, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_2"
+rect:ip4=67, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_3"
+rect:ip4=100, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_4"
+rect:ip4=133, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_5"
+rect:ip4=166, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_6"
+rect:ip4=199, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_7"
+rect:ip4=232, 1, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_8"
+rect:ip4=1, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_9"
+rect:ip4=34, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_10"
+rect:ip4=67, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_11"
+rect:ip4=100, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_12"
+rect:ip4=133, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_13"
+rect:ip4=166, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_14"
+rect:ip4=199, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_15"
+rect:ip4=232, 34, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_16"
+rect:ip4=1, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_17"
+rect:ip4=34, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_18"
+rect:ip4=67, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_19"
+rect:ip4=100, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_20"
+rect:ip4=133, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_21"
+rect:ip4=166, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_22"
+rect:ip4=199, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_23"
+rect:ip4=232, 67, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_24"
+rect:ip4=1, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_25"
+rect:ip4=34, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_26"
+rect:ip4=67, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_27"
+rect:ip4=100, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_28"
+rect:ip4=133, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_29"
+rect:ip4=166, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_30"
+rect:ip4=199, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_31"
+rect:ip4=232, 100, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_32"
+rect:ip4=1, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_33"
+rect:ip4=34, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_34"
+rect:ip4=67, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_35"
+rect:ip4=100, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_36"
+rect:ip4=133, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_37"
+rect:ip4=166, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_38"
+rect:ip4=199, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_39"
+rect:ip4=232, 133, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_40"
+rect:ip4=1, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_41"
+rect:ip4=34, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_42"
+rect:ip4=67, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_43"
+rect:ip4=100, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_44"
+rect:ip4=133, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_45"
+rect:ip4=166, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_46"
+rect:ip4=199, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="tmw_desert_spacing_47"
+rect:ip4=232, 166, 32, 32
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+}

@@ -1,0 +1,5 @@
+project_guid:t="019e1c4d-8f12-7d94-913a-85634127f42c"
+defaultPrefab:t="019eefca-8b6f-7a5b-a02e-11804f687e55"
+preview:t=".project/preview.png"
+title:t="NavMesh"
+description:t="Demonstrates how to use the NavMesh system and navigate agents using pathfinding."

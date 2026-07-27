@@ -7,8 +7,8 @@ var {
     waveSpeed = 2.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def wave(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def wave(inp : PbrInput) {
     let t = g_Time * waveSpeed
     let dx = sin(inp.uv.y * waveFreq + t) * waveAmp
     let dy = sin(inp.uv.x * waveFreq + t * 1.3) * waveAmp

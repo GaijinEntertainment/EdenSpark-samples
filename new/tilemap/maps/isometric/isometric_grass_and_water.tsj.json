@@ -1,0 +1,18 @@
+{
+ "columns": 4,
+ "image": "isometric_grass_and_water.png",
+ "imageheight": 384,
+ "imagewidth": 256,
+ "margin": 0,
+ "name": "isometric_grass_and_water",
+ "spacing": 0,
+ "tilecount": 24,
+ "tileheight": 64,
+ "tileoffset": {
+  "x": 0,
+  "y": 16
+ },
+ "tilewidth": 64,
+ "type": "tileset",
+ "version": "1.10"
+}

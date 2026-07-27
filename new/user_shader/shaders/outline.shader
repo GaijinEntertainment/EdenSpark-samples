@@ -6,8 +6,8 @@ var {
     outlineSharpness = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def outline(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def outline(inp : PbrInput) {
     let f = fresnel(outlineSharpness, inp.worldNormal, inp.viewDir)
     let outlineMask = step(outlineThreshold, f)
 

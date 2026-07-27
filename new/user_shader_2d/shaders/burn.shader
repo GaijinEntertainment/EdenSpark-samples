@@ -7,8 +7,8 @@ var {
     noiseScale = 5.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def burn(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def burn(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let t = g_Time * burnSpeed
     let n = noise(float2(inp.uv.x * noiseScale, inp.uv.y * noiseScale * 0.5 + t))

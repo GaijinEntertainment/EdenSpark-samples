@@ -5,8 +5,8 @@ var {
     levels = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def posterize(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def posterize(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let result = floor(c * levels) / levels
     let daylight = saturate(g_LightDirection.y)

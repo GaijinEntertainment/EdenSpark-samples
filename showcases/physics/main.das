@@ -874,6 +874,11 @@ class RaycastSample : Component {
 
         if (is_action_just_pressed("nextRaycast")) {
             traceExample += 1
+            if (traceExample == 5) {
+                raycastSrc.add_component(new CharacterController())
+            } elif (raycastSrc.has_component(type<CharacterController>)){
+                raycastSrc.remove_component(type<CharacterController>)
+            }
         }
 
         match (traceExample) {
@@ -933,7 +938,7 @@ class RaycastSample : Component {
                 (get_component(raycastGhost, type<Mesh>)).meshId = CAPSULE_MESH_ID
                 set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nCapsule ShapeCast")
             }
-            if (4) {
+            if (4 || 5) {
                 sweep_test(NodeCast(
                     nodeId = raycastSrc,
                     from = newPos,
@@ -944,7 +949,7 @@ class RaycastSample : Component {
                 })
                 (get_component(raycastSrc, type<Mesh>)).meshId = CUBE_MESH_ID
                 (get_component(raycastGhost, type<Mesh>)).meshId = CUBE_MESH_ID
-                set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nSweep Test")
+                set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nSweep Test{traceExample == 5 ? " (with CharacterController)" : ""}")
             }
             if (_) {
                 traceExample = 0

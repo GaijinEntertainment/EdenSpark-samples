@@ -6,8 +6,8 @@ var {
     @color lightColor = float3(0.47, 0.73, 0.24)
 }
 
-[shader(stage="pixel", type="pbr")]
-def gameboy(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def gameboy(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let gray = dot(c, float3(0.299, 0.587, 0.114))
     let level = floor(gray * 4.0) / 4.0

@@ -8,8 +8,8 @@ var {
     noiseScale = 6.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def freeze(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def freeze(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let n = noise(inp.uv * noiseScale)
     let iceMask = smooth_step(1.0 - freezeAmount - 0.1, 1.0 - freezeAmount + 0.1, n)

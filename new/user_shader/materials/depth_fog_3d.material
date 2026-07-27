@@ -1,0 +1,39 @@
+shader:t="standard_user_shader"
+userShader{
+guid:t="019ed52c-7306-70dc-b96d-53dc0f491199"
+type:i=14
+}
+textures{
+it{}
+it{}
+it{}
+it{}
+it{}
+it{}
+}
+properties{
+shallowColor{
+__variant_index:i=4
+f3:p3=0.3, 0.7, 1
+}
+deepColor{
+__variant_index:i=4
+f3:p3=0, 0.2, 0.5
+}
+edgeColor{
+__variant_index:i=4
+f3:p3=0.8, 1, 1
+}
+softDepth{
+__variant_index:i=0
+f:r=1.5
+}
+edgeThreshold{
+__variant_index:i=0
+f:r=0.25
+}
+opacity{
+__variant_index:i=0
+f:r=0.7
+}
+}

@@ -8,8 +8,8 @@ var {
     scale = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def plasma(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def plasma(inp : PbrInput) {
     let t = g_Time * speed
     let uv = inp.uv * scale
     let v1 = sin(uv.x + t)

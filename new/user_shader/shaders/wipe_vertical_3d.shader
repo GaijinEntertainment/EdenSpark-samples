@@ -6,8 +6,8 @@ var {
     edgeWidth = 0.05
 }
 
-[shader(stage="pixel", type="pbr")]
-def wipe_vertical_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def wipe_vertical_3d(inp : PbrInput) {
     let threshold = remap(sin(g_Time * 0.8), float2(-1.0, 1.0), float2(-0.2, 1.2))
     let h = inp.localPos.y * 0.5 + 0.5
     let mask = step(threshold, h)

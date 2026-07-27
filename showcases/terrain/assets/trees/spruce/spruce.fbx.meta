@@ -1,8 +1,6 @@
 guid:t="01934d58-272f-725e-82ce-8e9287789605"
 assetType:i=3
-fileName:t=""
 sceneScale:r=1
-improveCacheLocality:b=yes
 findInstances:b=no
 optimizeMeshes:b=yes
 joinIdenticalVertices:b=yes
@@ -13,12 +11,15 @@ flipUvs:b=no
 flipWindingOrder:b=no
 importMeshes:b=yes
 importMaterials:b=yes
+exportSceneWithColliders:b=no
+markMeshesAsStatic:b=no
+simplify:t="None"
 generateNormals:t="HardNormals"
 animationImport{
 importAnimations:b=yes
 animationKeyframeReduction:b=yes
 animationKeyframeReductionTolerance:r=0.001
-animationSubClips{}
+skeletonRootNode:t=""
 }
 materialRemap{
 bark012_1k-png_color2_0Mat{

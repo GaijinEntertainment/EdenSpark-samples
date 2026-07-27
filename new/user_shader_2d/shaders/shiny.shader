@@ -7,8 +7,8 @@ var {
     shineWidth = 0.12
 }
 
-[shader(stage="pixel", type="pbr")]
-def shiny(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def shiny(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let pos = remap(sin(g_Time * shineSpeed), float2(-1.0, 1.0), float2(-0.2, 1.2))
     let diag = inp.uv.x + inp.uv.y

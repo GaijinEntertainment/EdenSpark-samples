@@ -4,8 +4,8 @@ var {
     albedo_texture = Sampler2D("%builtin_package/logo.png")
 }
 
-[shader(stage="pixel", type="pbr")]
-def invert(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def invert(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let result = float3(1.0) - c
     let daylight = saturate(g_LightDirection.y)

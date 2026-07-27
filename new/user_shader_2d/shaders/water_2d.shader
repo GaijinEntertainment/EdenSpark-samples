@@ -9,8 +9,8 @@ var {
     foamThreshold = 0.6
 }
 
-[shader(stage="pixel", type="pbr")]
-def water_2d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def water_2d(inp : PbrInput) {
     let t = g_Time * waveSpeed
     let n1 = noise(inp.uv * waveScale + float2(t, t * 0.7))
     let n2 = noise(inp.uv * waveScale * 2.1 + float2(t * 1.6, 0.0))

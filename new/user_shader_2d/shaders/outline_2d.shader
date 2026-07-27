@@ -6,8 +6,8 @@ var {
     thickness = 0.003
 }
 
-[shader(stage="pixel", type="pbr")]
-def outline_2d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def outline_2d(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let r = tex2d(albedo_texture, inp.uv + float2(thickness, 0.0)).x
     let l = tex2d(albedo_texture, inp.uv - float2(thickness, 0.0)).x

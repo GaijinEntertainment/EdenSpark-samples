@@ -4,8 +4,8 @@ var {
     @color fresnelColor = float3(0.0, 0.5, 1.0)
 }
 
-[shader(stage="pixel", type="pbr")]
-def fresnel(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def fresnel(inp : PbrInput) {
     let rim = fresnel(3., inp.worldNormal, inp.viewDir) * fresnelColor
     let scale = remap(sin(g_Time * 4.0), float2(-1, 1), float2(0, 1))
     let color = rim * scale

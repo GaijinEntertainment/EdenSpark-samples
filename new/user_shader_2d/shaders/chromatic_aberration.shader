@@ -6,8 +6,8 @@ var {
     pulse = 0.5
 }
 
-[shader(stage="pixel", type="pbr")]
-def chromatic_aberration(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def chromatic_aberration(inp : PbrInput) {
     let t = 1.0 + sin(g_Time * 2.0) * pulse
     let offset = aberration * t
     let r = tex2d(albedo_texture, inp.uv + float2(offset, 0)).x

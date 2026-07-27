@@ -8,8 +8,8 @@ var {
     noiseScale = 5.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def stun_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def stun_3d(inp : PbrInput) {
     let t = g_Time * speed
     let n1 = noise(inp.worldPos * noiseScale + float3(t, 0, 0))
     let n2 = noise(inp.worldPos * noiseScale * 2.0 + float3(0, t * 1.3, 0))

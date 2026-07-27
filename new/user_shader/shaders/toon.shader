@@ -10,8 +10,8 @@ var {
     rimEnd = 0.98
 }
 
-[shader(stage="pixel", type="pbr")]
-def toon(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def toon(inp : UnlitInput) : UnlitOutput {
     let nDotL = saturate(dot(normalize(inp.worldNormal), normalize(lightDir)))
 
     let stepped = floor(nDotL * bands) / bands
@@ -24,12 +24,7 @@ def toon(inp : PbrInput) : PbrOutput {
     let outColor = lerp(lit, rimColor, rimMask)
 
     let daylight = saturate(g_LightDirection.y)
-    return PbrOutput(
-        albedo = float3(0),
-        emission = outColor,
-        emissionStrength = lerp(0.1, 0.8, daylight),
-        metalness = 0.0,
-        roughness = 1.0,
-        ao = 1.0
+    return UnlitOutput(
+        color = outColor
     )
 }

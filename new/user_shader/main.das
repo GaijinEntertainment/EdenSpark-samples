@@ -117,6 +117,7 @@ def on_post_initialize() {
     let bunnyMesh = request_mesh_from_model("stanford-bunny.obj", "defaultobject")
     let bunnyShape = mesh_shape(request_collision_from_model("stanford-bunny.obj", "defaultobject"))
     let sphereShape = sphere_shape(0.5)
+    let boxShape = box_shape(float3(1, 1, 1))
 
     var entries = [
         ShaderEntry(name = "fresnel_emission", meshId = bunnyMesh, shape = bunnyShape),
@@ -144,6 +145,9 @@ def on_post_initialize() {
         ShaderEntry(name = "rage_3d", meshId = bunnyMesh, shape = bunnyShape),
         ShaderEntry(name = "stun_3d", meshId = bunnyMesh, shape = bunnyShape),
         ShaderEntry(name = "heal_3d", meshId = bunnyMesh, shape = bunnyShape),
+        ShaderEntry(name = "raymarch_spheres", meshId = CUBE_MESH_ID, shape = boxShape),
+        ShaderEntry(name = "depth_fog_3d",    meshId = SPHERE_MESH_ID, shape = sphereShape),
+        ShaderEntry(name = "scene_refraction", meshId = SPHERE_MESH_ID, shape = sphereShape),
     ]
 
     let count = length(entries)

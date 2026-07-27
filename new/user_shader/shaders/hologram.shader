@@ -8,8 +8,8 @@ var {
     fresnelPower = 2.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def hologram(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def hologram(inp : PbrInput) {
     let scan = frac(inp.worldPos.y * scanlineDensity - g_Time * scanlineSpeed)
     let scanlines = smooth_step(0.3, 0.7, scan)
 
