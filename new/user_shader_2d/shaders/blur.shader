@@ -5,13 +5,20 @@ var {
     blurSize = 0.015
 }
 
-[shader(stage="pixel", type="pbr")]
-def blur(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def blur(inp : PbrInput) {
     let s = blurSize
-    let a = tex2d(albedo_texture, inp.uv + float2(-s, -s)).xyz
-    let b = tex2d(albedo_texture, inp.uv).xyz
-    let c = tex2d(albedo_texture, inp.uv + float2(s, s)).xyz
-    let result = a * 0.25 + b * 0.5 + c * 0.25
+    // 3x3 box blur — both for loops are fully unrolled at compile time into
+    // 9 texture taps (the shader graph has no runtime loop construct), and `acc`
+    // is a compile-time accumulator: each `+=` chains one more add node.
+    var acc = float3(0.0, 0.0, 0.0)
+    for (y in range(3)) {
+        for (x in range(3)) {
+            let offset = float2(float(x - 1) * s, float(y - 1) * s)
+            acc += tex2d(albedo_texture, inp.uv + offset).xyz
+        }
+    }
+    let result = acc * (1.0 / 9.0)
     let daylight = saturate(g_LightDirection.y)
     return PbrOutput(
         albedo = result,

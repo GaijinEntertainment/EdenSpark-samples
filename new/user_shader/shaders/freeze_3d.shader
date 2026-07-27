@@ -7,8 +7,8 @@ var {
     noiseScale = 5.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def freeze_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def freeze_3d(inp : PbrInput) {
     let n = noise(inp.worldPos * noiseScale)
     let iceMask = smooth_step(1.0 - freezeAmount - 0.1, 1.0 - freezeAmount + 0.2, n)
     let crystal = step(0.78, n) * iceMask

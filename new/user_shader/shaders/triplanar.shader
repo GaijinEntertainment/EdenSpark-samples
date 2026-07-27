@@ -7,23 +7,18 @@ var {
     blendSharpness = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def triplanar(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def triplanar(inp : PbrInput) {
     let p = inp.worldPos * texScale
-
-    let uvX = p.zy
-    let uvY = p.xz
-    let uvZ = p.xy
-
-    let cX = tex2d(albedo_texture, uvX)
-    let cY = tex2d(albedo_texture, uvY)
-    let cZ = tex2d(albedo_texture, uvZ)
 
     let an = pow(abs(inp.worldNormal), float3(blendSharpness))
     let sumW = an.x + an.y + an.z
     let w = an / float3(sumW)
 
-    let blended = cX * w.x + cY * w.y + cZ * w.z
+    var blended = float4(0.0, 0.0, 0.0, 0.0)
+    for (uv, weight in [p.zy, p.xz, p.xy], [w.x, w.y, w.z]) {
+        blended += tex2d(albedo_texture, uv) * weight
+    }
 
     return PbrOutput(
         albedo = blended.xyz * tint,

@@ -7,8 +7,8 @@ var {
     noiseScale = 5.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def burn_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def burn_3d(inp : PbrInput) {
     let t = g_Time * burnSpeed
     let n = noise(float3(inp.worldPos.x * noiseScale, inp.worldPos.y * noiseScale * 0.5 + t, inp.worldPos.z * noiseScale))
     let burnLine = remap(sin(t * 0.8), float2(-1.0, 1.0), float2(0.1, 0.9))

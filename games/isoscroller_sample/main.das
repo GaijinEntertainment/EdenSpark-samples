@@ -200,6 +200,13 @@ class ButtonDoor : Component {
     }
 }
 
+[export]
+def on_fixed_update() {
+    for (comp in find_components(type<CharacterInput>)) {
+        comp.on_fixed_update()
+    }
+}
+
 
 class CharacterInput : Component {
     runSpeed : float = 7.
@@ -214,7 +221,7 @@ class CharacterInput : Component {
         nodeId.add_component(new RigidBody(motionType = MotionType.Kinematic))
     }
 
-    def override on_update() {
+    def on_fixed_update() {
         var moveDir = float3()
         let jumpImpulse = 4. * jumpHeight / jumpDuration
         let gravity = DOWN * (8. * jumpHeight / (jumpDuration * jumpDuration))

@@ -1,0 +1,290 @@
+node{
+name:t="scene"
+uid:i=-351111375
+}
+node{
+name:t="render_settings"
+uid:i=-485026193
+isRenderSettingsNode:b=yes
+parent:i=-351111375
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+HDStaticShadows{
+maxDist:r=1000
+cascadeWidth:i=4096
+}
+Tonemap{
+active:b=yes
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+Bloom{
+active:b=yes
+threshold:r=1
+scatter:r=0.8
+intensity:r=0.05
+}
+HDGlobalIllumination{
+coveredDistance:r=100
+verticalScale:r=0.5
+baseSDFVoxelSize:r=0.1
+albedoVoxelScale:r=4
+}
+HDSky{
+__customSky:i64=0
+clouds{
+seed:i=0
+renderMode:i=0
+layers{
+elem{
+startHeight:r=0.8
+thickness:r=8
+density:r=0.5
+coverage:r=0.2
+volume:r=0.5
+volumeVariance:r=0.5
+frequency:r=2
+}
+}
+form{
+extinction:r=0.45
+shapeNoiseScale:r=9
+erosionNoiseScale:r=2.5
+epicness:r=0
+worldSize:r=1
+turbulenceStrength:r=0.21
+turbulenceFrequency:r=2
+cumulonimbusShapeScale:r=4
+cumulonimbusCoverage:r=0
+strataAmount:r=0.8
+strataAltitude:r=8
+strataType:i=0
+}
+lighting{
+ambientDesaturation:r=0.5
+msContribution:r=0.7
+msAttenuation:r=0.3
+}
+}
+atmosphere{
+groundColor:p3=0.1, 0.1, 0.1
+mediaTint:p3=1, 1, 1
+mediaDensity:r=0
+mediaAbsorption:r=1
+mediaHeight:r=1
+atmosphereTint:p3=1, 1, 1
+atmosphereDensity:r=1
+atmosphereHeight:r=1
+ozoneImpact:r=0.5
+}
+}
+HDExposureAdaptation{
+exposureScale:r=1.5
+maxExposure:r=50
+minExposure:r=0.1
+downSpeed:r=5
+upSpeed:r=5
+brightnessPerceptionPower:r=0.6
+centerWeight:r=0.7
+}
+}
+node{
+name:t="directional_light"
+uid:i=-1893284085
+parent:i=-351111375
+pos:p3=0, 8.58579, -8.58579
+rot:p4=0.00667876, -0.923739, 0.0161239, 0.382626
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="plane"
+uid:i=1622420104
+parent:i=-351111375
+scl:p3=10, 1, 10
+Mesh{
+__meshId:i64=-4597744817949207731
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=yes
+}
+}
+node{
+name:t="camera"
+uid:i=1209884476
+parent:i=-351111375
+pos:p3=0, 1.5, -8
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=0.523599
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+}
+node{
+name:t="light"
+uid:i=1797518778
+parent:i=-351111375
+pos:p3=-2, 0.01, 0
+rot:p4=0.707107, 0, 0, 0.707107
+scl:p3=0.5, 0.5, 0.5
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=-6234890753938250964
+visibility:i=2047
+isStatic:b=yes
+}
+}
+node{
+name:t="spot_light"
+uid:i=-1885923383
+parent:i=1797518778
+pos:p3=0, -4.76837e-07, 0.02
+rot:p4=-1, 0, 0, 0
+scl:p3=2, 2, 2
+SpotLight{
+castShadows:b=yes
+castShadowsOnlyForStatic:b=no
+intensity:r=5
+color:p3=1, 1, 1
+radius:r=3
+angle:r=1.04883
+attenuation:r=0.5
+}
+}
+node{
+name:t="light"
+uid:i=-1240309166
+parent:i=-351111375
+pos:p3=0, 0.01, 0
+rot:p4=0.707107, 0, 0, 0.707107
+scl:p3=0.5, 0.5, 0.5
+Mesh{
+__meshId:i64=-5041345716884882344
+__materialId:i64=-6234890753938250964
+visibility:i=2047
+isStatic:b=yes
+}
+}
+node{
+name:t="spot_light"
+uid:i=-1205742926
+parent:i=-1240309166
+pos:p3=0, -4.76837e-07, 0.02
+rot:p4=-1, 0, 0, 0
+scl:p3=2, 2, 2
+SpotLight{
+castShadows:b=yes
+castShadowsOnlyForStatic:b=no
+intensity:r=5
+color:p3=1, 1, 1
+radius:r=3
+angle:r=1.04883
+attenuation:r=0.5
+}
+}
+node{
+name:t="water_flow"
+uid:i=-1889998866
+prefab:i64=-7764325360534127419
+parent:i=-351111375
+pos:p3=-2, 3, 0
+}
+res{
+guid:t="019f6f53-32ef-70f4-9b4d-9a385222135e"
+type:i=12
+refId:i64=-7764325360534127419
+}
+node{
+name:t="steam"
+uid:i=-350783606
+prefab:i64=3688026426001060476
+parent:i=-351111375
+}
+res{
+guid:t="019f6f39-6013-76d0-bb0d-0877695c7a08"
+type:i=12
+refId:i64=3688026426001060476
+}
+node{
+name:t="fire"
+uid:i=127195563
+prefab:i64=-8238823484269311842
+parent:i=-351111375
+pos:p3=2, 0, 0
+}
+res{
+guid:t="019f6f14-6453-7993-af19-badfae09258f"
+type:i=12
+refId:i64=-8238823484269311842
+}
+res{
+guid:t="0193c182-87d2-773e-86b9-235585394fc2"
+type:i=1
+refId:i64=-4597744817949207731
+}
+res{
+guid:t="0193c182-6cd3-77c2-b166-39e1825250fa"
+type:i=1
+refId:i64=-5041345716884882344
+}
+res{
+guid:t="019f6f82-55d2-74ac-b29f-0db222e81370"
+type:i=3
+refId:i64=-6234890753938250964
+}

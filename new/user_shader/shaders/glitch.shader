@@ -8,8 +8,8 @@ var {
     splitStrength = 0.3
 }
 
-[shader(stage="pixel", type="pbr")]
-def glitch(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def glitch(inp : PbrInput) {
     let t = g_Time * glitchSpeed
     let bar = sin(inp.worldPos.y * barFreq + t) * 0.5 + 0.5
     let glitchMask = step(0.85, bar)

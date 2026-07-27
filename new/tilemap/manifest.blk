@@ -1,0 +1,6 @@
+project_guid:t="019f89e1-f8e4-78e7-bcee-e168df481c5d"
+title:t="Tilemap (Tiled)"
+description:t="Loads and renders Tiled editor maps (JSON): orthogonal (desert, Sticker Knight platformer with parallax layers), hexagonal and isometric."
+preview:t=".project/preview.jpeg"
+genre:t="simulation"
+numberOfPlayers:t="single"

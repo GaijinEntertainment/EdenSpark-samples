@@ -8,8 +8,8 @@ var {
     noiseScale = 3.5
 }
 
-[shader(stage="pixel", type="pbr")]
-def rage_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def rage_3d(inp : PbrInput) {
     let t = g_Time * pulseSpeed
     let n = noise(inp.worldPos * noiseScale + float3(0, t * 0.3, 0))
     let pulse = sin(t) * 0.5 + 0.5

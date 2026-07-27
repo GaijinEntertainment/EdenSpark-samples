@@ -5,8 +5,8 @@ var {
     strength = 1.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def sepia(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def sepia(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let gray = dot(c, float3(0.299, 0.587, 0.114))
     let result = lerp(c, float3(gray * 1.08, gray * 0.86, gray * 0.66), strength)

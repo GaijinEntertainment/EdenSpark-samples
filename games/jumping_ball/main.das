@@ -199,7 +199,7 @@ def on_initialize() {
 
     let characterMaterial = request_material("assets/ball_mat.material")
 
-    let sphereMesh = create_sphere_mesh(SphereInit(subdivisions = 32, radius = character.setup.radius))
+    let sphereMesh = create_sphere_mesh(SphereInit(subdivisions = 32, radius = character.setup.radius, sphereType = SphereType.UVSphere))
     character.node = create_node(NodeData(position = float3(0, character.setup.radius * 2.0, 0)))
     add_component(character.node, new Mesh(meshId = sphereMesh, materialId = characterMaterial))
     add_component(character.node, new RigidBody(

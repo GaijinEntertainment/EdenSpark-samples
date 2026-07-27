@@ -4,8 +4,8 @@ var {
     albedo_texture = Sampler2D("%builtin_package/logo.png")
 }
 
-[shader(stage="pixel", type="pbr")]
-def grayscale(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def grayscale(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let gray = dot(c, float3(0.299, 0.587, 0.114))
     let result = float3(gray)

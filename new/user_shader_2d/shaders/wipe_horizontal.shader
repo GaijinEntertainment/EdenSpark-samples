@@ -6,8 +6,8 @@ var {
     edgeWidth = 0.04
 }
 
-[shader(stage="pixel", type="pbr")]
-def wipe_horizontal(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def wipe_horizontal(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let threshold = remap(sin(g_Time * 0.8), float2(-1.0, 1.0), float2(0.0, 1.0))
     let mask = step(threshold, inp.uv.x)

@@ -7,8 +7,8 @@ var {
     rippleAmp = 0.025
 }
 
-[shader(stage="pixel", type="pbr")]
-def ripple(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def ripple(inp : PbrInput) {
     let uv = inp.uv - float2(0.5, 0.5)
     let dist = length(uv)
     let offset = sin(dist * rippleFreq - g_Time * rippleSpeed) * rippleAmp

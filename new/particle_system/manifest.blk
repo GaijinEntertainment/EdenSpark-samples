@@ -1,0 +1,8 @@
+project_guid:t="019f19c1-dc36-7d44-9856-d6e182786ce2"
+defaultPrefab:t="019f70eb-1ca4-757f-ae79-2f1c3e441b55"
+hdRendering:b=yes
+title:t="Particle System"
+description:t="A demonstration of effects created with ParticleSystem component"
+preview:t=".project/preview.jpeg"
+genre:t="simulation"
+numberOfPlayers:t="single"

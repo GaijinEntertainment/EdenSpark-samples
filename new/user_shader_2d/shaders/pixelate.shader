@@ -5,8 +5,8 @@ var {
     pixelSize = 32.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def pixelate(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def pixelate(inp : PbrInput) {
     let uv = floor(inp.uv * pixelSize) / pixelSize
     let result = tex2d(albedo_texture, uv).xyz
     let daylight = saturate(g_LightDirection.y)

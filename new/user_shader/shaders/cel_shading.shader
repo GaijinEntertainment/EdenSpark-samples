@@ -12,8 +12,8 @@ var {
     specularPower = 12.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def cel_shading(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def cel_shading(inp : PbrInput) {
     let nDotL = saturate(dot(normalize(inp.worldNormal), normalize(lightDir)))
     let stepped = floor(nDotL * bands) / bands
     let cel = lerp(shadowColor, baseColor, stepped)

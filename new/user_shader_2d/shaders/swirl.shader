@@ -6,8 +6,8 @@ var {
     swirlSpeed = 1.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def swirl(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def swirl(inp : PbrInput) {
     let uv = inp.uv - float2(0.5, 0.5)
     let dist = length(uv)
     let angle = atan2(uv.y, uv.x) + swirlStrength * dist * sin(g_Time * swirlSpeed)

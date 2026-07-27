@@ -1,0 +1,672 @@
+node{
+name:t="test_scene"
+uid:i=581834296
+}
+node{
+name:t="road center"
+uid:i=-1070418759
+parent:i=581834296
+pos:p3=0, -0.5, 0
+scl:p3=10, 1, 10
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="border south"
+uid:i=945643974
+parent:i=581834296
+pos:p3=0, 0, -45
+scl:p3=91, 0.25, 1
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="border west"
+uid:i=320680897
+parent:i=581834296
+pos:p3=-45, 0, 0
+rot:p4=0, 0.707107, 0, 0.707107
+scl:p3=91, 0.25, 1
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="border east"
+uid:i=-1583775104
+parent:i=581834296
+pos:p3=45, 0, 0
+rot:p4=0, 0.707107, 0, 0.707107
+scl:p3=91, 0.25, 1
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="border south"
+uid:i=-669877283
+parent:i=581834296
+pos:p3=0, 0, 45
+scl:p3=91, 0.25, 1
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="building NE"
+uid:i=1678870339
+parent:i=581834296
+pos:p3=20, 0, 20
+scl:p3=30, 5, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="building SE"
+uid:i=525831395
+parent:i=581834296
+pos:p3=20, 0, -20
+scl:p3=30, 25, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="building NW"
+uid:i=830581314
+parent:i=581834296
+pos:p3=-20, 0, 20
+scl:p3=30, 15, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="building SW"
+uid:i=1214556473
+parent:i=581834296
+pos:p3=-20, 0, -20
+scl:p3=30, 20, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road north T"
+uid:i=45115640
+parent:i=581834296
+pos:p3=0, -0.5, 40
+scl:p3=70, 1, 10
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road west T"
+uid:i=455777398
+parent:i=581834296
+pos:p3=-40, -0.5, 0
+rot:p4=0, -0.707107, 0, 0.707107
+scl:p3=90, 1, 10
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road west T"
+uid:i=834467639
+parent:i=581834296
+pos:p3=40, -0.5, 0
+rot:p4=0, 0.707107, 0, 0.707107
+scl:p3=90, 1, 10
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road south T"
+uid:i=-256339087
+parent:i=581834296
+pos:p3=0, -0.5, -40
+rot:p4=-0, -1, 0, -4.37114e-08
+scl:p3=70, 1, 10
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road north"
+uid:i=-1461730261
+parent:i=581834296
+pos:p3=0, -0.5, 20
+scl:p3=10, 1, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road west"
+uid:i=1199726998
+parent:i=581834296
+pos:p3=-20, -0.5, 0
+rot:p4=0, -0.707107, 0, 0.707107
+scl:p3=10, 1, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road south"
+uid:i=-123448652
+parent:i=581834296
+pos:p3=0, -0.5, -20
+rot:p4=-0, -1, 0, -4.37114e-08
+scl:p3=10, 1, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="road east"
+uid:i=356109428
+parent:i=581834296
+pos:p3=20, -0.5, 0
+rot:p4=0, 0.707107, 0, 0.707107
+scl:p3=10, 1, 30
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="ramp"
+uid:i=-1592233696
+parent:i=581834296
+pos:p3=20.6117, 0.4589, 56.7129
+rot:p4=0.130526, 0, 0, 0.991445
+scl:p3=3, 0.1, 15
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=-1
+restitution:r=1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="ramp2"
+uid:i=708098829
+parent:i=581834296
+pos:p3=20.6117, 2.4, 42
+scl:p3=3, 0.1, 15
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=-1
+restitution:r=1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+}
+node{
+name:t="cube"
+uid:i=411302876
+parent:i=581834296
+pos:p3=0.7845, 0.58, 53.9245
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+RigidBody{
+enabled:b=yes
+mass:r=80
+linearDamping:r=0.05
+angularDamping:r=0.05
+useGravity:b=yes
+motionType:i=0
+collisionDetection:i=0
+allowedDofs:i=63
+maxVelocity:r=500
+maxAngularVelocity:r=47.124
+interpolation:i=0
+}
+}
+node{
+name:t="cube"
+uid:i=1660676940
+parent:i=581834296
+pos:p3=-1.4574, 0.5353, 51.4279
+rot:p4=0, 0.35277, 0, 0.93571
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+RigidBody{
+enabled:b=yes
+mass:r=80
+linearDamping:r=0.05
+angularDamping:r=0.05
+useGravity:b=yes
+motionType:i=0
+collisionDetection:i=0
+allowedDofs:i=63
+maxVelocity:r=500
+maxAngularVelocity:r=47.124
+interpolation:i=0
+}
+}
+node{
+name:t="cube"
+uid:i=2145308842
+parent:i=581834296
+pos:p3=-1.4574, 1.5684, 51.4279
+rot:p4=0, 0.0763751, 0, 0.997079
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+Collider{
+friction:r=-1
+restitution:r=-1
+isSensor:b=no
+collisionLayer:i=0
+shapes{
+shape{
+shapeType:i=0
+translation:p3=0, 0, 0
+rotation:p4=0, 0, 0, 0
+params:p3=1, 1, 1
+__mesh:i64=0
+}
+}
+}
+RigidBody{
+enabled:b=yes
+mass:r=80
+linearDamping:r=0.05
+angularDamping:r=0.05
+useGravity:b=yes
+motionType:i=0
+collisionDetection:i=0
+allowedDofs:i=63
+maxVelocity:r=500
+maxAngularVelocity:r=47.124
+interpolation:i=0
+}
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}

@@ -1,0 +1,18 @@
+{
+ "columns": 5,
+ "image": "hexmini.png",
+ "imageheight": 72,
+ "imagewidth": 106,
+ "margin": 0,
+ "name": "hex mini",
+ "spacing": 0,
+ "tilecount": 20,
+ "tileheight": 18,
+ "tileoffset": {
+  "x": 0,
+  "y": 1
+ },
+ "tilewidth": 18,
+ "type": "tileset",
+ "version": "1.10"
+}

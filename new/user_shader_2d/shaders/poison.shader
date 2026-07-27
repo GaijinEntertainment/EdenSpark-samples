@@ -7,8 +7,8 @@ var {
     strength = 0.7
 }
 
-[shader(stage="pixel", type="pbr")]
-def poison(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def poison(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let pulse = sin(g_Time * pulseSpeed) * 0.5 + 0.5
     let n = noise(inp.uv * 4.0 + float2(g_Time * 0.3, 0.0))

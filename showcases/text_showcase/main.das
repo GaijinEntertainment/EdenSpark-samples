@@ -27,12 +27,11 @@ def create_text(canvas : NodeId, position : float3, box : float2, pivot : float2
     return node
 }
 
-
 def create_text_not_wrapped(canvas : NodeId, position : float3, box : float2, pivot : float2, halign : TextHorAlignment, valign : TextVertAlignment, fontAutoSize : bool = false, fontSize : float = 16.0) : NodeId {
     let node = create_text(canvas, position, box, pivot, halign, valign, fontAutoSize, fontSize)
 
     node?.UIText.wordWrapping = false
-    node?.UIText.text = "This text is not wrapped (but still have \\n's)\n\n\npivot = {pivot}\nwordWrapping = false\nhorAlignment = {halign}\nvertAlignment = {valign}"
+    node?.UIText.text = "This text is not wrapped (but still has \\n's)\n\n\npivot = {pivot}\nwordWrapping = false\nhorAlignment = {halign}\nvertAlignment = {valign}"
 
     return node
 }
@@ -42,7 +41,7 @@ def create_text_not_wrapped_no_max_size(canvas : NodeId, position : float3, box 
     let node = create_text(canvas, position, box, pivot, halign, valign, fontAutoSize, fontSize)
 
     node?.UIText.wordWrapping = false
-    node?.UIText.text = "This text is not wrapped (but still have \\n's)\nsize is set to -1, -1\n\n\npivot = {pivot}\nwordWrapping = false\nhorAlignment = {halign}\nvertAlignment = {valign}"
+    node?.UIText.text = "This text is not wrapped (but still has \\n's)\nsize is set to -1, -1\n\n\npivot = {pivot}\nwordWrapping = false\nhorAlignment = {halign}\nvertAlignment = {valign}"
 
     node?.UIFrame.size = float2(-1)
     remove_component(node, type<UIImage>)
@@ -54,7 +53,7 @@ def create_text_not_wrapped_no_max_size(canvas : NodeId, position : float3, box 
 def create_text_custom_pivot(canvas : NodeId, position : float3, box : float2, pivot : float2, halign : TextHorAlignment, valign : TextVertAlignment, fontAutoSize : bool = false, fontSize : float = 16.0) : NodeId {
     let node = create_text(canvas, position, box, pivot, halign, valign, fontAutoSize, fontSize)
 
-    node?.UIText.text = "This text have custom pivot (and aligns properly!)\n\n\npivot = {pivot}\nwordWrapping = true\nsize = {box}\nhorAlignment = {halign}\nvertAlignment = {valign}"
+    node?.UIText.text = "This text has a custom pivot (and aligns properly!)\n\n\npivot = {pivot}\nwordWrapping = true\nsize = {box}\nhorAlignment = {halign}\nvertAlignment = {valign}"
 
     return node
 }
@@ -93,28 +92,34 @@ def create_guides(canvas : NodeId) : void {
     }
 }
 
-var node : NodeId
-
 [export]
 def on_initialize() {
     let canvas = create_node(NodeData(name = "ui canvas"))
     add_component(canvas, new UICanvas())
 
     // vertical alignment + multi line
-    node = create_text(canvas, float3(-500, 275, 0), float2(300, 250), float2(0.5, 0.5), TextHorAlignment.Left, TextVertAlignment.Top, true)
-    create_text(canvas, float3(-500, 0, 0), float2(300, 100), float2(0.5, 0.5), TextHorAlignment.Center, TextVertAlignment.Middle)
+    let outlineNode = create_text(canvas, float3(-500, 275, 0), float2(300, 250), float2(0.5, 0.5), TextHorAlignment.Left, TextVertAlignment.Top, true)
+    outlineNode?.UIText.effect = TextEffect.Outline
+    outlineNode?.UIText.effectColor = float4(0, 0, 0, 1)
+    outlineNode?.UIText.effectThickness = 2.5
+
+    let shadowNode = create_text(canvas, float3(-500, 0, 0), float2(300, 100), float2(0.5, 0.5), TextHorAlignment.Center, TextVertAlignment.Middle)
+    shadowNode?.UIText.effect = TextEffect.Shadow
+    shadowNode?.UIText.effectColor = float4(0, 0, 0, 1)
+    shadowNode?.UIText.effectOffset = float2(3, 3)
+
     create_text(canvas, float3(-500, -275, 0), float2(300, 250), float2(0.5, 0.5), TextHorAlignment.Right, TextVertAlignment.Bottom)
 
     // vertical alignment + multi line + pivot
     create_text_custom_pivot(canvas, float3(0, 200, 0), float2(300, 250), float2(0.5, 0.0), TextHorAlignment.Left, TextVertAlignment.Top)
     create_text_custom_pivot(canvas, float3(0, -200, 0), float2(300, 250), float2(0.5, 1.0), TextHorAlignment.Left, TextVertAlignment.Top)
 
-    // single character vertical alignment, should produce the same resultsw regarding of TextVertAlignment value
+    // single character vertical alignment, should produce the same results regardless of the TextVertAlignment value
     create_text(canvas, float3(-50, 0, 0), float2(200, 200), float2(0.5, 0.5), TextHorAlignment.Center, TextVertAlignment.Top, true)?.UIText.text = "7"
     create_text(canvas, float3(250, 0, 0), float2(200, 200), float2(0.5, 0.5), TextHorAlignment.Center, TextVertAlignment.Middle, true)?.UIText.text = "7"
     create_text(canvas, float3(550, 0, 0), float2(200, 200), float2(0.5, 0.5), TextHorAlignment.Center, TextVertAlignment.Bottom, true)?.UIText.text = "7"
 
-    // multi line + wrapping disabed
+    // multi line + wrapping disabled
     create_text_not_wrapped(canvas, float3(500, 275, 0), float2(300, 250), float2(0.5, 0.5), TextHorAlignment.Left, TextVertAlignment.Top)
     create_text_not_wrapped_no_max_size(canvas, float3(500, -275, 0), float2(300, 250), float2(0.5, 0.5), TextHorAlignment.Right, TextVertAlignment.Top)
 

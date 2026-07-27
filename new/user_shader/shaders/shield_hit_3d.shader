@@ -8,8 +8,8 @@ var {
     fresnel_power = 1.5
 }
 
-[shader(stage="pixel", type="pbr")]
-def shield_hit_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def shield_hit_3d(inp : PbrInput) {
     let n = length(inp.localPos)
     let pulse = frac(n * rings - g_Time * hitSpeed)
     let ring = smooth_step(0.0, 0.5, pulse) * smooth_step(1.0, 0.5, pulse)

@@ -8,8 +8,8 @@ var {
     noiseScale = 3.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def magma_2d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def magma_2d(inp : PbrInput) {
     let t = g_Time * flowSpeed
     let uv = inp.uv * noiseScale + float2(t, t * 0.7)
     let n = noise(uv)

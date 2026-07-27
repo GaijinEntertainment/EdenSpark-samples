@@ -48,8 +48,10 @@ def on_update() {
         // handle keyboard event depending on its kind
         match (cmd) {
             if (RawKeyboardInputEvent(kind = RawKeyboardInputEventKind.KeyDown, buttonIdx = $v(buttonIdx), charCode = $v(charCode), repeat = $v(repeat))) {
+                // charCode == 0 is a valid key press with no printable character (e.g. WASD, arrows, F-keys)
                 var inscope utf <- utf8_encode(charCode)
-                add_debug_line("kind = KeyDown, {string(utf)} (code: {charCode}), buttonIdx = {buttonIdx} ({int(buttonIdx)}), is repeat: {repeat}")
+                let charStr = charCode == 0u ? "<no char>" : string(utf)
+                add_debug_line("kind = KeyDown, {charStr} (code: {charCode}), buttonIdx = {buttonIdx} ({int(buttonIdx)}), is repeat: {repeat}")
             }
             if (RawKeyboardInputEvent(kind = RawKeyboardInputEventKind.KeyUp, buttonIdx = $v(buttonIdx))) {
                 add_debug_line("kind = KeyUp, buttonIdx = {buttonIdx} ({int(buttonIdx)})")

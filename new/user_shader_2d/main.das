@@ -10,11 +10,11 @@ def on_initialize() {
     let sun = create_node(NodeData(name = "sun", rotation = quat4(deg_to_rad(45.0), deg_to_rad(30.0), 0.0)))
     add_component(sun, new DirectionalLight(color = float3(1, 0.95, 0.85), intensity = 3.0))
 
-    create_free_camera(float3(0, 0, -12))
+    create_free_camera(float3(0, 0, -15))
 
     var shaders = [
         "sepia",
-        "vignette",
+        "vignette_2d",
         "pixelate",
         "scanlines",
         "chromatic_aberration",
@@ -48,6 +48,20 @@ def on_initialize() {
         "glow",
         "shadow_2d",
         "glitch_2d",
+        "mandelbrot",
+        // "voronoi",
+        "julia",
+        "kaleidoscope",
+        "dithering",
+        "crt",
+        "flash",
+        "gradient_map",
+        "dissolve_edge",
+        "bloom",
+        "bulge",
+        "emboss",
+        "sharpen_2d",
+        "smooth_2d",
     ]
 
     let count = length(shaders)

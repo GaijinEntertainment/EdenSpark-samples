@@ -8,8 +8,8 @@ var {
     noiseScale = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def poison_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def poison_3d(inp : PbrInput) {
     let pulse = sin(g_Time * pulseSpeed) * 0.5 + 0.5
     let n = noise(inp.worldPos * noiseScale + float3(0, g_Time * 0.3, 0))
     let bubble = step(0.72, n) * pulse

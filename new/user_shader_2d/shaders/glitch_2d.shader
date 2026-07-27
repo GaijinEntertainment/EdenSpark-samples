@@ -9,8 +9,8 @@ var {
     barFreq = 15.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def glitch_2d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def glitch_2d(inp : PbrInput) {
     let t = g_Time * speed
     let bar = floor(inp.uv.y * barFreq + t) / barFreq
     let noise = frac(sin(bar * 127.1 + t) * 43758.5)

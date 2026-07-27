@@ -7,8 +7,8 @@ var {
     speed = 0.2
 }
 
-[shader(stage="pixel", type="pbr")]
-def fractal_noise(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def fractal_noise(inp : PbrInput) {
     let t = g_Time * speed
     let uv = inp.uv * scale
     let n1 = noise(uv + float2(t, t * 0.7))

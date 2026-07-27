@@ -8,8 +8,8 @@ var {
     shadowStrength = 0.7
 }
 
-[shader(stage="pixel", type="pbr")]
-def shadow_2d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def shadow_2d(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let cs = tex2d(albedo_texture, inp.uv - float2(offsetX, offsetY)).xyz
     let shadowGray = dot(cs, float3(0.299, 0.587, 0.114))

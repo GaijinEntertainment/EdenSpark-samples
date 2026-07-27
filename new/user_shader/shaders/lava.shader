@@ -8,8 +8,8 @@ var {
     noiseScale = 2.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def lava(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def lava(inp : PbrInput) {
     let flowOffset = g_Time * flowSpeed
     let uv = inp.worldPos * noiseScale + float3(0, flowOffset, 0)
     let n = noise(uv)

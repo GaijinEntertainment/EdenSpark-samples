@@ -9,8 +9,8 @@ var {
     fresnelPower = 2.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def force_field(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def force_field(inp : PbrInput) {
     let scrollY = g_Time * pulseSpeed * 0.3
     let gridUV = inp.worldPos * gridScale + float3(0, scrollY, 0)
 

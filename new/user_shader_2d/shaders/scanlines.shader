@@ -7,8 +7,8 @@ var {
     scrollSpeed = 0.8
 }
 
-[shader(stage="pixel", type="pbr")]
-def scanlines(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def scanlines(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let scan = sin((inp.uv.y + g_Time * scrollSpeed) * lineFreq) * 0.5 + 0.5
     let mask = step(0.5, scan)

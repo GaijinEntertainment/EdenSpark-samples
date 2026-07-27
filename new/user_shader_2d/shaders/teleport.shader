@@ -7,8 +7,8 @@ var {
     intensity = 0.8
 }
 
-[shader(stage="pixel", type="pbr")]
-def teleport(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def teleport(inp : PbrInput) {
     let t = g_Time * speed
     let shake = sin(t * 13.0) * 0.008 * intensity
     let uv = inp.uv + float2(shake, sin(t * 7.0) * 0.005 * intensity)

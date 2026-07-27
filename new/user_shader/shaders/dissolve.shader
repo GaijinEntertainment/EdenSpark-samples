@@ -8,8 +8,8 @@ var {
     noiseScale = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def dissolve(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def dissolve(inp : PbrInput) {
     let n = noise(inp.worldPos * noiseScale)
 
     let animatedAmount = remap(sin(g_Time * 0.7), float2(-1.0, 1.0), float2(0.1, 0.9))

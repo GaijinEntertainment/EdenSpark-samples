@@ -8,8 +8,8 @@ var {
     noiseScale = 4.0
 }
 
-[shader(stage="pixel", type="pbr")]
-def heal_3d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def heal_3d(inp : PbrInput) {
     let t = g_Time * riseSpeed
     let n = noise(inp.worldPos * noiseScale + float3(0, -t, 0))
     let h = inp.localPos.y * 0.5 + 0.5

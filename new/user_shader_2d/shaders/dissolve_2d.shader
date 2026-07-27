@@ -7,8 +7,8 @@ var {
     @color edgeColor = float3(2.0, 0.5, 0.1)
 }
 
-[shader(stage="pixel", type="pbr")]
-def dissolve_2d(inp : PbrInput) : PbrOutput {
+[pixel_shader]
+def dissolve_2d(inp : PbrInput) {
     let c = tex2d(albedo_texture, inp.uv).xyz
     let amount = remap(sin(g_Time * 0.8), float2(-1.0, 1.0), float2(0.1, 0.9))
     let n = noise(inp.uv * noiseScale)
