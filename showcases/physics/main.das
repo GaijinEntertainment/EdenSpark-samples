@@ -840,12 +840,15 @@ class RaycastSample : Component {
     traceExample : int = 0
     raycastGhost : NodeId
     raycastSrc : NodeId
+    raycastTarget : NodeId
     textRaycast : NodeId
+    useSyncTransforms : bool = false
+    syncFrameIndex : int = 0
 
     def override on_initialize() {
         set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape")
 
-        let raycastTarget = create_node(NodeData(parent = nodeId, position = float3(0f, 2.5, 0f), scale = float3(5f)))
+        raycastTarget = create_node(NodeData(parent = nodeId, position = float3(0f, 2.5, 0f), scale = float3(5f)))
         add_component(raycastTarget, new Mesh(meshId = CUBE_MESH_ID, color = activeColor))
         add_component(raycastTarget, new Collider(shape = box_shape(), collisionLayer = uint8(CollisionLayer.RaycastTarget)))
 
@@ -862,6 +865,12 @@ class RaycastSample : Component {
                     keyboardButtons = [KeyboardButtonInput(idx=KeyCode.Space)],
                     gamepadButtons = [GamepadButtonInput(idx=GamepadButton.A)]
                 )
+            ),
+            "toggleSync" => Action(
+                buttonActions = ButtonAction(
+                    keyboardButtons = [KeyboardButtonInput(idx=KeyCode.G)],
+                    gamepadButtons = [GamepadButtonInput(idx=GamepadButton.Y)]
+                )
             )
         })
     }
@@ -871,6 +880,7 @@ class RaycastSample : Component {
         let maxDistance = 100f
         let newPos = float3(sin(get_time()) * 15f, 20f, 0f)
         raycastSrc.localPosition = newPos
+        raycastTarget.localPosition = float3(0f, 2.5, 0f)
 
         if (is_action_just_pressed("nextRaycast")) {
             traceExample += 1
@@ -950,6 +960,36 @@ class RaycastSample : Component {
                 (get_component(raycastSrc, type<Mesh>)).meshId = CUBE_MESH_ID
                 (get_component(raycastGhost, type<Mesh>)).meshId = CUBE_MESH_ID
                 set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nSweep Test{traceExample == 5 ? " (with CharacterController)" : ""}")
+            }
+            if (6) {
+                syncFrameIndex += 1
+                let posInCycle = (syncFrameIndex / 10) % 10
+                let syncX = float(posInCycle < 5 ? posInCycle : 10 - posInCycle) * 8f - 20f
+                let syncPos = float3(syncX, 20f, 0f)
+                raycastSrc.localPosition = syncPos
+                raycastTarget.localPosition = syncPos
+
+                if (is_action_just_pressed("toggleSync")) {
+                    useSyncTransforms = !useSyncTransforms
+                }
+
+                if (syncFrameIndex % 10 == 0) {
+                    if (useSyncTransforms) {
+                        physics_sync_transforms()
+                    }
+
+                    trace(RayCast(
+                        ray = Ray(syncPos + float3(0, 10, 0), rayDirection),
+                        maxDistance = 15f,
+                        collisionMask = 1u << uint(CollisionLayer.RaycastTarget)
+                    ), $(hit) {
+                        raycastGhost.localPosition = hit.position
+                    })
+                }
+
+                (get_component(raycastSrc, type<Mesh>)).meshId = CUBE_MESH_ID
+                (get_component(raycastGhost, type<Mesh>)).meshId = SPHERE_MESH_ID
+                set_debug_status_string("Raycast sample\nPress Space (or A on gamepad) to change shape\nMove & Raycast in the same frame: physics_sync_transforms()={useSyncTransforms ? "ON" : "OFF"} (toggle with G / gamepad Y)")
             }
             if (_) {
                 traceExample = 0

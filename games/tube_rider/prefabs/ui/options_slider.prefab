@@ -21,7 +21,6 @@ UIText{
 text:t="<option>"
 color:p4=1, 1, 1, 1
 fontSize:r=48
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0

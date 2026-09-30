@@ -101,6 +101,22 @@ def apply_assist(s : CorneringSpeedLimiterAssist; var vc : VehicleController?; s
     vc.brakeInput = max(vc.brakeInput, saturate(s.gain * overspeed) * s.intensity)
 }
 
+// Not really an assist - patches a Jolt quirk: braking while leaned spins the bike out.
+struct LeanBrakeLimiterAssist {
+    enabled : bool = true
+}
+
+def apply_assist(s : LeanBrakeLimiterAssist; var vc : VehicleController?; nodeId : NodeId) {
+    if (!s.enabled || vc.brakeInput <= 0.) {
+        return
+    }
+    let forward = nodeId.worldRotation * FORWARD
+    let up = nodeId.worldRotation * UP
+    let sinLeanAngle = saturate(abs(dot(cross(UP, up), forward)))
+    let brakeMultiplier = (1. - sinLeanAngle) * (1. - sinLeanAngle)
+    vc.brakeInput *= brakeMultiplier
+}
+
 // Unstuck: pushes the car away from whatever it's jammed against when the wheel is turned.
 struct UnstuckAssist {
     enabled : bool = true

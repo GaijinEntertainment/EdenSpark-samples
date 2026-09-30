@@ -1,0 +1,42 @@
+node{
+name:t="weapon"
+uid:i=-1618476915
+WeaponVisual{}
+}
+node{
+name:t="pistol"
+uid:i=5001
+WeaponRecoil{}
+active:b=no
+parent:i=-1618476915
+pos:p3=0.25, -0.2, 0.4
+scl:p3=0.1, 0.1, 0.25
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=511
+isStatic:b=no
+color:p4=0.02, 0.02, 0.02, 1
+}
+}
+node{
+name:t="rifle"
+uid:i=-810245065
+WeaponRecoil{}
+active:b=no
+parent:i=-1618476915
+pos:p3=0.25, -0.2, 0.4
+scl:p3=0.1, 0.1, 0.5
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=511
+isStatic:b=no
+color:p4=0.02, 0.02, 0.02, 1
+}
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}

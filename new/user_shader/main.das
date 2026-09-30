@@ -43,7 +43,7 @@ class HoverLabel : Component {
     @no_export currentTarget : NodeId
 
     def override on_initialize() {
-        let lbl = create_node(NodeData(name = "__hover_label", scale = float3(0.05, 0.05, 0.05)))
+        let lbl = create_node(NodeData(name = "__hover_label"))
         add_component(lbl, new Text3D(text = "", fontSize = 18.0, useDepthScale = false))
         lbl.isActive = false
         labelNode = lbl

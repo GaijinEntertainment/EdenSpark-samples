@@ -13,6 +13,7 @@ allowedDofs:i=35
 maxVelocity:r=500
 maxAngularVelocity:r=47.124
 interpolation:i=0
+overrides{}
 }
 Collider{
 friction:r=-1

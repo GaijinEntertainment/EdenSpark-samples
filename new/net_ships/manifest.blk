@@ -1,0 +1,6 @@
+title:t="Net Ships"
+description:t="Networked 2D arena: the server simulates ships and asteroids, each client drives the ship it owns and draws the rest from replicas"
+genre:t="action"
+preview:t=".project/preview.png"
+numberOfPlayers:t="coop"
+project_guid:t="01a0aa71-2310-7528-91b8-f6f872b9329a"

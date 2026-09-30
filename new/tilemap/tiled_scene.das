@@ -204,6 +204,24 @@ def draw_tiled_objects_debug(data : TiledMapData; color : float4 = float4(1f, 1f
                     let w1 = tiled_pixel_to_world(data.map, obj.x + obj.polyline[i + 1].x, obj.y + obj.polyline[i + 1].y)
                     draw_line(w0, w1, color, 1)
                 }
+            } elif (obj.ellipse && (obj.width > 0f || obj.height > 0f)) {
+                // ellipse inscribed in the object's box; approximate with a line loop
+                let cx = obj.x + obj.width * 0.5f
+                let cy = obj.y + obj.height * 0.5f
+                let rx = obj.width * 0.5f
+                let ry = obj.height * 0.5f
+                let segments = 32
+                var prev = tiled_pixel_to_world(data.map, cx + rx, cy)
+                for (i in range(1, segments + 1)) {
+                    let a = float(i) / float(segments) * 2f * PI
+                    let cur = tiled_pixel_to_world(data.map, cx + rx * cos(a), cy + ry * sin(a))
+                    draw_line(prev, cur, color, 1)
+                    prev = cur
+                }
+                if (!empty(obj.name)) {
+                    let mid = tiled_pixel_to_world(data.map, cx, obj.y - 8f)
+                    draw_debug_text(obj.name, mid, color, 1, 14f)
+                }
             } elif (obj.width > 0f || obj.height > 0f) {
                 let c0 = tiled_pixel_to_world(data.map, obj.x, obj.y)
                 let c1 = tiled_pixel_to_world(data.map, obj.x + obj.width, obj.y)

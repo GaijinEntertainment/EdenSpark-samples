@@ -8,6 +8,7 @@ uid:i=1660039514
 parent:i=1333598389
 ParticleSystem{
 transformType:i=0
+stopBehavior:i=0
 __baseTexture:i64=5019320235752355714
 __secondaryTexture:i64=0
 lifetime{
@@ -290,6 +291,7 @@ uid:i=160640959
 parent:i=1333598389
 ParticleSystem{
 transformType:i=0
+stopBehavior:i=0
 __baseTexture:i64=-5555974371404601055
 __secondaryTexture:i64=0
 lifetime{
@@ -551,6 +553,7 @@ uid:i=1236873279
 parent:i=1333598389
 ParticleSystem{
 transformType:i=0
+stopBehavior:i=0
 __baseTexture:i64=-147582437696744968
 __secondaryTexture:i64=0
 lifetime{

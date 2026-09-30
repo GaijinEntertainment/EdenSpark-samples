@@ -915,12 +915,10 @@ def show_game_result(msg : string, subtitle : string) {
     game_result_node = create_debug_text(canvas, msg, float2(0, -30), MIDDLE_CENTER_ANCHOR)
     set_text_font_size(game_result_node, 96.0)
     set_text_color(game_result_node, float4(1, 1, 0, 1))
-    game_result_node?.UIText.fontScaling = false
     game_result_node?.UIText.autoResizeFrame = true
     game_result_subtitle_node = create_debug_text(canvas, subtitle, float2(0, 50), MIDDLE_CENTER_ANCHOR)
     set_text_font_size(game_result_subtitle_node, 48.0)
     set_text_color(game_result_subtitle_node, float4(1, 1, 0, 1))
-    game_result_subtitle_node?.UIText.fontScaling = false
     game_result_subtitle_node?.UIText.autoResizeFrame = true
 }
 

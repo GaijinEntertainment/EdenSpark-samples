@@ -1,0 +1,7 @@
+title:t="FPS Sample"
+description:t="Minimal first-person shooter sample"
+genre:t="action"
+numberOfPlayers:t="single"
+project_guid:t="01a08b7a-c3b7-7615-9bbd-c1626ed9edb6"
+preview:t=".project/preview.png"
+hdRendering:b=yes

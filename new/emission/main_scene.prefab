@@ -161,7 +161,6 @@ https://creativecommons.org/licenses/by/4.0/
 """
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -170,7 +169,7 @@ effectOffset:p2=0, 0
 effectThickness:r=1
 fontAutoSize:p2=0, 0
 wordWrapping:b=yes
-margin:p4=25, -25, 0, 0
+margin:p4=25, 25, 0, 0
 horAlignment:i=0
 vertAlignment:i=0
 }

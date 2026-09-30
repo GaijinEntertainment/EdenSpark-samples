@@ -2,6 +2,7 @@ require engine.core
 require daslib/strings_boost
 require terrain
 require driving_assists
+require road
 
 var statusNode : NodeId
 var status2Node : NodeId
@@ -10,7 +11,8 @@ var statusOutputNode : NodeId
 let VEHICLE_LIST : array<tuple<name : string; prefab : PrefabId>> = [
     (name = "sedan", prefab = request_prefab("sedan.prefab")),
     (name = "suv", prefab = request_prefab("suv.prefab")),
-    (name = "race", prefab = request_prefab("race.prefab"))
+    (name = "race", prefab = request_prefab("race.prefab")),
+    (name = "bike", prefab = request_prefab("bike.prefab"))
 ]
 
 let CAR_KEYS = [KeyCode._0, KeyCode._1, KeyCode._2, KeyCode._3, KeyCode._4, KeyCode._5, KeyCode._6, KeyCode._7, KeyCode._8, KeyCode._9]
@@ -86,6 +88,25 @@ class VehicleCamera : Component {
     }
 }
 
+class WheelSteeringRig : Component {
+    vehicle : NodeId
+    wheel : NodeId
+    offsetFromWheel : float3 = float3(0)
+    leftRotation : quat4 = quat4()
+    rightRotation : quat4 = quat4()
+
+    def override on_update {
+        if (!!vehicle && has_component(vehicle, type<VehicleController>)) {
+            let vc = get_component(vehicle, type<VehicleController>)
+            let t = saturate((vc.steeringInput + 1.) * 0.5)
+            nodeId.localRotation = slerp(leftRotation, rightRotation, t)
+        }
+        if (!!wheel) {
+            nodeId.worldPosition = wheel.worldPosition + nodeId.worldRotation * offsetFromWheel
+        }
+    }
+}
+
 class VehicleInput : Component {
     handbrake : bool
     isManual : bool = false
@@ -95,6 +116,7 @@ class VehicleInput : Component {
     stabilityControlAssist : StabilityControlAssist = StabilityControlAssist()
     corneringLimiterAssist : CorneringSpeedLimiterAssist = CorneringSpeedLimiterAssist()
     unstuckAssist : UnstuckAssist = UnstuckAssist()
+    leanBrakeLimiterAssist : LeanBrakeLimiterAssist = LeanBrakeLimiterAssist()
 
     private smoothedGas : float = 0.0
     private smoothedBrake : float = 0.0
@@ -114,6 +136,9 @@ class VehicleInput : Component {
         if (assistsEnabled) {
             apply_assists(vc, rb, dt)
         }
+        if (vc.enableMotorcycleLean) {
+            leanBrakeLimiterAssist.apply_assist(vc, nodeId)
+        }
         update_labels(vc, rb)
     }
 
@@ -128,7 +153,6 @@ class VehicleInput : Component {
         let rawSteerKeys = get_action_axis("steeringKeys")
         let rawSteerStick = get_action_axis("steeringStick")
         let rawSteer = clamp(rawSteerKeys + rawSteerStick, -1., 1.)
-        let steerRate = 5.
 
         if (is_action_just_pressed("handbrake")) {
             handbrake = !handbrake
@@ -183,7 +207,7 @@ class VehicleInput : Component {
         }
         wasBraking = brakePressed
 
-        vc.steeringInput = move_to(vc.steeringInput, rawSteer, dt, steerRate)
+        vc.steeringInput = move_to(vc.steeringInput, rawSteer, dt, 5.)
         vc.handbrakeInput = move_to(vc.handbrakeInput, handbrake ? 1. : 0., dt, 10.)
 
         vc.gasInput = smoothedGas
@@ -247,7 +271,7 @@ Wheels (km/h): {wheelSpeedsText}")
     statusOutputNode = create_debug_text(float2(-20, -20), BOTTOM_RIGHT_ANCHOR)
     statusOutputNode?.UIText.color = BLACK_COLOR
 
-    update_debug_text(status2Node, "0 - init_procedural_vehicle()\n1 - sedan\n2 - suv\n3 - race")
+    update_debug_text(status2Node, "0 - init_procedural_vehicle()\n1 - sedan\n2 - suv\n3 - race\n4 - bike")
 
     init_lights()
     init_input()
@@ -260,6 +284,7 @@ Wheels (km/h): {wheelSpeedsText}")
     add_component(playerCamera, new VehicleCamera(vehicle = playerVehicle))
 
     TEST_SCENE.instantiate_prefab(NodeData(position = float3(0, 0.05, 0)))
+    spawn_bypass_road()
 
     set_physics_fps(100f)
 }

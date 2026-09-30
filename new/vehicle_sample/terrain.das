@@ -11,7 +11,7 @@ let TERRAIN_MAX_HEIGHT = 45.
 let TERRAIN_NOISE_FREQUENCY = 0.02
 let TERRAIN_COLOR = color32_to_float4(0xFFA3D877)
 
-let RELIEF_FLAT_L1 = 100.
+let RELIEF_FLAT_L1 = 245.
 let RELIEF_FULL_L1 = 500.
 
 def public spawn_terrain() : NodeId {

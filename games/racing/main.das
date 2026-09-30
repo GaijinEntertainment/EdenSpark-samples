@@ -257,13 +257,13 @@ def set_camera_active(camera : PlayerCamera, active : bool) {
 }
 
 
-def initialize_camera(var camera : PlayerCamera&, fov_scale : float, viewport : float4) {
+def initialize_camera(var camera : PlayerCamera&, fov_scale : float, viewport : float4, layer_idx : int) {
     camera.nodeCreated = true
     camera.fov = deg_to_rad(71.0) * fov_scale
     camera.node = create_node()
     add_component(camera.node, new Camera(fovAxis = FovAxis.Horizontal, fov = camera.fov, zfar = 2000.0, znear = 0.1,
                                         backgroundColor = float3(0.5 + 0.25, 0.55 + 0.25, 0.63 + 0.25),
-                                        viewport = viewport))
+                                        viewport = viewport, layerIdx = layer_idx))
     camera.node.isActive = false
 }
 
@@ -459,7 +459,7 @@ def request_track_segment_res(start_width_idx, end_width_idx, angle_idx : int) {
     desc.startWidth = float(start_width_idx) * 1.5 + 2.5
     desc.endWidth = float(end_width_idx) * 1.5 + 2.5
     desc.rotation = track_angle_index_to_rad(angle_idx)
-    var resourceId = generate_mesh("%file/trackSegmentGen.das", track_segment_desc_to_resource_request(desc))
+    var resourceId = generate_mesh("%file/trackSegmentGen.das", (desc = desc))
     track_segments_res[start_width_idx][end_width_idx][angle_idx] = resourceId
     track_segments_created[start_width_idx][end_width_idx][angle_idx] = true
     return resourceId
@@ -959,9 +959,9 @@ def on_initialize() {
     setup_light()
 
     //use screen size for camera initialization
-    initialize_camera(camera_fullscreen, 1.0, float4(0.0, 0.0, 1.0, 1.0))
-    initialize_camera(camera_left_half, 0.65, float4(0.0, 0.0, 0.5, 1.0))
-    initialize_camera(camera_right_half, 0.65, float4(0.5, 0.0, 0.5, 1.0))
+    initialize_camera(camera_fullscreen, 1.0, float4(0.0, 0.0, 1.0, 1.0), /*layer_idx*/0)
+    initialize_camera(camera_left_half, 0.65, float4(0.0, 0.0, 0.5, 1.0), /*layer_idx*/0)
+    initialize_camera(camera_right_half, 0.65, float4(0.5, 0.0, 0.5, 1.0), /*layer_idx*/1)
     initialize_game_mode(GameMode.Menu)
 }
 

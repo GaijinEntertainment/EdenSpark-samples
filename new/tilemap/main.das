@@ -1,34 +1,25 @@
-// Tilemap sample: loading and rendering maps made in the Tiled editor (https://www.mapeditor.org/).
-//
-// Four maps exported from Tiled as JSON are loaded and spawned, one per supported map
-// orientation/tileset combination:
-//   - desert: orthogonal, a classic tile-grid map on an atlas tileset (margin/spacing)
-//   - sticker_knight: orthogonal, an object-based platformer map on an image-collection
-//     tileset, with parallax cloud/background layers and flipped sprites
-//   - hex_mini: hexagonal (staggeraxis "y", staggerindex "odd"), a tiny atlas-tileset map
-//   - isometric_grass_and_water: isometric, an atlas-tileset map
-//
-// Controls: WASD / arrow keys or gamepad left stick / dpad - scroll the camera,
-// mouse wheel or gamepad right stick - zoom, Space or gamepad A - switch maps.
-//
-// The reusable part lives in tiled_map.das (parsing) and tiled_scene.das (spawning).
+// Tilemap sample: load and render maps made in the Tiled editor (https://www.mapeditor.org/).
+// Parsing lives in tiled_map.das, spawning in tiled_scene.das. The desert and sticker-knight
+// maps are loaded in BOTH source formats (JSON .tmj and XML .tmx) to show load_tiled_map
+// reads either transparently. Controls: WASD/arrows/left stick scroll, wheel/right stick zoom,
+// Space/gamepad A switch map.
 //
 // How to export a map from Tiled so this sample can load it:
-//   1. Map -> Map Properties -> "Tile Layer Format" = "CSV". The engine can't decompress
-//      base64/zlib tile data.
-//   2. Edit -> Preferences -> General -> Export Options: enable "Detach templates" and
-//      "Resolve object types and properties". Template objects (.tx files) are not
-//      supported; with these options Tiled inlines them on export.
-//   3. Export with File -> Export As (NOT Save - export options do not apply to Save):
-//      the map as .tmj, external tilesets as .tsj, into one folder together with the
-//      tileset images.
-//   4. Rename the exported files to "<name>.tmj.json" / "<name>.tsj.json" - the engine
-//      imports text assets only with a .txt/.json extension. Do not edit the content:
-//      tileset references inside (e.g. "desert.tsx") are resolved by the loader.
-//   5. Optional: slice atlas textures with the Sprite Editor (the default
-//      "<texture>_<index>" names match Tiled's tile ids) - tiles then render via engine
-//      Sprites. Import tile atlases pixel-art style (Point filter, no mips) to avoid
-//      seams between tiles.
+//   1. Any "Tile Layer Format" works: CSV or Base64 (uncompressed, gzip, zlib or Zstandard)
+//      all load - the loader base64-decodes and decompresses the payload.
+//   2. Export the map + external tilesets into one folder together with the tileset images.
+//      Native XML (.tmx/.tsx, via Save or Export) or JSON (.tmj/.tsj, via Export As) both work
+//      - load_tiled_map sniffs the content, not the extension.
+//   3. Rename the files so the engine imports them as text assets (it keys off the extension
+//      .txt/.json/.xml), content unchanged: XML -> "<name>.tmx.xml" / "<name>.tsx.xml";
+//      JSON -> "<name>.tmj.json" / "<name>.tsj.json". Tileset refs inside (e.g. "desert.tsx")
+//      are resolved by the loader.
+//   4. Object templates (.tx) are resolved automatically for XML maps (they are XML too, kept
+//      next to the map). For a JSON export they are NOT - optionally enable Edit -> Preferences
+//      -> Export Options "Detach templates" + "Resolve object types and properties" so Tiled
+//      inlines them into the .tmj.
+//   5. Optional: slice atlas textures with the Sprite Editor (default "<texture>_<index>" names
+//      match Tiled tile ids); import atlases pixel-art style (Point filter, no mips).
 
 require engine.core
 require tiled_map
@@ -36,8 +27,14 @@ require tiled_scene
 
 struct MapSlot {
     path : string
+    format : string         //! "XML" or "JSON" - which source the map was loaded from
     data : TiledMapData
     scene : TiledScene
+}
+
+def map_format(path : string) : string {
+    //! Label only (load_tiled_map sniffs the content itself); read off the on-disk extension.
+    return find(path, ".tmx.") >= 0 || find(path, ".tsx.") >= 0 ? "XML" : "JSON"
 }
 
 var g_maps : array<MapSlot>
@@ -45,6 +42,7 @@ var g_current = 0
 var g_cam : NodeId
 var g_camPos : float3
 var g_orthoSize = 20f // visible height in world units
+var g_label : NodeId  // on-screen current-map name/format/size
 
 def activate_map(idx : int) {
     for (i in range(0, length(g_maps))) {
@@ -63,23 +61,33 @@ def activate_map(idx : int) {
         let c = empty(bg) ? float4(0.83f, 0.72f, 0.51f, 1f) : parse_tiled_color(bg)
         cam.backgroundColor = float3(c.x, c.y, c.z)
     }
-    print("tilemap sample: showing \"{g_maps[idx].path}\" ({int(ws.x)}x{int(ws.y)} tiles)")
+    let lbl = "[{g_maps[idx].format}] {g_maps[idx].path}  ({int(ws.x)}x{int(ws.y)} tiles)"
+    update_debug_text(g_label, lbl)
+    print("tilemap sample: showing {lbl}")
 }
 
 [export]
 def on_initialize() {
     show_mouse_cursor(true)
-    // maps that fail to load (load_tiled_map reports the error) are just left out
+    // desert + sticker-knight in both formats (JSON and XML load identically). The XML files are
+    // the unmodified Tiled originals - desert and orthogonal-outside use base64 + zlib tile layers
+    // (decoded on load) and embedded tilesets; sticker-knight uses CSV plus .tx object templates.
+    // Failed loads are skipped.
     for (path in fixed_array(
         "maps/desert/desert.tmj.json",
+        "maps/desert/desert.tmx.xml",
         "maps/sticker_knight/sandbox.tmj.json",
+        "maps/sticker_knight/sandbox.tmx.xml",
         "maps/hex/hex_mini.tmj.json",
-        "maps/isometric/isometric_grass_and_water.tmj.json"
+        "maps/isometric/isometric_grass_and_water.tmj.json",
+        "maps/ortho_outside/orthogonal-outside.tmx.xml",
+        "maps/perspective/perspective_walls.tmx.xml"
     )) {
-        var slot = MapSlot(path = path)
+        var slot = MapSlot(path = path, format = map_format(path))
         if (load_tiled_map(path, slot.data)) {
             slot.scene <- spawn_tiled_map(slot.data, path)
             slot.scene.root.isActive = false
+            print("tilemap sample: loaded [{slot.format}] \"{path}\" ({slot.data.map.width}x{slot.data.map.height} tiles, {length(slot.data.tilesets)} tileset(s))")
             g_maps |> emplace(slot)
         }
     }
@@ -90,6 +98,7 @@ def on_initialize() {
         orthographicSize = g_orthoSize,
         fovAxis = FovAxis.Vertical,
     ))
+    g_label = create_debug_text("", float2(10, 34)) // current-map label, filled by activate_map
     if (length(g_maps) > 0) {
         activate_map(0)
     }
@@ -111,6 +120,11 @@ def on_initialize() {
             keyboardButtons = [KeyboardButtonInput(idx = KeyCode.Space)],
             gamepadButtons = [GamepadButtonInput(idx = GamepadButton.A)]
         )),
+        // step to the PREVIOUS map - handy for A/B comparing the same scene loaded from JSON vs XML
+        "switch_map_back" => Action(buttonActions = ButtonAction(
+            keyboardButtons = [KeyboardButtonInput(idx = KeyCode.Space, modifier = KeyboardShifts.Shift)],
+            gamepadButtons = [GamepadButtonInput(idx = GamepadButton.B)]
+        )),
         "zoom" => Action(axisActions = AxisAction(mouseAxis = [
             MouseBtnAxisInput(positiveIdx = MouseButton.WheelUp, negativeIdx = MouseButton.WheelDown)
         ])),
@@ -120,7 +134,7 @@ def on_initialize() {
             GamepadAxisInput(idx = GamepadAxis.RThumbV, deadZone = 0.2f)
         ]))
     })
-    create_debug_text("WASD/arrows/left stick - scroll, wheel/right stick - zoom, Space/gamepad A - switch map", float2(10))
+    create_debug_text("WASD/arrows/left stick - scroll, wheel/right stick - zoom, Space/A - next map, Shift+Space/B - prev map", float2(10))
 }
 
 [export]
@@ -129,8 +143,13 @@ def on_update() {
         return
     }
 
-    if (is_action_just_pressed("switch_map")) {
-        activate_map((g_current + 1) % length(g_maps))
+    let n = length(g_maps)
+    // check "back" first: Shift+Space may also trigger the plain "switch_map" (Space), so a
+    // back press wins and forward is skipped that frame
+    if (is_action_just_pressed("switch_map_back")) {
+        activate_map((g_current - 1 + n) % n)
+    } elif (is_action_just_pressed("switch_map")) {
+        activate_map((g_current + 1) % n)
     }
 
     let ws = g_maps[g_current].scene.worldSize

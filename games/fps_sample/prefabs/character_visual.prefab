@@ -1,0 +1,63 @@
+node{
+name:t="body"
+uid:i=1000
+}
+node{
+name:t="torso"
+uid:i=1001
+parent:i=1000
+pos:p3=0, 0.5, 0
+scl:p3=1, 0.5, 0.75
+Mesh{
+__meshId:i64=-6959024684010202747
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+CharacterTeamColor{
+}
+}
+node{
+name:t="head"
+uid:i=1002
+parent:i=1000
+pos:p3=0, 1.4911, 0
+Mesh{
+__meshId:i64=5696195008224956559
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+}
+CharacterTeamColor{
+}
+}
+node{
+name:t="weaponStub"
+uid:i=1003
+WeaponRecoil{}
+parent:i=1000
+pos:p3=0.4419, 1.0304, 0.4043
+scl:p3=0.1, 0.1, 0.25
+Mesh{
+__meshId:i64=4481307235788880410
+__materialId:i64=0
+visibility:i=2047
+isStatic:b=no
+color:p4=0.02, 0.02, 0.02, 1
+}
+}
+res{
+guid:t="0193c182-9c86-7123-8ba6-41c7a1059ec3"
+type:i=1
+refId:i64=-6959024684010202747
+}
+res{
+guid:t="0193c182-51f0-70c2-b3ee-0bd097d754d6"
+type:i=1
+refId:i64=5696195008224956559
+}
+res{
+guid:t="0193c180-91e6-7806-87dd-19e8d41cd80f"
+type:i=1
+refId:i64=4481307235788880410
+}

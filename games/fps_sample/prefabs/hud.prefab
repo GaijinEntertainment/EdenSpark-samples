@@ -1,0 +1,40 @@
+node{
+name:t="hud"
+uid:i=570329078
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1920, 1080
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+visibility:i=2047
+camera:i=0
+screenMode:i=1
+referenceSize:p2=1920, 1080
+}
+}
+node{
+name:t="crosshair"
+uid:i=1851692209
+parent:i=570329078
+UIFrame{
+localPosition2D:p2=960, 540
+size:p2=6, 6
+pivot:p2=0.5, 0.5
+}
+UIImage{
+__textureId:i64=0
+__spriteId:i64=0
+color:p4=1, 1, 1, 0.85
+uvRegion:p4=0, 0, 1, 1
+nineGrid:p4=0, 0, 0, 0
+pixelMultiplier:r=1
+fillMode:i=0
+fillOrigin:i=0
+fillAmount:r=1
+fillClockwise:b=yes
+grayScale:b=no
+grayScaleFactor:r=1
+}
+}

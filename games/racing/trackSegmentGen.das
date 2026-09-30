@@ -1,7 +1,6 @@
 require engine.gen_geometry.mesh_structures
 require engine.math_core
 require math
-require engine.serializer.generic_storage
 
 module trackSegmentGen public
 
@@ -14,28 +13,8 @@ struct TrackSegmentDescription {
     endWidth : float = 3.0
 }
 
-def track_segment_desc_to_resource_request(desc : TrackSegmentDescription) : GenericStorage {
-    var req : GenericStorage
-    set(req, "rotation", desc.rotation)
-    set(req, "subdivLength", desc.subdivLength)
-    set(req, "subdivCount", desc.subdivCount)
-    set(req, "startWidth", desc.startWidth)
-    set(req, "endWidth", desc.endWidth)
-    return <- req
-}
 
-
-def resource_request_to_track_segment_desc(req : GenericStorage) : TrackSegmentDescription {
-    var desc <- TrackSegmentDescription()
-    get(req, "rotation", desc.rotation)
-    get(req, "subdivLength", desc.subdivLength)
-    get(req, "subdivCount", desc.subdivCount)
-    get(req, "startWidth", desc.startWidth)
-    get(req, "endWidth", desc.endWidth)
-    return <- desc
-}
-
-
+[mesh_generator]
 def generate_track_mesh(desc : TrackSegmentDescription) : MeshGeometry {
     let slicePoints = fixed_array(
         float2(0.0, 0.0), float2(0.25, 0.0), float2(0.5, 0.0), float2(0.75, 0.0), float2(1.0, 0.0),
@@ -84,9 +63,4 @@ def generate_track_mesh(desc : TrackSegmentDescription) : MeshGeometry {
     }
 
     return <- mesh
-}
-
-[export]
-def build(data : string) : MeshGeometry {
-    return <- generate_track_mesh(resource_request_to_track_segment_desc(GenericStorage(data)))
 }

@@ -8,7 +8,10 @@ pivot:p2=0.5, 0.5
 }
 UICanvas{
 renderMode:i=0
+visibility:i=2047
+camera:i=0
 screenMode:i=2
+referenceSize:p2=0, 0
 }
 }
 node{
@@ -23,6 +26,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=0.210971, 0.210971, 0.210971, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -63,7 +67,6 @@ UIText{
 text:t="SOUND FX SYNTH"
 color:p4=0.244833, 0.805907, 0, 1
 fontSize:r=20
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -97,6 +100,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=0.451477, 0.451477, 0.451477, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0
@@ -181,6 +185,7 @@ pivot:p2=0.5, 0.5
 }
 UIImage{
 __textureId:i64=0
+__spriteId:i64=0
 color:p4=1, 1, 1, 1
 uvRegion:p4=0, 0, 1, 1
 nineGrid:p4=0, 0, 0, 0

@@ -1,0 +1,106 @@
+guid:t="019fb89f-ef8d-7ff4-8094-70a3e578348f"
+assetType:i=0
+filter:t="Point"
+addressing:t="Clamp"
+anisotropicLevel:i=4
+generateMipLevels:b=no
+usage:t="Sprite2D"
+compressTexture:b=no
+sprites{
+it{
+name:t="perspective_walls_0"
+rect:ip4=0, 0, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_1"
+rect:ip4=64, 0, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_2"
+rect:ip4=128, 0, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_3"
+rect:ip4=192, 0, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_4"
+rect:ip4=0, 64, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_5"
+rect:ip4=64, 64, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_6"
+rect:ip4=128, 64, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_7"
+rect:ip4=192, 64, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_8"
+rect:ip4=0, 128, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_9"
+rect:ip4=64, 128, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_10"
+rect:ip4=128, 128, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_11"
+rect:ip4=192, 128, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_12"
+rect:ip4=0, 192, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_13"
+rect:ip4=64, 192, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_14"
+rect:ip4=128, 192, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+it{
+name:t="perspective_walls_15"
+rect:ip4=192, 192, 64, 64
+pivot:p2=0.5, 0.5
+borderLTRB:p4=0, 0, 0, 0
+}
+}
