@@ -1,0 +1,8 @@
+title:t="Fireworks"
+description:t="Example of a firework effect made with ParticleSystem component"
+preview:t=".project/preview.jpeg"
+genre:t="simulation"
+numberOfPlayers:t="single"
+project_guid:t="019ff714-d05b-75db-938a-7e5ef5f5a1cb"
+defaultPrefab:t="019fccdc-4f1c-76b5-9df5-388bf7cfb4e3"
+hdRendering:b=yes

@@ -81,7 +81,7 @@ def on_initialize() {
         ))
         let mat = request_material("materials/{name}.material")
         add_component(plane, new Mesh(meshId = QUAD_MESH_ID, materialId = mat))
-        let txt = create_node(NodeData(parent = plane, position = float3(0, -0.65, 0), scale = float3(0.075, 0.075, 0.075)))
-        add_component(txt, new Text3D(text = name, fontSize = 16.0, useDepthScale = false))
+        let txt = create_node(NodeData(parent = plane, position = float3(0, -0.65, 0)))
+        add_component(txt, new Text3D(text = name, fontSize = 14.0))
     }
 }

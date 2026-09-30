@@ -1,0 +1,219 @@
+node{
+name:t="root"
+uid:i=129659267
+}
+node{
+name:t="render_settings"
+uid:i=1091110465
+isRenderSettingsNode:b=yes
+parent:i=129659267
+ShadowSettings{
+active:b=yes
+shadowStrength:r=1
+cascadeDepthHighPrecision:b=no
+numCascades:i=4
+cascadeWidth:i=1024
+powWeight:r=0.94
+maxDist:r=250
+shadowStart:r=0
+}
+HDStaticShadows{
+maxDist:r=1000
+cascadeWidth:i=4096
+}
+Tonemap{
+active:b=yes
+tonemapContrast:r=1.28
+tonemapShoulder:r=0.85
+tonemapMidIn:r=0.18
+tonemapMidOut:r=0.18
+tonemapHdrMax:r=4
+colorSaturation:p4=1, 1, 1, 1
+colorContrast:p4=1, 1, 1, 1
+colorGamma:p4=1, 1, 1, 1
+colorGain:p4=1, 1, 1, 1
+colorOffset:p4=0, 0, 0, 0
+colorCorrectionShadowsMax:r=0.1
+colorCorrectionHighlightsMin:r=0.8
+shadows_colorSaturation:p4=1, 1, 1, 1
+shadows_colorContrast:p4=1, 1, 1, 1
+shadows_colorGamma:p4=1, 1, 1, 1
+shadows_colorGain:p4=1, 1, 1, 1
+shadows_colorOffset:p4=0, 0, 0, 0
+midtones_colorSaturation:p4=1, 1, 1, 1
+midtones_colorContrast:p4=1, 1, 1, 1
+midtones_colorGamma:p4=1, 1, 1, 1
+midtones_colorGain:p4=1, 1, 1, 1
+midtones_colorOffset:p4=0, 0, 0, 0
+highlights_colorSaturation:p4=1, 1, 1, 1
+highlights_colorContrast:p4=1, 1, 1, 1
+highlights_colorGamma:p4=1, 1, 1, 1
+highlights_colorGain:p4=1, 1, 1, 1
+highlights_colorOffset:p4=0, 0, 0, 0
+whiteTemp:r=6400
+whiteTint:r=0
+}
+SSAOSettings{
+active:b=yes
+mode:i=1
+method:i=1
+strength:r=1
+worldRadius:r=2
+screenRadius:r=5
+cutoffRadiusExtent:r=1.7
+cutoffSmoothness:r=0.6
+}
+Bloom{
+active:b=yes
+threshold:r=1
+scatter:r=0.8
+intensity:r=0.05
+}
+HDGlobalIllumination{
+coveredDistance:r=100
+verticalScale:r=0.5
+baseSDFVoxelSize:r=0.1
+albedoVoxelScale:r=4
+}
+HDSky{
+__customSky:i64=0
+clouds{
+seed:i=0
+renderMode:i=0
+layers{
+elem{
+startHeight:r=0.8
+thickness:r=8
+density:r=0.5
+coverage:r=0.2
+volume:r=0.5
+volumeVariance:r=0.5
+frequency:r=2
+}
+}
+form{
+extinction:r=0.45
+shapeNoiseScale:r=9
+erosionNoiseScale:r=2.5
+epicness:r=0
+worldSize:r=1
+turbulenceStrength:r=0.21
+turbulenceFrequency:r=2
+cumulonimbusShapeScale:r=4
+cumulonimbusCoverage:r=0
+strataAmount:r=0.8
+strataAltitude:r=8
+strataType:i=0
+}
+lighting{
+ambientDesaturation:r=0.5
+msContribution:r=0.7
+msAttenuation:r=0.3
+}
+}
+atmosphere{
+groundColor:p3=0.1, 0.1, 0.1
+mediaTint:p3=1, 1, 1
+mediaDensity:r=0
+mediaAbsorption:r=1
+mediaHeight:r=1
+atmosphereTint:p3=1, 1, 1
+atmosphereDensity:r=1
+atmosphereHeight:r=1
+ozoneImpact:r=0.5
+}
+}
+HDExposureAdaptation{
+exposureScale:r=1
+maxExposure:r=2
+minExposure:r=0.1
+downSpeed:r=5
+upSpeed:r=5
+brightnessPerceptionPower:r=0.6
+centerWeight:r=0.7
+}
+}
+node{
+name:t="directional_light"
+uid:i=1401145849
+parent:i=129659267
+rot:p4=-0.0348995, 0, 0, 0.999391
+DirectionLight{
+color:p3=1, 0.96, 0.92
+intensity:r=1
+castShadows:b=yes
+}
+}
+node{
+name:t="camera"
+uid:i=-2096746632
+parent:i=129659267
+pos:p3=0, 0, -100
+rot:p4=-0.300706, 0, 0, 0.953717
+Camera{
+znear:r=0.01
+zfar:r=10000
+fov:r=1.0472
+fovAxis:i=1
+orthographic:b=no
+orthographicSize:r=100
+viewport:p4=0, 0, 1, 1
+backgroundColor:p3=0.25, 0.25, 0.25
+__renderTargetId:i64=0
+layerIdx:i=0
+renderSettings:i=0
+}
+}
+node{
+name:t="canvas"
+uid:i=-468635268
+parent:i=129659267
+UIFrame{
+localPosition2D:p2=0, 0
+size:p2=1000, 600
+pivot:p2=0.5, 0.5
+}
+UICanvas{
+renderMode:i=0
+screenMode:i=2
+}
+}
+node{
+name:t="hint"
+uid:i=606341065
+parent:i=-468635268
+pos:p3=0, -250, 0
+UIFrame{
+localPosition2D:p2=500, 550
+size:p2=800, 60
+pivot:p2=0.5, 0.5
+}
+UIText{
+text:t="Press Space or GamepadA to launch a firework"
+color:p4=1, 1, 1, 1
+fontSize:r=16
+autoResizeFrame:b=no
+__fontId:i64=0
+effect:i=0
+effectColor:p4=1, 1, 1, 1
+effectOffset:p2=0, 0
+effectThickness:r=1
+fontAutoSize:p2=0, 0
+wordWrapping:b=yes
+margin:p4=0, 0, 0, 0
+horAlignment:i=1
+vertAlignment:i=1
+}
+UIAnchor{
+anchorMin:p2=0.5, 1
+anchorMax:p2=0.5, 1
+left:r=0
+top:r=-50
+right:r=-300
+bottom:r=540
+}
+TextFader{
+fadeStart:r=3
+fadeEnd:r=4
+}
+}

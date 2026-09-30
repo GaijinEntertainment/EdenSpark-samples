@@ -24,10 +24,6 @@ __mesh:i64=0
 }
 }
 }
-Inertia{
-value:p3=0, 0, 0
-rotateOnly:b=yes
-}
 }
 node{
 pos:p3=0.25, 0, 0

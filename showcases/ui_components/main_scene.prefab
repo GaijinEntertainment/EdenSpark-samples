@@ -8,7 +8,10 @@ pivot:p2=0.5, 0.5
 }
 UICanvas{
 renderMode:i=0
+visibility:i=2047
+camera:i=0
 screenMode:i=2
+referenceSize:p2=0, 0
 }
 UIFlowLayout{
 direction:t="Horizontal"
@@ -73,7 +76,6 @@ UIText{
 text:t="Colored Button"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -125,7 +127,6 @@ UIText{
 text:t="Colored Button"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -194,7 +195,6 @@ UIText{
 text:t="Textured Button"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -245,7 +245,6 @@ UIText{
 text:t="Textured Button"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -373,7 +372,6 @@ UIText{
 text:t="Checkbox"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -483,7 +481,6 @@ UIText{
 text:t="Checkbox"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -593,7 +590,6 @@ UIText{
 text:t="Checkbox"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -705,7 +701,6 @@ UIText{
 text:t="Enter text"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -799,7 +794,6 @@ UIText{
 text:t="Enter text"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -892,7 +886,6 @@ UIText{
 text:t="Option 1"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -1158,7 +1151,6 @@ UIText{
 text:t="Option 1"
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -1977,7 +1969,6 @@ UIText{
 text:t="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=no
 autoResizeFrame:b=yes
 __fontId:i64=0
 effect:i=0

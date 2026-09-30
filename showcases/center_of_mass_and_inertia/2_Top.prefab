@@ -14,6 +14,7 @@ allowedDofs:i=63
 maxVelocity:r=500
 maxAngularVelocity:r=47.124
 interpolation:i=0
+overrides{}
 }
 Collider{
 friction:r=-1
@@ -32,13 +33,13 @@ __mesh:i64=0
 }
 Top{}
 Inertia{
-value:p3=0.075, 0.1, 0.075
+diagonal:p3=1, 1, 1
 rotation:p4=0, 0, 0, 1
 rotateOnly:b=no
-reapply:b=no
+apply:b=no
 reset:b=no
+print:b=yes
 }
-InertiaPrinter{reprint:b=no;}
 }
 node{
 name:t="text"
@@ -52,7 +53,6 @@ pivot:p2=0.5, 0.5
 size:p2=0, 0
 color:p4=0, 0, 0, 1
 fontSize:r=16
-fontScaling:b=yes
 __fontId:i64=0
 effect:i=0
 effectColor:p4=1, 1, 1, 1

@@ -21,6 +21,7 @@ maxSlopeAngle:r=0.785398
 stepHeight:r=0
 upDirection:p3=0, 1, 0
 gravityScale:r=2.5
+mass:r=70
 }
 Player{
 eye:i=1223616609

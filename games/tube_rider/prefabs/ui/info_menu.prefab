@@ -108,7 +108,6 @@ UIText{
 text:t="Use mouse to turn. Avoid bumping into obstacles. Collect light squares to gain HP. Get as far as you can."
 color:p4=1, 1, 1, 1
 fontSize:r=40
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0

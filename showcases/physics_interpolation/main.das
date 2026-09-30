@@ -38,7 +38,7 @@ def on_initialize() {
     add_component(ball1, new BallTag())
 
     let text1 = create_node(NodeData(position = float3(1.75, 0.0, 0.0), parent = ball1))
-    add_component(text1, new Text3D(text = "Interpolation None", color = float4(0, 0, 0, 1), useDepthScale = false))
+    add_component(text1, new Text3D(text = "Interpolation None", color = float4(0, 0, 0, 1)))
 
     let ball2 = create_node(NodeData(position = float3(0., -6., 0.), scale = float3(10)))
     add_component(ball2, new Mesh(meshId = SPHERE_MESH_ID))
@@ -47,7 +47,7 @@ def on_initialize() {
     add_component(ball2, new BallTag())
 
     let text2 = create_node(NodeData(position = float3(1.75, 0.0, 0.0), parent = ball2))
-    add_component(text2, new Text3D(text = "Interpolation Interpolate", color = float4(0, 0, 0, 1), useDepthScale = false))
+    add_component(text2, new Text3D(text = "Interpolation Interpolate", color = float4(0, 0, 0, 1)))
 
     let ball3 = create_node(NodeData(position = float3(0., 6., 0.), scale = float3(10)))
     add_component(ball3, new Mesh(meshId = SPHERE_MESH_ID))
@@ -56,14 +56,14 @@ def on_initialize() {
     add_component(ball3, new BallTag())
 
     let text3 = create_node(NodeData(position = float3(1.75, 0.0, 0.0), parent = ball3))
-    add_component(text3, new Text3D(text = "Interpolation Extrapolate", color = float4(0, 0, 0, 1), useDepthScale = false))
+    add_component(text3, new Text3D(text = "Interpolation Extrapolate", color = float4(0, 0, 0, 1)))
 
     let ball4 = create_node(NodeData(position = float3(0., 18., 0.), scale = float3(10)))
     add_component(ball4, new Mesh(meshId = SPHERE_MESH_ID))
     ballNoPhys = ball4
 
     let text4 = create_node(NodeData(position = float3(1.75, 0.0, 0.0), parent = ball4))
-    add_component(text4, new Text3D(text = "No physics", color = float4(0, 0, 0, 1), useDepthScale = false))
+    add_component(text4, new Text3D(text = "No physics", color = float4(0, 0, 0, 1)))
 
     set_target_fps(60.)
     set_physics_fps(70.)

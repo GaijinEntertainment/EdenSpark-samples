@@ -10,7 +10,6 @@ UIText{
 text:t="<title>"
 color:p4=1, 0.8, 0.6, 1
 fontSize:r=80
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0

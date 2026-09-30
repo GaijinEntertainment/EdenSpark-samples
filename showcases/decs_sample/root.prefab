@@ -13,7 +13,10 @@ pivot:p2=0.5, 0.5
 }
 UICanvas{
 renderMode:i=0
+visibility:i=2047
+camera:i=0
 screenMode:i=2
+referenceSize:p2=0, 0
 }
 }
 node{
@@ -30,7 +33,6 @@ UIText{
 text:t="Press SPACE (or A on gamepad) to change rotation direction"
 color:p4=1, 1, 1, 1
 fontSize:r=26
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0

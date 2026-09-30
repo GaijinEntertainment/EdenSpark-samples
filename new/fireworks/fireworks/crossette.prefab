@@ -1,0 +1,248 @@
+node{
+name:t="crossette"
+uid:i=1741179799
+FireworkBehavior{
+lifeTimeRange:p2=2, 2
+speed:r=0
+drag:r=0
+acceleration:p3=0, 0, 0
+subFireworks{}
+}
+}
+node{
+name:t="particle_system"
+uid:i=1135044002
+parent:i=1741179799
+ParticleSystem{
+transformType:i=0
+stopBehavior:i=1
+__baseTexture:i64=7367213551347314822
+__secondaryTexture:i64=0
+lifetime{
+lifeRange:p2=0.5, 1
+maxAgeOffset:r=0
+}
+spawn{
+delay:r=1
+emission{
+mode:i=1
+linear{
+count:i=100
+subframeEmission:b=no
+}
+burst{
+count:i=100
+cycles:i=1
+period:r=1
+}
+distance{
+maxCount:i=10000
+spacing:r=0.1
+idlePeriod:r=0.05
+}
+fixed{count:i=1;}
+}
+shape{
+kind:i=0
+sphere{
+radius:r=0.1
+volumeFill:r=1
+}
+cylinder{
+direction:p3=1, 0, 0
+radius:r=4
+height:r=0
+volumeFill:r=1
+}
+cone{
+direction:p3=0, 1, 0
+widthTop:r=1
+widthBottom:r=0.5
+height:r=1
+volumeFill:r=1
+}
+box{
+width:r=1
+height:r=1
+depth:r=1
+}
+sphereSector{
+direction:p3=0, 1, 0
+radius:r=1
+sector:r=0.5
+volumeFill:r=1
+}
+}
+}
+motion{
+applyGravity:b=no
+addEmitterVelocity:b=no
+pinLastParticle:b=no
+velocity{
+active:b=yes
+speedRange:p2=50, 100
+directionRandom:r=0
+directionMode:i=0
+point{offset:p3=0, 0, 0;}
+vector{direction:p3=0, 1, 0;}
+}
+acceleration{
+active:b=yes
+applyEmitterTransform:b=no
+strengthRange:p2=1, 1
+directionRandom:r=0
+directionMode:i=1
+point{offset:p3=0, 0, 0;}
+vector{direction:p3=0, -1, 0;}
+cone{
+direction:p3=0, 1, 0
+offset:p3=0, -1, 0
+widthTop:r=1
+widthBottom:r=0.5
+height:r=1
+centerPower:r=1
+borderPower:r=1
+}
+}
+vortex{
+active:b=no
+direction:p3=0, 1, 0
+directionRandom:r=0
+center:p3=0, 0, 0
+centerRandom:p3=0, 0, 0
+rotationStrengthRange:p2=1, 1
+pullStrengthRange:p2=1, 1
+rotationStrengthCurve{}
+pullStrengthCurve{}
+}
+noise{
+active:b=no
+frequency:r=1
+strengthRange:p2=1, 1
+strengthCurve{}
+}
+wind{
+active:b=no
+strengthRange:p2=1, 1
+turbulenceStrength:r=0
+turbulenceFrequency:r=0
+strengthCurve{}
+}
+drag{
+active:b=yes
+strength:r=1
+radiusFactor:r=0
+strengthCurve{}
+}
+}
+render{
+blendMode:i=2
+reverseParticlesOrder:b=no
+shape{
+radiusRange:p2=0.1, 0.2
+kind:i=0
+radiusCurve{}
+billboard{
+aspect:r=1
+pivotOffset:p2=0, 0
+orientation:i=1
+staticUpVector:p3=0, 1, 0
+staticRightVector:p3=0, 0, 1
+crossFadeMul:r=0
+crossFadePow:i=1
+crossFadeThreshold:r=0
+velocityToLength:r=0
+velocityToLengthRange:p2=1, 1
+}
+ribbon{
+mode:i=0
+uvMapping:i=0
+uvTile:r=1
+sideFadeThreshold:r=1
+sideFadePow:r=1
+headFadeThreshold:r=0
+headFadePow:r=1
+}
+}
+rotation{
+active:b=no
+angleRange:p2=0, 0
+spinSpeedRange:p2=0, 0
+spinSpeedCurve{}
+}
+texture{
+framesX:i=1
+framesY:i=1
+startFrameRange:ip2=0, 0
+randomFlipX:b=no
+randomFlipY:b=no
+animation{
+active:b=yes
+blendFrames:b=yes
+enableLoop:b=no
+speedRange:p2=1, 1
+speedCurve{}
+}
+colorRemap{}
+}
+color{
+active:b=yes
+tintFrom:p4=1, 0.176471, 0.0784314, 1
+tintTo:p4=1, 0.572549, 0.313726, 1
+alphaDissolve:b=no
+gradient{
+useParticleIndexAsKey:b=no
+keys{}
+}
+curve{
+mask:p4=0, 0, 0, 1
+useParticleIndexAsKey:b=no
+keys{
+elem{
+pos:r=0
+value:r=0
+}
+elem{
+pos:r=1
+value:r=0
+}
+elem{
+pos:r=0.502732
+value:r=1
+}
+}
+}
+alphaCurveByVelocity{
+active:b=no
+velocityRange:p2=0, 1
+keys{}
+}
+}
+emission{
+active:b=yes
+mask:p3=1, 1, 1
+strength:r=100
+strengthCurve{}
+}
+lighting{
+active:b=no
+mode:i=0
+normalSoftness:r=0
+usePointLights:b=no
+translucency:r=0
+}
+depthMask{
+active:b=yes
+useParticleRadius:b=yes
+depthSoftness:r=0.5
+znearSoftness:r=1
+znearClip:r=0
+}
+}
+}
+}
+res{
+guid:t="019fca6c-1341-7c6c-8fa5-4440bff04409"
+type:i=2
+refId:i64=7367213551347314822
+}

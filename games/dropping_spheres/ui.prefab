@@ -9,7 +9,10 @@ pivot:p2=0.5, 0.5
 }
 UICanvas{
 renderMode:i=0
+visibility:i=2047
+camera:i=0
 screenMode:i=2
+referenceSize:p2=0, 0
 }
 }
 node{
@@ -26,7 +29,6 @@ UIText{
 text:t="Score: 0"
 color:p4=0.34902, 0.368627, 0.439216, 1
 fontSize:r=29.9844
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -66,7 +68,6 @@ Press Down/Space to spawn.
 """
 color:p4=0.34902, 0.368627, 0.439216, 1
 fontSize:r=29.9844
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0

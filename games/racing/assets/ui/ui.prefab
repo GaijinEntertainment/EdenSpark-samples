@@ -8,7 +8,10 @@ pivot:p2=0.5, 0.5
 }
 UICanvas{
 renderMode:i=0
+visibility:i=2047
+camera:i=0
 screenMode:i=2
+referenceSize:p2=0, 0
 }
 UILinks{
 menu:i=957873616
@@ -36,7 +39,6 @@ UIText{
 text:t="Press 'Backspace' to return to menu"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -115,7 +117,6 @@ UIText{
 text:t=">"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -143,7 +144,6 @@ UIText{
 text:t=">"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -171,7 +171,6 @@ UIText{
 text:t=">"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -199,7 +198,6 @@ UIText{
 text:t=">"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -244,7 +242,6 @@ UIText{
 text:t="Select game mode:"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -272,7 +269,6 @@ UIText{
 text:t=" - Solo"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -300,7 +296,6 @@ UIText{
 text:t=" - Human vs Human"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -328,7 +323,6 @@ UIText{
 text:t=" - Human vs AI"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -356,7 +350,6 @@ UIText{
 text:t=" - AI vs AI"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -410,7 +403,6 @@ UIText{
 text:t="Controls: W, A, S, D"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -438,7 +430,6 @@ UIText{
 text:t="Speed: 0 km/h"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -492,7 +483,6 @@ UIText{
 text:t="Controls: I, J, K, L, or Numpad keys"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -520,7 +510,6 @@ UIText{
 text:t="Speed: 0 km/h"
 color:p4=1, 1, 1, 1
 fontSize:r=16
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0

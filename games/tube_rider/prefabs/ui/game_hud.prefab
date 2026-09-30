@@ -211,7 +211,6 @@ UIText{
 text:t="0"
 color:p4=1, 1, 1, 1
 fontSize:r=50
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0
@@ -259,7 +258,6 @@ UIText{
 text:t="Press Escape to pause"
 color:p4=1, 1, 1, 1
 fontSize:r=24
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=1

@@ -50,7 +50,6 @@ UIText{
 text:t="SOUND FX SYNTH - Press F (or A on gamepad) to play"
 color:p4=0.244833, 0.805907, 0, 1
 fontSize:r=20
-fontScaling:b=yes
 autoResizeFrame:b=no
 __fontId:i64=0
 effect:i=0

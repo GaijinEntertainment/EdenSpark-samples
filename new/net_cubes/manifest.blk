@@ -1,0 +1,5 @@
+title:t="Net Cubes"
+description:t="Replicated components: the server orbits cubes, clients render them from replicas"
+genre:t="simulation"
+preview:t=".project/preview.png"
+project_guid:t="01a02163-eae7-7263-9299-5cf3922105b6"

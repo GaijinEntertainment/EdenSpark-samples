@@ -24,14 +24,13 @@ __mesh:i64=0
 }
 }
 }
-newComps{
-CenterOfMassPrinter{reprint:b=no;}
-}
-removedComps{compName:t="CenterOfMass";}
 }
 node{
 uid:i=834090835
-Text3D{text:t="CoM default";}
+Text3D{text:t="""
+LongCube
+CoM default
+""";}
 }
 node{
 pos:p3=-0.5, 0, 0
